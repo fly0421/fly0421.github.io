@@ -213,6 +213,14 @@ button {
     backdrop-filter: saturate(200%) blur(20px);
   }
 }
+@supports (backdrop-filter: blur(20px)) {
+  .blur#comments {
+    backdrop-filter: unset;
+  }
+}
+#layoutHelper-comments {
+  margin-bottom: 100px;
+}
 .shadow {
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
   -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
@@ -2131,7 +2139,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1746978438530),
+    lastupdate: new Date(1747151035714),
     cdn: {
       izitoast_css: 'https://unpkg.com/izitoast@1.4.0/dist/css/iziToast.min.css',
       izitoast_js: 'https://unpkg.com/izitoast@1.4.0/dist/js/iziToast.min.js',
@@ -2139,7 +2147,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox_js: 'https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js'
     },
     sidebar: {
-      for_page: ["blogger","category","tagcloud","donate","webinfo","music"],
+      for_page: ["blogger","category","tagcloud","donate","webinfo","music","lastupdate"],
       for_post: ["toc"],
       webinfo: {
         lastupd: {
@@ -2156,7 +2164,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       
       aplayer: {
-        id: 3175833810,
+        id: 2090675384,
         enable:true
       },
       
@@ -2187,7 +2195,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <!-- Custom Files headEnd end-->
 </head>
-  <body itemscope itemtype="https://schema.org.cn/WebPage">
+  <body itemscope itemtype="https://schema.org.cn/WebPage"> 
 	<script src="https://gcore.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_slide.js"></script>
 	<script src="https://gcore.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_click.js"></script>
 	<script>
@@ -2197,11 +2205,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		document.addEventListener('visibilitychange', function () {
 		  if (document.hidden) {
 			//离开当前页面时标签显示内容
-			document.title = '👀跑哪里去了~ 🐖???';
+			document.title = '跑哪里去啦 👀 👀 👀 ？';
 			clearTimeout(titleTime);
 		  } else {
 			//返回当前页面时标签显示内容
-			document.title = '🐖抓到你啦～';
+			document.title = '抓到你啦 ～ 🐖 ⬅ ';
 			//两秒后变回正常标题
 			titleTime = setTimeout(function () {
 			  document.title = OriginTitile;
@@ -2209,7 +2217,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		  }
 		});
 	</script
-    <!-- import body_begin begin-->
+    <!-- import body_begin begin--> 
     <!-- import body_begin end-->
     <!-- Custom Files bodyBegin begin-->
     
@@ -2234,6 +2242,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <img no-lazy class='logo' src='https://picmdnew-1301987940.cos.ap-guangzhou.myqcloud.com/mySite/sheep.png'/>
           
           
+            <i class='https://picmdnew-1301987940.cos.ap-guangzhou.myqcloud.com/mySite/sheep.png'></i>
+          
           
         </a>
       
@@ -2247,13 +2257,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="首页"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-rss fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -2315,23 +2325,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="更多"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>更多
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                  title="更多"
                   
                   
@@ -2348,6 +2341,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   <i class='fas fa-moon fa-fw'></i>暗黑模式
                 </a>
               <li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/artitalk/" title="说说"
+                  
+                  
+                  
+                    active-action="action-artitalk"
+                  >
+                  <i class='fa-solid fa-comments fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/photos/" title="相册"
+                  
+                  
+                  
+                    active-action="action-photos"
+                  >
+                  <i class='fas fa-images fa-fw'></i>相册
+                </a>
+                
+              </li>
             
           
                     
@@ -2376,8 +2403,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 				</ul>
 			</div>
-      
-      <div class="m_search">
+       
+	  <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
           <input type="text" class="input u-search-input" placeholder="搜索" />
@@ -2397,13 +2424,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="首页"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-rss fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -2465,23 +2492,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="更多"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>更多
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                  title="更多"
                   
                   
@@ -2498,6 +2508,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   <i class='fas fa-moon fa-fw'></i>暗黑模式
                 </a>
               <li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/artitalk/" title="说说"
+                  
+                  
+                  
+                    active-action="action-artitalk"
+                  >
+                  <i class='fa-solid fa-comments fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/photos/" title="相册"
+                  
+                  
+                  
+                    active-action="action-photos"
+                  >
+                  <i class='fas fa-images fa-fw'></i>相册
+                </a>
+                
+              </li>
             
           
                     
@@ -2629,7 +2673,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 								<a class="meta" href="/2025/05/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
 									<time>05-11</time>
 									
-										2025-05-11
+										设计模式
 									
 									
 									
@@ -2642,10 +2686,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 				
 					
 						<div class='timenode'>
-								<a class="meta" href="/2025/05/11/WPF%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/">
+								<a class="meta" href="/2025/05/11/WPF%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E4%B8%8B/">
 									<time>05-11</time>
 									
-										2025-05-11
+										WPF编程基础下（二）
 									
 									
 									
@@ -2658,10 +2702,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 				
 					
 						<div class='timenode'>
-								<a class="meta" href="/2025/05/11/WPF%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0/">
+								<a class="meta" href="/2025/05/11/WPF%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E4%B8%8A/">
 									<time>05-11</time>
 									
-										2025-05-11
+										WPF编程基础上（一）
 									
 									
 									
@@ -2674,26 +2718,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 				
 					
 						<div class='timenode'>
-								<a class="meta" href="/2025/05/11/CSharp%E5%AD%A6%E4%B9%A0/">
-									<time>05-11</time>
+								<a class="meta" href="/2025/05/10/WPF%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0/">
+									<time>05-10</time>
 									
-										2025-05-11
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2025/05/11/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87bolg%E6%96%87%E7%AB%A0/">
-									<time>05-11</time>
-									
-										我的第一篇bolg文章
+										WPF编程高级
 									
 									
 									
@@ -2706,10 +2734,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 				
 					
 						<div class='timenode'>
-								<a class="meta" href="/2025/05/11/hello-world/">
-									<time>05-11</time>
+								<a class="meta" href="/2025/05/10/Face/">
+									<time>05-10</time>
 									
-										Hello World
+										常见面试题
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/2025/05/10/CSharp%E5%AD%A6%E4%B9%A0/">
+									<time>05-10</time>
+									
+										CSharp学习
 									
 									
 									
@@ -2799,7 +2843,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
   
-  <section class="widget category desktop">
+  <section class="widget category desktop mobile">
     
   <header>
     
@@ -2812,9 +2856,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <ul class="entry navigation">
         
           <li><a class="flat-box"
-            title="/categories/%E5%88%86%E7%B1%BB1/" href="/categories/%E5%88%86%E7%B1%BB1/"
-            active-action="action-categoriesE58886E7B1BB1"
-            ><div class='name'>分类1</div><div class='badge'>(1)</div></a></li>
+            title="/categories/C/" href="/categories/C/"
+            active-action="action-categoriesC"
+            ><div class='name'>C#</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"
+            active-action="action-categoriesE8AEBEE8AEA1E6A8A1E5BC8F"
+            ><div class='name'>设计模式</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E9%9D%A2%E8%AF%95/" href="/categories/%E9%9D%A2%E8%AF%95/"
+            active-action="action-categoriesE99DA2E8AF95"
+            ><div class='name'>面试</div><div class='badge'>(1)</div></a></li>
         
       </ul>
     </div>
@@ -2839,7 +2893,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-      <a href="/tags/%E6%A0%87%E7%AD%BE1/" style="font-size: 14px; color: #999">标签1</a> <a href="/tags/%E6%A0%87%E7%AD%BE2/" style="font-size: 14px; color: #999">标签2</a>
+      <a href="/tags/C/" style="font-size: 24px; color: #555">C#</a> <a href="/tags/WPF-%E7%BC%96%E7%A8%8B/" style="font-size: 20.67px; color: #6c6c6c">WPF - 编程</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 17.33px; color: #828282">编程</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 14px; color: #999">设计模式</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 14px; color: #999">面试</a>
     </div>
   </section>
 
@@ -2853,7 +2907,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget desktop">
+<section class="widget desktop mobile">
   
   <header>
     
@@ -2880,13 +2934,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
       
+        <div class="webinfo-item">
+          <div>本站总字数：</div>
+          <div>86.2k 字</div>
+        </div>
+      
 
       
 
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2025-05-11 日</div>
+          <div id="last-update-show">2025-05-13 日</div>
         </div>
       
     </div>
@@ -2919,7 +2978,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         list-max-height='320px'
         server='netease'
         type='playlist'
-        id='3175833810'
+        id='2090675384'
         list-folded='true'>
       </meting-js>
     
@@ -2929,6 +2988,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     </div>
   </section>
 
+
+    
+  
+
+  
+    
+    
+      
+
+<section class="widget desktop mobile">
+  
+  <header>
+    
+      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2025/05/10/WPF%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0/"><div class="item"><time>2025-05-13</time><span>C#</span></div><span>WPF编程高级</span></a></li><li><a class="widget-last" href="/2025/05/11/WPF%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E4%B8%8B/"><div class="item"><time>2025-05-13</time><span>C#</span></div><span>WPF编程基础下（二）</span></a></li><li><a class="widget-last" href="/2025/05/10/Face/"><div class="item"><time>2025-05-13</time><span>面试</span></div><span>常见面试题</span></a></li><li><a class="widget-last" href="/2025/05/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><div class="item"><time>2025-05-13</time><span>设计模式</span></div><span>设计模式</span></a></li><li><a class="widget-last" href="/2025/05/11/WPF%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E4%B8%8A/"><div class="item"><time>2025-05-13</time><span>C#</span></div><span>WPF编程基础上（一）</span></a></li></ul>
+  </div>
+</section>
 
     
   
@@ -2966,7 +3047,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         list-max-height='320px'
         server='netease'
         type='playlist'
-        id='3175833810'
+        id='2090675384'
         list-folded='true'>
       </meting-js>
     
@@ -3250,6 +3331,28 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
+   <script type="text/javascript">
+  function p_scrollrebeal() {
+    ScrollReveal().reveal("#l_main .reveal", {
+      distance: "32px",
+      duration: "800",
+      interval: "20",
+      scale: "1",
+      easing: "ease-out",
+    });
+  }
+  function init_scrollrebeal() {
+    if (typeof ScrollReveal == "undefined") {
+      volantis.requestAnimationFrame(init_scrollrebeal);
+    } else {
+      p_scrollrebeal();
+    }
+  }
+  volantis.js("https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js");
+  document.addEventListener("DOMContentLoaded", init_scrollrebeal)
+</script>
+
+
 
 
   <script>
@@ -3278,7 +3381,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
               Metings.forEach((item, index) => {
                 const aplayerItem = item.aplayer; if(!aplayerItem) return;
                 const rightAplayerCheck = 'true' === 'true'
-                  && item.meta.id === '3175833810';
+                  && item.meta.id === '2090675384';
                 if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
                 if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
                   aplayerItem.on('play', function messagePlay() {
@@ -3329,51 +3432,46 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-      <script>
-  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
+      <script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@3.3.2/dist/waline.js';
 
-  volantis.giscus = {};
+  volantis.layoutHelper("comments", `<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
 
-  function check_giscus() {
-    if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'dark';
-    } else {
-      volantis.giscus.Theme = 'light';
+  function p_waline() {
+    if (!document.querySelector("#waline")) return;
+    
+    let locale = {};
+    let path = pdata.commentPath;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    if (pagePlaceholder.length != 0) {
+      locale.placeholder = pagePlaceholder;
     }
 
-    return document.getElementById("giscus_container");
+    try {
+      init(Object.assign(Object.assign({"path":null,"placeholder":"快来评论吧~","serverURL":"https://hexo-wline-three.vercel.app/","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"imageHosting":"https://7bu.top/api/upload"}, {
+        el: '#waline',
+        path: path,
+        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
+        
+        locale,
+      }), pdata.commentConfig));
+    } catch (error) {
+      alert(`Waline ${error}`);
+    }
+    fancybox_waline();
   }
 
-  function p_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"fly0421/commentsMySite","repo-id":"R_kgDOOoG7HQ","category":"Announcements","category-id":"DIC_kwDOOoG7Hc4CqBY","mapping":"pathname","reactions-enabled":"1","emit-metadata":"1","lang":"zh-CN"},pdata.commentConfig)
-    const script = document.createElement('script');
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    Object.keys(cfg).forEach(k=>{
-      if (k != "theme") {
-        script.setAttribute('data-'+k, cfg[k]);
-      }
-    })
-    script.setAttribute('data-theme', volantis.giscus.Theme);
-    script.setAttribute('crossorigin', "anonymous");
-    HEAD.appendChild(script);
+  function fancybox_waline() {
+    const fancyBoxInstance = new VolantisFancyBox();
+    fancyBoxInstance.bind('#waline .wl-content img:not(.wl-emoji)');
   }
 
-  function dark_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-
-    const message = {
-      setConfig: {
-        theme: volantis.giscus.Theme
-      }
-    };
-    const giscusIframe = document.querySelector('iframe.giscus-frame');
-    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-  }
-  p_giscus();
-  volantis.dark.push(dark_giscus);
+  volantis.css('https://unpkg.com/@waline/client@3.3.2/dist/waline.css');
+  volantis.js('https://unpkg.com/@waline/client@3.3.2/dist/waline.js').then(p_waline);
 </script>
 
     
@@ -3461,7 +3559,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://picmdnew-1301987940.cos.ap-guangzhou.myqcloud.com/mySite/%E7%99%BD%E5%A4%A9%E9%9D%92%E8%8D%89.jpg","https://gcore.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg","https://picmdnew-1301987940.cos.ap-guangzhou.myqcloud.com/mySite/ocean.png"];
+  let imgs = ["https://pic1.imgdb.cn/item/6823641658cb8da5c8f0b47a.png","https://pic1.imgdb.cn/item/6823672b58cb8da5c8f0b607.png","https://pic1.imgdb.cn/item/6823641458cb8da5c8f0b470.png","https://pic1.imgdb.cn/item/6823641658cb8da5c8f0b479.jpg","https://pic1.imgdb.cn/item/6823641458cb8da5c8f0b471.jpg","https://pic1.imgdb.cn/item/6823671a58cb8da5c8f0b600.png","https://pic1.imgdb.cn/item/6823672b58cb8da5c8f0b608.png","https://pic1.imgdb.cn/item/6823641758cb8da5c8f0b47b.jpg","https://pic1.imgdb.cn/item/6823672b58cb8da5c8f0b609.png"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3478,7 +3576,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     if (imgs.length>1) {
       IntervalParallax = setInterval(function () {
         next_parallax();
-      }, '30000');
+      }, '25000');
     }
   }
 
@@ -3701,6 +3799,81 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
     </div>
     <!-- import body_end begin-->
+	 
+	
+	 <div id="tp-weather-widget"></div>
+<style>
+  #tp-weather-widget {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  #tp-weather-widget.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #tp-weather-widget .sw-container {
+    left: unset;
+    right: 100px;
+    top: unset;
+    bottom: 33px;
+    opacity: 0.9;
+  }
+</style>
+
+<script>
+  if (screen.width >= 768){
+	// 天气插件初始化代码
+	  (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+	  window.SeniverseWeatherWidget('show', {
+		flavor: "bubble",
+		location: "WX4FBXXFKE4F",
+		geolocation: true,
+		position: "bottom-right",
+		language: "zh-Hans",
+		unit: "c",
+		theme: "auto",
+		token: "15395d19-df74-475b-9663-63cecebd74dc",
+		hover: "enabled",
+		container: "tp-weather-widget", 
+	  });
+  }
+
+  // 滚动控制逻辑
+  document.addEventListener('DOMContentLoaded', function() {
+    const widget = document.getElementById('tp-weather-widget');
+    const scrollThreshold = 200; // 触发显示/隐藏的滚动距离阈值
+    let lastScroll = window.scrollY;
+
+    function updateVisibility() {
+      const currentScroll = window.scrollY || document.documentElement.scrollTop;
+      const isOverThreshold = currentScroll > scrollThreshold;
+      
+      // 根据滚动方向和应用阈值更新状态
+      if (currentScroll > lastScroll && isOverThreshold) {
+        widget.classList.add('show');
+      } else if (currentScroll < lastScroll && !isOverThreshold) {
+        widget.classList.remove('show');
+      }
+      
+      lastScroll = currentScroll;
+    }
+
+    // 优化滚动事件处理
+    function handleScroll() {
+      window.requestAnimationFrame(updateVisibility);
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // 初始化检测
+    updateVisibility();
+  });
+</script>
+	
+	
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
     
