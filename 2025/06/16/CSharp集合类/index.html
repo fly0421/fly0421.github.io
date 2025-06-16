@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2025/06/16/c#框架/"/>
+  <link rel="canonical" href="http://example.com/2025/06/16/csharp集合类/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,23 +34,23 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>C#框架 - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა</title>
-  <meta name="keywords" content="C#,面试系列,框架,null">
+  <title>CSharp集合类[面试系列] - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა</title>
+  <meta name="keywords" content="C#,面试系列,集合,null">
   <meta desc name="description" content="Here is Fly’s Blos - Fly - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#框架">
-<meta property="og:url" content="http://example.com/2025/06/16/C#%E6%A1%86%E6%9E%B6/index.html">
+<meta property="og:title" content="CSharp集合类[面试系列]">
+<meta property="og:url" content="http://example.com/2025/06/16/CSharp%E9%9B%86%E5%90%88%E7%B1%BB/index.html">
 <meta property="og:site_name" content="Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა">
-<meta property="og:description" content="📌 ASP.NET Core 原理题1. ASP.NET Core 比 ASP.NET 更具优势的地方是什么？答案：    跨平台支持（Windows、Linux、macOS） 高性能 内建依赖注入 模块化设计（中间件机制） 支持多种部署方式（自托管、IIS、Docker等）  推荐星级：★★难度：初级  2. ASP.NET Core 主要的特性有哪些？答案：    轻量级、模块化的框架 支持">
+<meta property="og:description" content="核心问题解答1. Collection和Collections的区别？ Collection： 通常指System.Collections.ICollection接口（非泛型）或System.Collections.Generic.ICollection&lt;T&gt;接口（泛型）。定义了集合（如列表、队列）的基本操作（添加、删除、计数、枚举）。 Collections： 指System.Col">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2025-06-16T14:35:24.000Z">
-<meta property="article:modified_time" content="2025-06-16T15:56:35.895Z">
+<meta property="article:published_time" content="2025-06-16T14:33:24.000Z">
+<meta property="article:modified_time" content="2025-06-16T16:00:43.312Z">
 <meta property="article:author" content="Fly">
 <meta property="article:tag" content="C#">
 <meta property="article:tag" content="面试系列">
-<meta property="article:tag" content="框架">
+<meta property="article:tag" content="集合">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2144,7 +2144,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1750089442766),
+    lastupdate: new Date(1750089720169),
     cdn: {
       izitoast_css: 'https://unpkg.com/izitoast@1.4.0/dist/css/iziToast.min.css',
       izitoast_js: 'https://unpkg.com/izitoast@1.4.0/dist/js/iziToast.min.js',
@@ -2665,7 +2665,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="https://schema.org.cn/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2025/06/16/C#框架/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/06/16/CSharp集合类/">
   <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
     <meta itemprop="name" content="Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა">
   </span>
@@ -2679,20 +2679,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class='headimg-div'>
       <a class='headimg-a'>
-        <img itemprop="image" class='headimg' src='https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6ce.jpg'/>
+        <img itemprop="image" class='headimg' src='https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6d0.jpg'/>
       </a>
     </div>
   
   <div class="article-meta" id="top">
     
     
-      <a title='C#框架' href='/2025/06/16/C#%E6%A1%86%E6%9E%B6/'>
-        <img itemprop="image" class='thumbnail' src='https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6ce.jpg'>
+      <a title='CSharp集合类[面试系列]' href='/2025/06/16/CSharp%E9%9B%86%E5%90%88%E7%B1%BB/'>
+        <img itemprop="image" class='thumbnail' src='https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6d0.jpg'>
       </a>
     
     
       <h1 class="title" itemprop="name headline">
-        C#框架
+        CSharp集合类[面试系列]
       </h1>
       <div class='new-meta-box'>
         
@@ -2732,7 +2732,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-16T22:35:24+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-16T22:33:24+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2025年6月16日</p>
@@ -2750,7 +2750,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
-      <span data-path="/2025/06/16/C#%E6%A1%86%E6%9E%B6/" class="waline-pageview-count">
+      <span data-path="/2025/06/16/CSharp%E9%9B%86%E5%90%88%E7%B1%BB/" class="waline-pageview-count">
         <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
       </span>
         
@@ -2772,398 +2772,263 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h3 id="📌-ASP-NET-Core-原理题"><a href="#📌-ASP-NET-Core-原理题" class="headerlink" title="📌 ASP.NET Core 原理题"></a>📌 <strong>ASP.NET Core 原理题</strong></h3><h4 id="1-ASP-NET-Core-比-ASP-NET-更具优势的地方是什么？"><a href="#1-ASP-NET-Core-比-ASP-NET-更具优势的地方是什么？" class="headerlink" title="1. ASP.NET Core 比 ASP.NET 更具优势的地方是什么？"></a><strong>1. ASP.NET Core 比 ASP.NET 更具优势的地方是什么？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li>跨平台支持（Windows、Linux、macOS）</li>
-<li>高性能</li>
-<li>内建依赖注入</li>
-<li>模块化设计（中间件机制）</li>
-<li>支持多种部署方式（自托管、IIS、Docker等）</li>
+    <h3 id="核心问题解答"><a href="#核心问题解答" class="headerlink" title="核心问题解答"></a><strong>核心问题解答</strong></h3><h4 id="1-Collection和Collections的区别？"><a href="#1-Collection和Collections的区别？" class="headerlink" title="1. Collection和Collections的区别？"></a><strong>1. Collection和Collections的区别？</strong></h4><ul>
+<li><strong>Collection：</strong> 通常指<code>System.Collections.ICollection</code>接口（非泛型）或<code>System.Collections.Generic.ICollection&lt;T&gt;</code>接口（泛型）。定义了集合（如列表、队列）的基本操作（添加、删除、计数、枚举）。</li>
+<li><strong>Collections：</strong> 指<code>System.Collections</code>（非泛型）或<code>System.Collections.Generic</code>（泛型）命名空间，包含集合类（如<code>ArrayList</code>, <code>Hashtable</code>, <code>List&lt;T&gt;</code>, <code>Dictionary&lt;TKey, TValue&gt;</code>）。</li>
+<li><strong>关键区别：</strong> <code>Collection</code>是<strong>接口</strong>，定义行为；<code>Collections</code>是<strong>命名空间</strong>，包含实现这些接口的类。</li>
 </ul>
-<p><strong>推荐星级：★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="2-ASP-NET-Core-主要的特性有哪些？"><a href="#2-ASP-NET-Core-主要的特性有哪些？" class="headerlink" title="2. ASP.NET Core 主要的特性有哪些？"></a><strong>2. ASP.NET Core 主要的特性有哪些？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li>轻量级、模块化的框架</li>
-<li>支持跨平台</li>
-<li>内建依赖注入容器</li>
-<li>强大的中间件管道系统</li>
-<li>支持Kestrel服务器（可自托管）</li>
-<li>配置系统灵活（JSON、XML、环境变量等）</li>
+<h4 id="2-C-List-Set-Map是否继承自Collection接口？"><a href="#2-C-List-Set-Map是否继承自Collection接口？" class="headerlink" title="2. C# List, Set, Map是否继承自Collection接口？"></a><strong>2. C# List, Set, Map是否继承自Collection接口？</strong></h4><ul>
+<li><strong>List (List<T>):</strong> 实现<code>ICollection&lt;T&gt;</code>。</li>
+<li><strong>Set (如HashSet<T>):</strong> 实现<code>ICollection&lt;T&gt;</code>。</li>
+<li><strong>Map (如Dictionary&lt;TKey, TValue&gt;):</strong> 不直接实现<code>ICollection&lt;T&gt;</code>，但其<code>Keys</code>和<code>Values</code>属性是<code>ICollection&lt;T&gt;</code>，且本身实现<code>ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;</code>。</li>
 </ul>
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="3-ASP-NET-Core-Filter-如何支持依赖注入？"><a href="#3-ASP-NET-Core-Filter-如何支持依赖注入？" class="headerlink" title="3. ASP.NET Core Filter 如何支持依赖注入？"></a><strong>3. ASP.NET Core Filter 如何支持依赖注入？</strong></h4><p><strong>答案：</strong><br>Filter 通过构造函数注入或 <code>TypeFilterAttribute</code> 实现依赖注入：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyActionFilter</span> : <span class="title">IActionFilter</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">readonly</span> IService _service;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyActionFilter</span>(<span class="params">IService service</span>)</span> =&gt; _service = service;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">OnActionExecuting</span>(<span class="params">...</span>)</span> &#123; ... &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-链表-ArrayList-和数组-Array-的区别"><a href="#3-链表-ArrayList-和数组-Array-的区别" class="headerlink" title="3. 链表(ArrayList)和数组(Array)的区别"></a><strong>3. 链表(ArrayList)和数组(Array)的区别</strong></h4><table>
+<thead>
+<tr>
+<th><strong>特性</strong></th>
+<th><strong>Array (数组)</strong></th>
+<th><strong>ArrayList (非泛型动态数组)</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>类型</strong></td>
+<td>固定大小</td>
+<td>动态大小</td>
+</tr>
+<tr>
+<td><strong>类型安全</strong></td>
+<td>强类型 (声明类型)</td>
+<td>弱类型 (存储<code>object</code>，需装箱拆箱)</td>
+</tr>
+<tr>
+<td><strong>性能</strong></td>
+<td>内存连续，索引访问快</td>
+<td>需装箱拆箱，性能开销大</td>
+</tr>
+<tr>
+<td><strong>泛型支持</strong></td>
+<td>是 (如<code>int[]</code>)</td>
+<td>否 (C# 1.0)</td>
+</tr>
+<tr>
+<td><strong>推荐替代</strong></td>
+<td>-</td>
+<td><strong>推荐使用泛型<code>List&lt;T&gt;</code></strong></td>
+</tr>
+</tbody></table>
+<h4 id="4-HashMap和Hashtable区别"><a href="#4-HashMap和Hashtable区别" class="headerlink" title="4. HashMap和Hashtable区别"></a><strong>4. HashMap和Hashtable区别</strong></h4><table>
+<thead>
+<tr>
+<th><strong>特性</strong></th>
+<th><strong>Hashtable (非泛型)</strong></th>
+<th><strong>Dictionary&lt;TKey, TValue&gt; (泛型)</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>线程安全</strong></td>
+<td>是 (方法同步)</td>
+<td>否 (需手动加锁)</td>
+</tr>
+<tr>
+<td><strong>键&#x2F;值类型</strong></td>
+<td><code>object</code> (需装箱拆箱)</td>
+<td>强类型 (<code>TKey</code>, <code>TValue</code>)</td>
+</tr>
+<tr>
+<td><strong>性能</strong></td>
+<td>较低 (因装箱拆箱)</td>
+<td>更高</td>
+</tr>
+<tr>
+<td><strong>null键&#x2F;值</strong></td>
+<td>不允许<code>null</code>键或值</td>
+<td><code>TKey</code>不能为<code>null</code>，<code>TValue</code>可以为<code>null</code></td>
+</tr>
+</tbody></table>
+<h4 id="5-IList接口与List的区别"><a href="#5-IList接口与List的区别" class="headerlink" title="5. IList接口与List的区别"></a><strong>5. IList接口与List<T>的区别</strong></h4><ul>
+<li><strong>IList：</strong> 接口，定义了有序集合的操作（索引访问、插入、删除）。</li>
+<li><strong>List<T>：</strong> 类，实现了<code>IList&lt;T&gt;</code>接口，提供动态数组的具体实现。</li>
+<li><strong>关键点：</strong> <code>IList</code> 是契约，<code>List&lt;T&gt;</code> 是实现。优先使用<code>List&lt;T&gt;</code>（类型安全、高效）。</li>
+</ul>
+<h4 id="6-泛型的主要约束和次要约束"><a href="#6-泛型的主要约束和次要约束" class="headerlink" title="6. 泛型的主要约束和次要约束"></a><strong>6. 泛型的主要约束和次要约束</strong></h4><ul>
+<li><strong>主要约束：</strong> 指定类型参数必须是什么（类、接口、值类型等）。<ul>
+<li><code>where T : class</code> (必须是引用类型)</li>
+<li><code>where T : struct</code> (必须是值类型)</li>
+<li><code>where T : SomeClass</code> (必须继承自<code>SomeClass</code>)</li>
+<li><code>where T : ISomeInterface</code> (必须实现<code>ISomeInterface</code>)</li>
+</ul>
+</li>
+<li><strong>次要约束（构造函数约束）：</strong><ul>
+<li><code>where T : new()</code> (<code>T</code>必须有公共无参构造函数)</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-Set区分重复元素的方法"><a href="#7-Set区分重复元素的方法" class="headerlink" title="7. Set区分重复元素的方法"></a><strong>7. Set区分重复元素的方法</strong></h4><ul>
+<li>使用 <code>GetHashCode()</code> 和 <code>Equals()</code> 方法判断重复。</li>
+<li><strong><code>==</code> vs <code>Equals()</code>：</strong><ul>
+<li><code>==</code>：运算符，可被重载（默认引用类型比较引用，值类型比较值）。</li>
+<li><code>Equals()</code>：虚方法，通常用于逻辑相等性比较（可被重写）。</li>
+</ul>
+</li>
+</ul>
+<h4 id="8-判断50万int数字是否重复的思路"><a href="#8-判断50万int数字是否重复的思路" class="headerlink" title="8. 判断50万int数字是否重复的思路"></a><strong>8. 判断50万int数字是否重复的思路</strong></h4><ul>
+<li><strong>最优解：</strong> 使用 <code>HashSet&lt;int&gt;</code>。<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">bool</span> <span class="title">HasDuplicates</span>(<span class="params"><span class="built_in">int</span>[] numbers</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">set</span> = <span class="keyword">new</span> HashSet&lt;<span class="built_in">int</span>&gt;();</span><br><span class="line">    <span class="keyword">foreach</span> (<span class="built_in">int</span> num <span class="keyword">in</span> numbers) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="keyword">set</span>.Add(num)) <span class="comment">// 添加失败说明重复</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>时间复杂度：</strong> O(n) (平均情况)</li>
+<li><strong>空间复杂度：</strong> O(n)</li>
+</ul>
+</li>
+</ul>
+<h4 id="9-不用Max方法找List最大值"><a href="#9-不用Max方法找List最大值" class="headerlink" title="9. 不用Max方法找List最大值"></a><strong>9. 不用Max方法找List<int>最大值</strong></h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">int</span> <span class="title">FindMax</span>(<span class="params">List&lt;<span class="built_in">int</span>&gt; list</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (list == <span class="literal">null</span> || list.Count == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentException(<span class="string">&quot;List is empty or null&quot;</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">int</span> max = list[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">foreach</span> (<span class="built_in">int</span> num <span class="keyword">in</span> list) &#123;</span><br><span class="line">        <span class="keyword">if</span> (num &gt; max)</span><br><span class="line">            max = num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>使用 <code>[TypeFilter(typeof(MyActionFilter))]</code> 注入。</p>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="4-ASP-Net-Core-中有哪些异常处理的方案？"><a href="#4-ASP-Net-Core-中有哪些异常处理的方案？" class="headerlink" title="4. ASP.Net Core 中有哪些异常处理的方案？"></a><strong>4. ASP.Net Core 中有哪些异常处理的方案？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li><code>UseExceptionHandler()</code>：全局异常处理中间件</li>
-<li><code>UseDeveloperExceptionPage()</code>：开发时详细错误页</li>
-<li>自定义中间件捕获异常</li>
-<li><code>IExceptionFilter</code>：在MVC中实现过滤器处理</li>
+<h4 id="10-C-异常类包含的信息"><a href="#10-C-异常类包含的信息" class="headerlink" title="10. C#异常类包含的信息"></a><strong>10. C#异常类包含的信息</strong></h4><ul>
+<li><code>Message</code>：错误描述</li>
+<li><code>StackTrace</code>：调用堆栈</li>
+<li><code>InnerException</code>：内部异常</li>
+<li><code>Source</code>：导致异常的应用程序名</li>
+<li><code>TargetSite</code>：抛出异常的方法</li>
+<li><code>HelpLink</code>：帮助文档链接</li>
 </ul>
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="5-C-如何使用-ActionFilterAttribute？"><a href="#5-C-如何使用-ActionFilterAttribute？" class="headerlink" title="5. C# 如何使用 ActionFilterAttribute？"></a><strong>5. C# 如何使用 ActionFilterAttribute？</strong></h4><p><strong>答案：</strong><br>继承 <code>ActionFilterAttribute</code>，重写方法如 <code>OnActionExecuting</code>, <code>OnActionExecuted</code>：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">LogActionFilter</span> : <span class="title">ActionFilterAttribute</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnActionExecuting</span>(<span class="params">ActionExecutingContext context</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;Before action&quot;</span>);</span><br><span class="line">        <span class="keyword">base</span>.OnActionExecuting(context);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnActionExecuted</span>(<span class="params">ActionExecutedContext context</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;After action&quot;</span>);</span><br><span class="line">        <span class="keyword">base</span>.OnActionExecuted(context);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>控制器或方法上加 <code>[LogActionFilter]</code></p>
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：高难</strong></p>
-<hr>
-<h4 id="6-阐述什么是依赖注入？"><a href="#6-阐述什么是依赖注入？" class="headerlink" title="6. 阐述什么是依赖注入？"></a><strong>6. 阐述什么是依赖注入？</strong></h4><p><strong>答案：</strong><br>依赖注入是一种设计模式，用于解耦组件之间的依赖关系。由外部容器负责创建对象并管理其生命周期，而不是在类内部直接 new 对象。</p>
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="7-依赖注入有哪几种方式？"><a href="#7-依赖注入有哪几种方式？" class="headerlink" title="7. 依赖注入有哪几种方式？"></a><strong>7. 依赖注入有哪几种方式？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li>构造函数注入（最常用）</li>
-<li>属性注入</li>
-<li>方法注入</li>
-</ul>
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：中级</strong></p>
-<hr>
-<h4 id="8-阐述控制反转是什么？"><a href="#8-阐述控制反转是什么？" class="headerlink" title="8. 阐述控制反转是什么？"></a><strong>8. 阐述控制反转是什么？</strong></h4><p><strong>答案：</strong><br>控制反转（IoC）是将程序中对象的创建与调用分离，交由外部容器来管理。DI 是 IoC 的一种具体实现方式。</p>
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="9-依赖注入有哪些著名的框架？"><a href="#9-依赖注入有哪些著名的框架？" class="headerlink" title="9. 依赖注入有哪些著名的框架？"></a><strong>9. 依赖注入有哪些著名的框架？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li>Microsoft.Extensions.DependencyInjection（内置）</li>
-<li>Autofac</li>
-<li>Unity</li>
-<li>Castle Windsor</li>
-<li>Ninject</li>
-</ul>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="10-ABP-NEXT-是什么，请阐述？"><a href="#10-ABP-NEXT-是什么，请阐述？" class="headerlink" title="10. ABP.NEXT 是什么，请阐述？"></a><strong>10. ABP.NEXT 是什么，请阐述？</strong></h4><p><strong>答案：</strong><br>ABP（ASP.NET Boilerplate Project）是一个开源的应用框架，帮助快速构建模块化、可维护的企业级应用程序。ABP.NEXT 是其基于 .NET Core 的升级版本，整合了现代架构实践如 DDD、CQRS、微服务等。</p>
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="11-简述什么是-dot-net-core-的-Startup-Class？"><a href="#11-简述什么是-dot-net-core-的-Startup-Class？" class="headerlink" title="11. 简述什么是 dot net core 的 Startup Class？"></a><strong>11. 简述什么是 dot net core 的 Startup Class？</strong></h4><p><strong>答案：</strong><br>Startup 类是 ASP.NET Core 应用程序的启动入口，包含两个核心方法：</p>
-<ul>
-<li><code>ConfigureServices()</code>：注册服务</li>
-<li><code>Configure()</code>：配置请求管道（中间件）</li>
-</ul>
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="12-解释-Startup-Class-的-Configure-方法有什么作用？"><a href="#12-解释-Startup-Class-的-Configure-方法有什么作用？" class="headerlink" title="12. 解释 Startup Class 的 Configure 方法有什么作用？"></a><strong>12. 解释 Startup Class 的 Configure 方法有什么作用？</strong></h4><p><strong>答案：</strong><br>用于配置请求处理管道，添加中间件，例如：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.UseRouting();</span><br><span class="line">app.UseAuthentication();</span><br><span class="line">app.UseAuthorization();</span><br><span class="line">app.UseEndpoints(endpoints =&gt; &#123; endpoints.MapControllers(); &#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="11-创建自定义异常"><a href="#11-创建自定义异常" class="headerlink" title="11. 创建自定义异常"></a><strong>11. 创建自定义异常</strong></h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyCustomException</span> : <span class="title">Exception</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyCustomException</span>()</span> &#123; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyCustomException</span>(<span class="params"><span class="built_in">string</span> message</span>) : <span class="title">base</span>(<span class="params">message</span>)</span> &#123; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyCustomException</span>(<span class="params"><span class="built_in">string</span> message, Exception inner</span>) </span></span><br><span class="line"><span class="function">        : <span class="title">base</span>(<span class="params">message, inner</span>)</span> &#123; &#125;</span><br><span class="line">    <span class="comment">// 可添加额外属性</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> ErrorCode &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="13-简述什么是中间件（Middleware）？"><a href="#13-简述什么是中间件（Middleware）？" class="headerlink" title="13. 简述什么是中间件（Middleware）？"></a><strong>13. 简述什么是中间件（Middleware）？</strong></h4><p><strong>答案：</strong><br>中间件是一组按顺序执行的组件，用于处理 HTTP 请求和响应。每个中间件可以决定是否将请求传递给下一个中间件。</p>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：中级</strong></p>
-<hr>
-<h4 id="14-中间件的使用场景有哪些？"><a href="#14-中间件的使用场景有哪些？" class="headerlink" title="14. 中间件的使用场景有哪些？"></a><strong>14. 中间件的使用场景有哪些？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li>日志记录</li>
-<li>身份验证&#x2F;授权</li>
-<li>异常处理</li>
-<li>静态文件处理</li>
-<li>CORS 配置</li>
-<li>路由匹配</li>
-</ul>
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="15-请列举官方常用的中间件？"><a href="#15-请列举官方常用的中间件？" class="headerlink" title="15. 请列举官方常用的中间件？"></a><strong>15. 请列举官方常用的中间件？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li><code>UseRouting()</code></li>
-<li><code>UseAuthentication()</code></li>
-<li><code>UseAuthorization()</code></li>
-<li><code>UseEndpoints()</code></li>
-<li><code>UseStaticFiles()</code></li>
-<li><code>UseDeveloperExceptionPage()</code></li>
-<li><code>UseExceptionHandler()</code></li>
-<li><code>UseCors()</code></li>
-</ul>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="16-Application-Builder-的-Use-和-Run-方法有什么区别？"><a href="#16-Application-Builder-的-Use-和-Run-方法有什么区别？" class="headerlink" title="16. Application Builder 的 Use 和 Run 方法有什么区别？"></a><strong>16. Application Builder 的 Use 和 Run 方法有什么区别？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li><code>Use()</code>：添加中间件，并传入下一个中间件委托，可以继续向下传递请求。</li>
-<li><code>Run()</code>：终止管道，不调用后续中间件。</li>
-</ul>
-<p><strong>示例：</strong></p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.Use(<span class="keyword">async</span> (context, next) =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">await</span> context.Response.WriteAsync(<span class="string">&quot;Before\n&quot;</span>);</span><br><span class="line">    <span class="keyword">await</span> next.Invoke();</span><br><span class="line">    <span class="keyword">await</span> context.Response.WriteAsync(<span class="string">&quot;After\n&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.Run(<span class="keyword">async</span> context =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">await</span> context.Response.WriteAsync(<span class="string">&quot;End of pipeline.&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="12-用IEnumerable实现斐波那契数列"><a href="#12-用IEnumerable实现斐波那契数列" class="headerlink" title="12. 用IEnumerable实现斐波那契数列"></a><strong>12. 用IEnumerable实现斐波那契数列</strong></h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">int</span>&gt; <span class="title">Fibonacci</span>()</span> &#123;</span><br><span class="line">    <span class="built_in">int</span> a = <span class="number">0</span>, b = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="keyword">yield</span> <span class="keyword">return</span> a;</span><br><span class="line">        (a, b) = (b, a + b); <span class="comment">// 元组解构赋值</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用（取前10项）</span></span><br><span class="line"><span class="keyword">foreach</span> (<span class="function"><span class="built_in">int</span> num <span class="keyword">in</span> <span class="title">Fibonacci</span>().<span class="title">Take</span>(<span class="params"><span class="number">10</span></span>))</span> &#123;</span><br><span class="line">    Console.WriteLine(num);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="17-dot-net-core-里面的-Map-拓展有什么作用？"><a href="#17-dot-net-core-里面的-Map-拓展有什么作用？" class="headerlink" title="17. dot net core 里面的 Map 拓展有什么作用？"></a><strong>17. dot net core 里面的 Map 拓展有什么作用？</strong></h4><p><strong>答案：</strong><br><code>Map()</code> 用于根据路径前缀将请求路由到特定中间件管道。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">app.Map(<span class="string">&quot;/api&quot;</span>, builder =&gt; &#123;</span><br><span class="line">    builder.Run(<span class="keyword">async</span> context =&gt; &#123;</span><br><span class="line">        <span class="keyword">await</span> context.Response.WriteAsync(<span class="string">&quot;API route&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="13-用foreach和ref为数组每个元素加1"><a href="#13-用foreach和ref为数组每个元素加1" class="headerlink" title="13. 用foreach和ref为数组每个元素加1"></a><strong>13. 用foreach和ref为数组每个元素加1</strong></h4><ul>
+<li><strong>注意：</strong> <code>foreach</code>迭代变量是只读的，不能直接修改。</li>
+<li><strong>解决方案：</strong> 使用<code>for</code>循环或<code>Span&lt;T&gt;</code>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>[] arr = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;;</span><br><span class="line"><span class="comment">// 方法1：for循环</span></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; arr.Length; i++) &#123;</span><br><span class="line">    arr[i]++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法2：Span&lt;T&gt; (C# 7.2+)</span></span><br><span class="line">Span&lt;<span class="built_in">int</span>&gt; span = arr;</span><br><span class="line"><span class="keyword">foreach</span> (<span class="keyword">ref</span> <span class="built_in">int</span> num <span class="keyword">in</span> span) &#123;</span><br><span class="line">    num++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="14-捕获不同类型的异常"><a href="#14-捕获不同类型的异常" class="headerlink" title="14. 捕获不同类型的异常"></a><strong>14. 捕获不同类型的异常</strong></h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 可能抛出异常的代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (FileNotFoundException ex) &#123;</span><br><span class="line">    <span class="comment">// 处理文件不存在</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (DivideByZeroException ex) &#123;</span><br><span class="line">    <span class="comment">// 处理除以零</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (Exception ex) &#123;</span><br><span class="line">    <span class="comment">// 捕获其他所有异常</span></span><br><span class="line">    <span class="comment">// 放在最后！</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="18-dot-net-core-里面的路径是如何处理的？"><a href="#18-dot-net-core-里面的路径是如何处理的？" class="headerlink" title="18. dot net core 里面的路径是如何处理的？"></a><strong>18. dot net core 里面的路径是如何处理的？</strong></h4><p><strong>答案：</strong><br>路径处理主要由以下中间件完成：</p>
-<ul>
-<li><code>UseRouting()</code>：注册路由表</li>
-<li><code>UseEndpoints()</code>：映射具体端点（控制器、Razor 页面等）</li>
+<h4 id="15-避免类型转换异常"><a href="#15-避免类型转换异常" class="headerlink" title="15. 避免类型转换异常"></a><strong>15. 避免类型转换异常</strong></h4><ul>
+<li><strong>使用<code>as</code>运算符：</strong> 转换失败返回<code>null</code>（仅适用于引用类型）。<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MyClass obj = someObj <span class="keyword">as</span> MyClass;</span><br><span class="line"><span class="keyword">if</span> (obj != <span class="literal">null</span>) &#123; ... &#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>使用<code>is</code>模式匹配：</strong><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (someObj <span class="keyword">is</span> MyClass myObj) &#123;</span><br><span class="line">    <span class="comment">// 安全使用myObj</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p><strong>URL 匹配规则：</strong></p>
-<ul>
-<li><code>/Home/Index</code> → 控制器 Home 下的 Index 方法</li>
-<li>路由模板：<code>&#123;controller=Home&#125;/&#123;action=Index&#125;/&#123;id?&#125;</code></li>
+<h4 id="16-Serializable特性的作用"><a href="#16-Serializable特性的作用" class="headerlink" title="16. Serializable特性的作用"></a><strong>16. Serializable特性的作用</strong></h4><ul>
+<li>标记类可被<strong>序列化</strong>（转换为字节流用于存储或传输）。</li>
+<li>需搭配<code>System.Runtime.Serialization</code>命名空间使用（如<code>BinaryFormatter</code>, <code>DataContractSerializer</code>）。</li>
 </ul>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="19-dot-net-core-工程里面的常见工程文件？"><a href="#19-dot-net-core-工程里面的常见工程文件？" class="headerlink" title="19. dot net core 工程里面的常见工程文件？"></a><strong>19. dot net core 工程里面的常见工程文件？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li><code>.csproj</code>：项目文件</li>
-<li><code>Program.cs</code>：程序入口</li>
-<li><code>Startup.cs</code>：配置服务和中间件</li>
-<li><code>appsettings.json</code>：配置文件</li>
-<li><code>Properties/launchSettings.json</code>：启动设置</li>
-<li><code>wwwroot/</code>：静态文件目录</li>
+<h4 id="17-自定义委托"><a href="#17-自定义委托" class="headerlink" title="17. 自定义委托"></a><strong>17. 自定义委托</strong></h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义委托类型</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="built_in">delegate</span> <span class="built_in">int</span> <span class="title">MyDelegate</span>(<span class="params"><span class="built_in">string</span> s, <span class="built_in">int</span> x</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">MyDelegate handler = (str, num) =&gt; str.Length + num;</span><br><span class="line"><span class="built_in">int</span> result = handler(<span class="string">&quot;test&quot;</span>, <span class="number">5</span>); <span class="comment">// result = 4 + 5 = 9</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="18-NET默认委托类型"><a href="#18-NET默认委托类型" class="headerlink" title="18. .NET默认委托类型"></a><strong>18. .NET默认委托类型</strong></h4><ul>
+<li><strong><code>Action</code>系列：</strong> 无返回值的方法（<code>Action</code>, <code>Action&lt;T&gt;</code>, <code>Action&lt;T1,T2&gt;</code>等）。</li>
+<li><strong><code>Func</code>系列：</strong> 有返回值的方法（<code>Func&lt;TResult&gt;</code>, <code>Func&lt;T,TResult&gt;</code>, <code>Func&lt;T1,T2,TResult&gt;</code>等）。</li>
+<li><strong><code>Predicate&lt;T&gt;</code>：</strong> 返回<code>bool</code>的委托（等价于<code>Func&lt;T, bool&gt;</code>）。</li>
 </ul>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="20-简述依赖注入实现原理？"><a href="#20-简述依赖注入实现原理？" class="headerlink" title="20. 简述依赖注入实现原理？"></a><strong>20. 简述依赖注入实现原理？</strong></h4><p><strong>答案：</strong><br>DI 容器通过反射自动创建实例并解析依赖关系。主要流程：</p>
-<ol>
-<li>注册服务（生命周期：Singleton &#x2F; Scoped &#x2F; Transient）</li>
-<li>构造函数注入依赖项</li>
-<li>容器自动解析依赖链</li>
+<h4 id="19-泛型委托"><a href="#19-泛型委托" class="headerlink" title="19. 泛型委托"></a><strong>19. 泛型委托</strong></h4><ul>
+<li>使用泛型类型参数的委托，提高类型安全性和复用性。</li>
+<li>例如：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="built_in">delegate</span> TResult <span class="title">Func</span>&lt;<span class="title">T</span>, <span class="title">TResult</span>&gt;(<span class="params">T arg</span>)</span>;</span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">Func&lt;<span class="built_in">int</span>, <span class="built_in">bool</span>&gt; isEven = num =&gt; num % <span class="number">2</span> == <span class="number">0</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="20-IEnumerable解释"><a href="#20-IEnumerable解释" class="headerlink" title="20. IEnumerable解释"></a><strong>20. IEnumerable解释</strong></h4><ul>
+<li><strong>接口：</strong> <code>System.Collections.IEnumerable</code></li>
+<li><strong>作用：</strong> 支持对集合进行<strong>只进迭代</strong>（通过<code>GetEnumerator()</code>方法）。</li>
+<li><strong>关键方法：</strong><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IEnumerable</span> &#123;</span><br><span class="line">    <span class="function">IEnumerator <span class="title">GetEnumerator</span>()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="21-IEnumerable的缺点"><a href="#21-IEnumerable的缺点" class="headerlink" title="21. IEnumerable的缺点"></a><strong>21. IEnumerable的缺点</strong></h4><ul>
+<li><strong>只读：</strong> 无法通过它修改集合。</li>
+<li><strong>性能：</strong> 多次迭代可能重复计算（如LINQ查询）。</li>
+<li><strong>延迟执行：</strong> 可能导致意外行为（如迭代时数据源改变）。</li>
+</ul>
+<h4 id="22-泛型的优点"><a href="#22-泛型的优点" class="headerlink" title="22. 泛型的优点"></a><strong>22. 泛型的优点</strong></h4><ul>
+<li><strong>类型安全：</strong> 编译时类型检查。</li>
+<li><strong>性能提升：</strong> 避免值类型的装箱拆箱。</li>
+<li><strong>代码复用：</strong> 一套逻辑处理多种类型。</li>
+<li><strong>可读性：</strong> 明确集合元素类型。</li>
+</ul>
+<h4 id="23-泛型常见约束"><a href="#23-泛型常见约束" class="headerlink" title="23. 泛型常见约束"></a><strong>23. 泛型常见约束</strong></h4><ul>
+<li><code>where T : struct</code> （值类型）</li>
+<li><code>where T : class</code> （引用类型）</li>
+<li><code>where T : new()</code> （有无参构造函数）</li>
+<li><code>where T : BaseClass</code> （基类约束）</li>
+<li><code>where T : ISomeInterface</code> （接口约束）</li>
+<li><code>where T : U</code> （裸类型约束，<code>T</code>需继承&#x2F;实现<code>U</code>）</li>
+</ul>
+<h4 id="24-五个常用集合类"><a href="#24-五个常用集合类" class="headerlink" title="24. 五个常用集合类"></a><strong>24. 五个常用集合类</strong></h4><ol>
+<li><code>List&lt;T&gt;</code> （动态数组）</li>
+<li><code>Dictionary&lt;TKey, TValue&gt;</code> （键值对哈希表）</li>
+<li><code>HashSet&lt;T&gt;</code> （不重复元素集合）</li>
+<li><code>Queue&lt;T&gt;</code> （先进先出队列）</li>
+<li><code>Stack&lt;T&gt;</code> （后进先出栈）</li>
 </ol>
-<p><strong>推荐星级：★★</strong><br><strong>难度：中级</strong></p>
-<hr>
-<h3 id="📌-MVC-原理题"><a href="#📌-MVC-原理题" class="headerlink" title="📌 MVC 原理题"></a>📌 <strong>MVC 原理题</strong></h3><h4 id="21-ASP-NET-Core-项目如何设置-IP-地址和端口号？"><a href="#21-ASP-NET-Core-项目如何设置-IP-地址和端口号？" class="headerlink" title="21. ASP.NET Core 项目如何设置 IP 地址和端口号？"></a><strong>21. ASP.NET Core 项目如何设置 IP 地址和端口号？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li>在 <code>launchSettings.json</code> 中设置：</li>
-</ul>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;applicationUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://localhost:5000&quot;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>或者代码中：</li>
-</ul>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webBuilder.UseUrls(<span class="string">&quot;http://*:5000&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="22-MVC-中-TempData-ViewBag-ViewData-区别？"><a href="#22-MVC-中-TempData-ViewBag-ViewData-区别？" class="headerlink" title="22. MVC 中 TempData\ViewBag\ViewData 区别？"></a><strong>22. MVC 中 TempData\ViewBag\ViewData 区别？</strong></h4><table>
+<h4 id="25-数据结构特点对比"><a href="#25-数据结构特点对比" class="headerlink" title="25. 数据结构特点对比"></a><strong>25. 数据结构特点对比</strong></h4><table>
 <thead>
 <tr>
-<th>特性</th>
-<th>ViewBag</th>
-<th>ViewData</th>
-<th>TempData</th>
+<th><strong>数据结构</strong></th>
+<th><strong>优点</strong></th>
+<th><strong>缺点</strong></th>
+<th><strong>典型应用</strong></th>
 </tr>
 </thead>
 <tbody><tr>
-<td>类型</td>
-<td>dynamic</td>
-<td>Dictionary&lt;string, object&gt;</td>
-<td>IDictionary&lt;string, object&gt;</td>
+<td><strong>数组</strong></td>
+<td>随机访问快，内存连续</td>
+<td>大小固定，插入删除慢</td>
+<td>固定大小集合</td>
 </tr>
 <tr>
-<td>生命周期</td>
-<td>当前请求</td>
-<td>当前请求</td>
-<td>可跨请求（需调用 Peek&#x2F;Keep）</td>
+<td><strong>链表</strong></td>
+<td>动态大小，插入删除快</td>
+<td>随机访问慢，内存不连续</td>
+<td>频繁增删的场景</td>
 </tr>
 <tr>
-<td>是否强类型</td>
-<td>否</td>
-<td>否</td>
-<td>否</td>
+<td><strong>哈希表</strong></td>
+<td>键值查找快（接近O(1)）</td>
+<td>无序，内存占用较大</td>
+<td>字典、缓存</td>
+</tr>
+<tr>
+<td><strong>队列</strong></td>
+<td>FIFO（先进先出）</td>
+<td>只能访问两端元素</td>
+<td>任务调度、消息队列</td>
+</tr>
+<tr>
+<td><strong>栈</strong></td>
+<td>LIFO（后进先出）</td>
+<td>只能访问栈顶元素</td>
+<td>函数调用、撤销操作</td>
 </tr>
 </tbody></table>
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：高难</strong></p>
 <hr>
-<h4 id="23-阐述下-MVC-框架的机制，各个模块的作用？"><a href="#23-阐述下-MVC-框架的机制，各个模块的作用？" class="headerlink" title="23. 阐述下 MVC 框架的机制，各个模块的作用？"></a><strong>23. 阐述下 MVC 框架的机制，各个模块的作用？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li><strong>Model</strong>：数据模型，业务逻辑</li>
-<li><strong>View</strong>：用户界面</li>
-<li><strong>Controller</strong>：接收请求，协调 Model 和 View</li>
+<h3 id="选择题精要"><a href="#选择题精要" class="headerlink" title="选择题精要"></a><strong>选择题精要</strong></h3><h4 id="26-关于泛型的错误说法"><a href="#26-关于泛型的错误说法" class="headerlink" title="26. 关于泛型的错误说法"></a><strong>26. 关于泛型的错误说法</strong></h4><ul>
+<li><strong>常见错误选项：</strong><ul>
+<li>“泛型会为每个值类型生成同一份本地代码” ❌（值类型会生成特化代码）</li>
+<li>“泛型编译后类型参数会被擦除” ❌（.NET泛型是<strong>具体化</strong>的，运行时保留类型信息）</li>
 </ul>
-<p><strong>机制流程：</strong></p>
-<ol>
-<li>用户发起请求 → Controller 处理</li>
-<li>Controller 调用 Model 获取数据</li>
-<li>Controller 返回 View，绑定数据</li>
-<li>View 渲染后返回给用户</li>
+</li>
+</ul>
+<h4 id="27-创建int泛型集合"><a href="#27-创建int泛型集合" class="headerlink" title="27. 创建int泛型集合"></a><strong>27. 创建int泛型集合</strong></h4><ul>
+<li><strong>正确方式：</strong> <code>List&lt;int&gt; list = new List&lt;int&gt;();</code></li>
+</ul>
+<h4 id="28-非泛型集合的主要问题"><a href="#28-非泛型集合的主要问题" class="headerlink" title="28. 非泛型集合的主要问题"></a><strong>28. 非泛型集合的主要问题</strong></h4><ol>
+<li><strong>类型不安全</strong>（需强制转换）</li>
+<li><strong>值类型装箱拆箱开销</strong></li>
+<li><strong>代码可读性差</strong></li>
 </ol>
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="24-ASP-NET-和-ASP-NET-MVC-的关系？"><a href="#24-ASP-NET-和-ASP-NET-MVC-的关系？" class="headerlink" title="24. ASP.NET 和 ASP.NET MVC 的关系？"></a><strong>24. ASP.NET 和 ASP.NET MVC 的关系？</strong></h4><p><strong>答案：</strong><br>ASP.NET MVC 是基于 ASP.NET 的 Web 开发框架，采用 MVC 架构模式，相比传统 WebForms 更适合构建结构清晰、易于测试的 Web 应用。</p>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="25-MVC-对-ASP-NET-好处在哪？"><a href="#25-MVC-对-ASP-NET-好处在哪？" class="headerlink" title="25. MVC 对 ASP.NET 好处在哪？"></a><strong>25. MVC 对 ASP.NET 好处在哪？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li>结构更清晰，职责分离</li>
-<li>易于单元测试</li>
-<li>更好的 SEO 支持</li>
-<li>更灵活的 URL 路由</li>
-<li>更少的状态管理依赖</li>
+<h4 id="29-类型推断的正确说法"><a href="#29-类型推断的正确说法" class="headerlink" title="29. 类型推断的正确说法"></a><strong>29. 类型推断的正确说法</strong></h4><ul>
+<li><strong>正确描述：</strong> 编译器能根据上下文推断泛型方法类型参数：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 无需显式指定T</span></span><br><span class="line"><span class="keyword">var</span> list = <span class="keyword">new</span> List&lt;<span class="built_in">int</span>&gt; &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> first = list.First(); <span class="comment">// 推断T为int</span></span><br></pre></td></tr></table></figure></li>
 </ul>
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="26-阐述什么是-Razor-View-Engine？"><a href="#26-阐述什么是-Razor-View-Engine？" class="headerlink" title="26. 阐述什么是 Razor View Engine？"></a><strong>26. 阐述什么是 Razor View Engine？</strong></h4><p><strong>答案：</strong><br>Razor 是 ASP.NET MVC 默认的视图引擎，使用简洁的语法嵌入 C# 代码到 HTML 中，以 <code>@</code> 符号开头。</p>
-<p><strong>优点：</strong></p>
-<ul>
-<li>语法简洁</li>
-<li>编译速度快</li>
-<li>支持智能感知</li>
+<h4 id="30-泛型方法是否只能出现在泛型类中？"><a href="#30-泛型方法是否只能出现在泛型类中？" class="headerlink" title="30. 泛型方法是否只能出现在泛型类中？"></a><strong>30. 泛型方法是否只能出现在泛型类中？</strong></h4><ul>
+<li><strong>错误！</strong> 普通类也可包含泛型方法：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">NormalClass</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GenericMethod</span>&lt;<span class="title">T</span>&gt;(<span class="params">T input</span>)</span> &#123; ... &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：高难</strong></p>
-<hr>
-<h4 id="27-C-view-bag-和-view-data-之间的区别是什么？"><a href="#27-C-view-bag-和-view-data-之间的区别是什么？" class="headerlink" title="27. C# view bag 和 view data 之间的区别是什么？"></a><strong>27. C# view bag 和 view data 之间的区别是什么？</strong></h4><table>
-<thead>
-<tr>
-<th>ViewBag</th>
-<th>ViewData</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>dynamic 类型</td>
-<td>字典类型</td>
-</tr>
-<tr>
-<td>使用方便</td>
-<td>需要类型转换</td>
-</tr>
-<tr>
-<td>不支持编译时检查</td>
-<td>支持编译时检查</td>
-</tr>
-<tr>
-<td>本质是对 ViewData 的封装</td>
-<td>原始字典对象</td>
-</tr>
-</tbody></table>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：中级</strong></p>
-<hr>
-<h4 id="28-解释一下-Sections？"><a href="#28-解释一下-Sections？" class="headerlink" title="28. 解释一下 Sections？"></a><strong>28. 解释一下 Sections？</strong></h4><p><strong>答案：</strong><br>Sections 是 Razor 视图中的命名代码块，可以在布局页面中定义占位符，在子视图中填充内容。</p>
-<p><strong>示例：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@section Footer &#123;</span><br><span class="line">    &lt;p&gt;Custom footer&lt;/p&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在 <code>_Layout.cshtml</code> 中使用：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@RenderSection(&quot;Footer&quot;, required: false)</span><br></pre></td></tr></table></figure>
-
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：中级</strong></p>
-<hr>
-<h4 id="29-解释为什么要使用-Html-Partial？"><a href="#29-解释为什么要使用-Html-Partial？" class="headerlink" title="29. 解释为什么要使用 Html.Partial？"></a><strong>29. 解释为什么要使用 Html.Partial？</strong></h4><p><strong>答案：</strong><br>用于渲染一个部分视图（Partial View），通常用于复用 UI 组件（如导航栏、侧边栏）。不会触发控制器动作，直接渲染视图。</p>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="30-解释什么是-Partial-View？"><a href="#30-解释什么是-Partial-View？" class="headerlink" title="30. 解释什么是 Partial View？"></a><strong>30. 解释什么是 Partial View？</strong></h4><p><strong>答案：</strong><br>Partial View 是一个没有布局的视图文件（<code>.cshtml</code>），用于在多个视图之间共享 UI 组件。可以通过 <code>Html.Partial()</code> 或 <code>Html.RenderPartial()</code> 加载。</p>
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：高难</strong></p>
-<hr>
-<h4 id="31-MVC-同时适用于-Windows-应用和-Web-应用吗？"><a href="#31-MVC-同时适用于-Windows-应用和-Web-应用吗？" class="headerlink" title="31. MVC 同时适用于 Windows 应用和 Web 应用吗？"></a><strong>31. MVC 同时适用于 Windows 应用和 Web 应用吗？</strong></h4><p><strong>答案：</strong><br>MVC 主要用于 Web 应用。Windows 应用通常使用 WPF 或 WinForm + MVVM&#x2F;MVP 模式。</p>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="32-已经有了-ASPX，为什么还要-Razor？"><a href="#32-已经有了-ASPX，为什么还要-Razor？" class="headerlink" title="32. 已经有了 ASPX，为什么还要 Razor？"></a><strong>32. 已经有了 ASPX，为什么还要 Razor？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li>Razor 语法更简洁</li>
-<li>更易读，减少 HTML 混合混乱</li>
-<li>支持智能感知和编译检查</li>
-<li>更适合现代 Web 开发需求</li>
+<h4 id="31-泛型类可以继承非泛型类吗？"><a href="#31-泛型类可以继承非泛型类吗？" class="headerlink" title="31. 泛型类可以继承非泛型类吗？"></a><strong>31. 泛型类可以继承非泛型类吗？</strong></h4><ul>
+<li><strong>可以！</strong> 例如：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyBase</span> &#123; &#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyGeneric</span>&lt;<span class="title">T</span>&gt; : <span class="title">MyBase</span> &#123; &#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="33-在-MVC-中如何去执行-Windows-认证？"><a href="#33-在-MVC-中如何去执行-Windows-认证？" class="headerlink" title="33. 在 MVC 中如何去执行 Windows 认证？"></a><strong>33. 在 MVC 中如何去执行 Windows 认证？</strong></h4><p><strong>答案：</strong><br>在 <code>web.config</code> 或 <code>Startup.cs</code> 中启用 Windows 认证：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)</span><br><span class="line">       .AddNegotiate();</span><br></pre></td></tr></table></figure>
-<p>并在 <code>Configure</code> 中启用认证中间件。</p>
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：高难</strong></p>
-<hr>
-<h4 id="34-C-在-MVC-中如何用表单认证？"><a href="#34-C-在-MVC-中如何用表单认证？" class="headerlink" title="34. C# 在 MVC 中如何用表单认证？"></a><strong>34. C# 在 MVC 中如何用表单认证？</strong></h4><p><strong>答案：</strong><br>使用 Cookie 认证：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)</span><br><span class="line">       .AddCookie(options =&gt; &#123;</span><br><span class="line">           options.LoginPath = <span class="string">&quot;/Account/Login&quot;</span>;</span><br><span class="line">       &#125;);</span><br></pre></td></tr></table></figure>
-<p>登录成功后调用：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> HttpContext.SignInAsync(userPrincipal);</span><br></pre></td></tr></table></figure>
-
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="35-MVC-有哪些不同类型的结果类型？"><a href="#35-MVC-有哪些不同类型的结果类型？" class="headerlink" title="35. MVC 有哪些不同类型的结果类型？"></a><strong>35. MVC 有哪些不同类型的结果类型？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li><code>ViewResult</code>：返回视图</li>
-<li><code>RedirectResult</code>：跳转</li>
-<li><code>JsonResult</code>：返回 JSON 数据</li>
-<li><code>ContentResult</code>：返回纯文本</li>
-<li><code>FileResult</code>：返回文件</li>
-<li><code>EmptyResult</code>：无结果</li>
-<li><code>PartialViewResult</code>：返回部分视图</li>
+<h4 id="32-事件是否可用泛型委托？泛型委托是否只能有一个类型参数？"><a href="#32-事件是否可用泛型委托？泛型委托是否只能有一个类型参数？" class="headerlink" title="32. 事件是否可用泛型委托？泛型委托是否只能有一个类型参数？"></a><strong>32. 事件是否可用泛型委托？泛型委托是否只能有一个类型参数？</strong></h4><ul>
+<li><strong>事件可用泛型委托：</strong> 是（如<code>EventHandler&lt;TEventArgs&gt;</code>）。</li>
+<li><strong>泛型委托参数数量：</strong> <strong>错误！</strong> 泛型委托可定义多个类型参数（如<code>Func&lt;T1,T2,TResult&gt;</code>有三个）。</li>
 </ul>
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：中级</strong></p>
 <hr>
-<h4 id="36-解释-MVC-中的打包压缩？"><a href="#36-解释-MVC-中的打包压缩？" class="headerlink" title="36. 解释 MVC 中的打包压缩？"></a><strong>36. 解释 MVC 中的打包压缩？</strong></h4><p><strong>答案：</strong><br>使用 <code>Microsoft.AspNetCore.SpaServices.Extensions</code> 或第三方库如 <code>BundlerMinifier</code> 对 CSS&#x2F;JS 文件进行合并和压缩，提升加载速度。</p>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="37-MVC-中还有哪些注释属性用来验证？"><a href="#37-MVC-中还有哪些注释属性用来验证？" class="headerlink" title="37. MVC 中还有哪些注释属性用来验证？"></a><strong>37. MVC 中还有哪些注释属性用来验证？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li><code>[Required]</code></li>
-<li><code>[StringLength(max)]</code></li>
-<li><code>[Range(min, max)]</code></li>
-<li><code>[EmailAddress]</code></li>
-<li><code>[Compare]</code></li>
-<li><code>[RegularExpression]</code></li>
-</ul>
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：高难</strong></p>
-<hr>
-<h4 id="38-ActionResult-和-ViewResult-有什么不同？"><a href="#38-ActionResult-和-ViewResult-有什么不同？" class="headerlink" title="38. ActionResult 和 ViewResult 有什么不同？"></a><strong>38. ActionResult 和 ViewResult 有什么不同？</strong></h4><table>
-<thead>
-<tr>
-<th>ActionResult</th>
-<th>ViewResult</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>抽象类</td>
-<td>具体类</td>
-</tr>
-<tr>
-<td>可以表示任何结果类型</td>
-<td>仅表示视图结果</td>
-</tr>
-<tr>
-<td>常用于控制器方法返回值</td>
-<td>用于明确返回视图</td>
-</tr>
-</tbody></table>
-<p><strong>推荐星级：★★★★</strong><br><strong>难度：中级</strong></p>
-<hr>
-<h4 id="39-MVC-中如何-C-执行打包？"><a href="#39-MVC-中如何-C-执行打包？" class="headerlink" title="39. MVC 中如何 C# 执行打包？"></a><strong>39. MVC 中如何 C# 执行打包？</strong></h4><p><strong>答案：</strong><br>使用 <code>BundleConfig.cs</code> 或 NuGet 插件如 <code>BuildBundlerMinifier</code>，对脚本和样式进行打包压缩。</p>
-<p><strong>推荐星级：★★★★★</strong><br><strong>难度：高难</strong></p>
-<hr>
-<h4 id="40-MVC-的路由选择是什么？"><a href="#40-MVC-的路由选择是什么？" class="headerlink" title="40. MVC 的路由选择是什么？"></a><strong>40. MVC 的路由选择是什么？</strong></h4><p><strong>答案：</strong><br>路由根据 URL 模式匹配控制器和动作方法。默认格式：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">routes.MapRoute(</span><br><span class="line">    name: <span class="string">&quot;Default&quot;</span>,</span><br><span class="line">    template: <span class="string">&quot;&#123;controller=Home&#125;/&#123;action=Index&#125;/&#123;id?&#125;&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="41-在-MVC-中提到-Area-的好处？"><a href="#41-在-MVC-中提到-Area-的好处？" class="headerlink" title="41. 在 MVC 中提到 Area 的好处？"></a><strong>41. 在 MVC 中提到 Area 的好处？</strong></h4><p><strong>答案：</strong><br>Area 将大型项目划分为多个功能区域，便于组织和管理，每个 Area 可以拥有自己的控制器、视图和路由。</p>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="42-解释一下-MVC-中的-RenderBody-和-RenderPage？"><a href="#42-解释一下-MVC-中的-RenderBody-和-RenderPage？" class="headerlink" title="42. 解释一下 MVC 中的 RenderBody 和 RenderPage？"></a><strong>42. 解释一下 MVC 中的 RenderBody 和 RenderPage？</strong></h4><p><strong>答案：</strong>  </p>
-<ul>
-<li><code>@RenderBody()</code>：主布局页中的占位符，表示子视图内容插入的位置。</li>
-<li><code>@RenderPage(&quot;~/Views/Shared/_Header.cshtml&quot;)</code>：渲染指定的局部视图。</li>
-</ul>
-<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
-<hr>
-<h4 id="43-解释这几个类的作用及关系：Visual-UIElement-FrameworkElement-Control？"><a href="#43-解释这几个类的作用及关系：Visual-UIElement-FrameworkElement-Control？" class="headerlink" title="43. 解释这几个类的作用及关系：Visual, UIElement, FrameworkElement, Control？"></a><strong>43. 解释这几个类的作用及关系：Visual, UIElement, FrameworkElement, Control？</strong></h4><table>
-<thead>
-<tr>
-<th>类名</th>
-<th>作用</th>
-<th>关系</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>Visual</code></td>
-<td>提供图形呈现基础类</td>
-<td>最底层基类</td>
-</tr>
-<tr>
-<td><code>UIElement</code></td>
-<td>提供输入、布局、事件等基础功能</td>
-<td>继承自 Visual</td>
-</tr>
-<tr>
-<td><code>FrameworkElement</code></td>
-<td>提供样式、绑定、资源等功能</td>
-<td>继承自 UIElement</td>
-</tr>
-<tr>
-<td><code>Control</code></td>
-<td>控件基类，提供模板、外观等</td>
-<td>继承自 FrameworkElement</td>
-</tr>
-</tbody></table>
-<p><strong>推荐星级：★★★★★</strong><br>**难度：高难</p>
+<p><strong>附：高效学习建议</strong></p>
+<ol>
+<li><strong>动手实践：</strong> 对每个集合类型编写CRUD操作代码。</li>
+<li><strong>理解场景：</strong> 结合数据结构特点思考适用场景（如<code>Dictionary</code>适合快速查找）。</li>
+<li><strong>对比分析：</strong> 对相似概念（如<code>IList</code> vs <code>List&lt;T&gt;</code>）做对比表格。</li>
+<li><strong>阅读源码：</strong> 通过.NET Reference Source查看<code>List&lt;T&gt;</code>等核心类的实现。</li>
+</ol>
+<blockquote>
+<p>掌握这些基础概念是进阶高级开发的必经之路，建议结合项目实践深化理解！</p>
+</blockquote>
 
   </div>
   
@@ -3188,10 +3053,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-16T23:56:35+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-17T00:00:43+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2025年6月16日</p>
+    <p>更新于：2025年6月17日</p>
   </a>
 </div>
 
@@ -3202,8 +3067,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C#</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E8%AF%95%E7%B3%BB%E5%88%97/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>面试系列</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%A1%86%E6%9E%B6/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>框架</p></a></div>
-  <span hidden itemprop="keywords">C# 面试系列 框架</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C#</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E8%AF%95%E7%B3%BB%E5%88%97/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>面试系列</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9B%86%E5%90%88/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>集合</p></a></div>
+  <span hidden itemprop="keywords">C# 面试系列 集合</span>
   
 
 
@@ -3217,7 +3082,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2025/06/16/C#%E6%A1%86%E6%9E%B6/&title=C#框架 - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა&pics=https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6ce.jpg&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2025/06/16/CSharp%E9%9B%86%E5%90%88%E7%B1%BB/&title=CSharp集合类[面试系列] - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა&pics=https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6d0.jpg&summary="
           
           >
           
@@ -3229,7 +3094,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2025/06/16/C#%E6%A1%86%E6%9E%B6/&title=C#框架 - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა&pics=https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6ce.jpg&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2025/06/16/CSharp%E9%9B%86%E5%90%88%E7%B1%BB/&title=CSharp集合类[面试系列] - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა&pics=https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6d0.jpg&summary="
           
           >
           
@@ -3241,7 +3106,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2025/06/16/C#%E6%A1%86%E6%9E%B6/&title=C#框架 - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა&pics=https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6ce.jpg&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2025/06/16/CSharp%E9%9B%86%E5%90%88%E7%B1%BB/&title=CSharp集合类[面试系列] - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა&pics=https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6d0.jpg&summary="
           
           >
           
@@ -3274,20 +3139,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2025/06/16/EF/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Entity Framework</p>
-          <p class='content'>📌 Entity Framework 原理与使用详解
-1. 简述什么是 Entity Framework？答案：Entity Framework（EF）是微软开发的 ORM（对象关系映射）框架...</p>
+        <a class='prev' href='/2025/06/16/CSharp%E8%BF%9B%E9%98%B6%E9%A2%98/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>CSharp进阶题[面试系列]</p>
+          <p class='content'>一、核心原理与框架
+ASP.NET vs ASP  
+
+进步：编译执行（非解释）、事件驱动、控件化开发、状态管理（ViewState）、母版页、安全机制（Membership）、AJAX集成。
+...</p>
         </a>
       
       
-        <a class='next' href='/2025/06/16/C#%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95/'>
-          <p class='title'>C#语言语法<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>一、ADO.NET 核心对象
-五个主要对象：
-Connection：建立数据库连接（如 SqlConnection）。
-Command：执行SQL命令（如 SqlCommand）。
-DataRe...</p>
+        <a class='next' href='/2025/06/16/CSharp%E6%9C%BA%E8%80%83%E9%A2%98/'>
+          <p class='title'>CSharp机考题[面试系列]<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1. 在ADO.NET中，对于Command对象的ExecuteNonQuery()方法和ExecuteReader()方法，下面叙述错误的是？答案：D. ExecuteReader用于执行查询...</p>
         </a>
       
     </div>
@@ -3306,7 +3170,7 @@ DataRe...</p>
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2025/06/16/C#%E6%A1%86%E6%9E%B6/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/06/16/CSharp%E9%9B%86%E5%90%88%E7%B1%BB/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -3348,7 +3212,7 @@ DataRe...</p>
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8C-ASP-NET-Core-%E5%8E%9F%E7%90%86%E9%A2%98"><span class="toc-text">📌 ASP.NET Core 原理题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-ASP-NET-Core-%E6%AF%94-ASP-NET-%E6%9B%B4%E5%85%B7%E4%BC%98%E5%8A%BF%E7%9A%84%E5%9C%B0%E6%96%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">1. ASP.NET Core 比 ASP.NET 更具优势的地方是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-ASP-NET-Core-%E4%B8%BB%E8%A6%81%E7%9A%84%E7%89%B9%E6%80%A7%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">2. ASP.NET Core 主要的特性有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-ASP-NET-Core-Filter-%E5%A6%82%E4%BD%95%E6%94%AF%E6%8C%81%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%EF%BC%9F"><span class="toc-text">3. ASP.NET Core Filter 如何支持依赖注入？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-ASP-Net-Core-%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E7%9A%84%E6%96%B9%E6%A1%88%EF%BC%9F"><span class="toc-text">4. ASP.Net Core 中有哪些异常处理的方案？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-C-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-ActionFilterAttribute%EF%BC%9F"><span class="toc-text">5. C# 如何使用 ActionFilterAttribute？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E9%98%90%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AF%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%EF%BC%9F"><span class="toc-text">6. 阐述什么是依赖注入？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-text">7. 依赖注入有哪几种方式？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E9%98%90%E8%BF%B0%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">8. 阐述控制反转是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E6%9C%89%E5%93%AA%E4%BA%9B%E8%91%97%E5%90%8D%E7%9A%84%E6%A1%86%E6%9E%B6%EF%BC%9F"><span class="toc-text">9. 依赖注入有哪些著名的框架？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-ABP-NEXT-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E8%AF%B7%E9%98%90%E8%BF%B0%EF%BC%9F"><span class="toc-text">10. ABP.NEXT 是什么，请阐述？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-%E7%AE%80%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AF-dot-net-core-%E7%9A%84-Startup-Class%EF%BC%9F"><span class="toc-text">11. 简述什么是 dot net core 的 Startup Class？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-%E8%A7%A3%E9%87%8A-Startup-Class-%E7%9A%84-Configure-%E6%96%B9%E6%B3%95%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-text">12. 解释 Startup Class 的 Configure 方法有什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-%E7%AE%80%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%88Middleware%EF%BC%89%EF%BC%9F"><span class="toc-text">13. 简述什么是中间件（Middleware）？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">14. 中间件的使用场景有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#15-%E8%AF%B7%E5%88%97%E4%B8%BE%E5%AE%98%E6%96%B9%E5%B8%B8%E7%94%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%9F"><span class="toc-text">15. 请列举官方常用的中间件？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16-Application-Builder-%E7%9A%84-Use-%E5%92%8C-Run-%E6%96%B9%E6%B3%95%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">16. Application Builder 的 Use 和 Run 方法有什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#17-dot-net-core-%E9%87%8C%E9%9D%A2%E7%9A%84-Map-%E6%8B%93%E5%B1%95%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-text">17. dot net core 里面的 Map 拓展有什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#18-dot-net-core-%E9%87%8C%E9%9D%A2%E7%9A%84%E8%B7%AF%E5%BE%84%E6%98%AF%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E7%9A%84%EF%BC%9F"><span class="toc-text">18. dot net core 里面的路径是如何处理的？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#19-dot-net-core-%E5%B7%A5%E7%A8%8B%E9%87%8C%E9%9D%A2%E7%9A%84%E5%B8%B8%E8%A7%81%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%EF%BC%9F"><span class="toc-text">19. dot net core 工程里面的常见工程文件？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#20-%E7%AE%80%E8%BF%B0%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%9F"><span class="toc-text">20. 简述依赖注入实现原理？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8C-MVC-%E5%8E%9F%E7%90%86%E9%A2%98"><span class="toc-text">📌 MVC 原理题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#21-ASP-NET-Core-%E9%A1%B9%E7%9B%AE%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE-IP-%E5%9C%B0%E5%9D%80%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7%EF%BC%9F"><span class="toc-text">21. ASP.NET Core 项目如何设置 IP 地址和端口号？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22-MVC-%E4%B8%AD-TempData-ViewBag-ViewData-%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">22. MVC 中 TempData\ViewBag\ViewData 区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#23-%E9%98%90%E8%BF%B0%E4%B8%8B-MVC-%E6%A1%86%E6%9E%B6%E7%9A%84%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%90%84%E4%B8%AA%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-text">23. 阐述下 MVC 框架的机制，各个模块的作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24-ASP-NET-%E5%92%8C-ASP-NET-MVC-%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-text">24. ASP.NET 和 ASP.NET MVC 的关系？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#25-MVC-%E5%AF%B9-ASP-NET-%E5%A5%BD%E5%A4%84%E5%9C%A8%E5%93%AA%EF%BC%9F"><span class="toc-text">25. MVC 对 ASP.NET 好处在哪？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#26-%E9%98%90%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AF-Razor-View-Engine%EF%BC%9F"><span class="toc-text">26. 阐述什么是 Razor View Engine？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#27-C-view-bag-%E5%92%8C-view-data-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">27. C# view bag 和 view data 之间的区别是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#28-%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B-Sections%EF%BC%9F"><span class="toc-text">28. 解释一下 Sections？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#29-%E8%A7%A3%E9%87%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-Html-Partial%EF%BC%9F"><span class="toc-text">29. 解释为什么要使用 Html.Partial？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#30-%E8%A7%A3%E9%87%8A%E4%BB%80%E4%B9%88%E6%98%AF-Partial-View%EF%BC%9F"><span class="toc-text">30. 解释什么是 Partial View？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#31-MVC-%E5%90%8C%E6%97%B6%E9%80%82%E7%94%A8%E4%BA%8E-Windows-%E5%BA%94%E7%94%A8%E5%92%8C-Web-%E5%BA%94%E7%94%A8%E5%90%97%EF%BC%9F"><span class="toc-text">31. MVC 同时适用于 Windows 应用和 Web 应用吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-%E5%B7%B2%E7%BB%8F%E6%9C%89%E4%BA%86-ASPX%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E8%A6%81-Razor%EF%BC%9F"><span class="toc-text">32. 已经有了 ASPX，为什么还要 Razor？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#33-%E5%9C%A8-MVC-%E4%B8%AD%E5%A6%82%E4%BD%95%E5%8E%BB%E6%89%A7%E8%A1%8C-Windows-%E8%AE%A4%E8%AF%81%EF%BC%9F"><span class="toc-text">33. 在 MVC 中如何去执行 Windows 认证？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#34-C-%E5%9C%A8-MVC-%E4%B8%AD%E5%A6%82%E4%BD%95%E7%94%A8%E8%A1%A8%E5%8D%95%E8%AE%A4%E8%AF%81%EF%BC%9F"><span class="toc-text">34. C# 在 MVC 中如何用表单认证？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#35-MVC-%E6%9C%89%E5%93%AA%E4%BA%9B%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%BB%93%E6%9E%9C%E7%B1%BB%E5%9E%8B%EF%BC%9F"><span class="toc-text">35. MVC 有哪些不同类型的结果类型？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#36-%E8%A7%A3%E9%87%8A-MVC-%E4%B8%AD%E7%9A%84%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%EF%BC%9F"><span class="toc-text">36. 解释 MVC 中的打包压缩？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#37-MVC-%E4%B8%AD%E8%BF%98%E6%9C%89%E5%93%AA%E4%BA%9B%E6%B3%A8%E9%87%8A%E5%B1%9E%E6%80%A7%E7%94%A8%E6%9D%A5%E9%AA%8C%E8%AF%81%EF%BC%9F"><span class="toc-text">37. MVC 中还有哪些注释属性用来验证？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#38-ActionResult-%E5%92%8C-ViewResult-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C%EF%BC%9F"><span class="toc-text">38. ActionResult 和 ViewResult 有什么不同？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#39-MVC-%E4%B8%AD%E5%A6%82%E4%BD%95-C-%E6%89%A7%E8%A1%8C%E6%89%93%E5%8C%85%EF%BC%9F"><span class="toc-text">39. MVC 中如何 C# 执行打包？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#40-MVC-%E7%9A%84%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">40. MVC 的路由选择是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#41-%E5%9C%A8-MVC-%E4%B8%AD%E6%8F%90%E5%88%B0-Area-%E7%9A%84%E5%A5%BD%E5%A4%84%EF%BC%9F"><span class="toc-text">41. 在 MVC 中提到 Area 的好处？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#42-%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B-MVC-%E4%B8%AD%E7%9A%84-RenderBody-%E5%92%8C-RenderPage%EF%BC%9F"><span class="toc-text">42. 解释一下 MVC 中的 RenderBody 和 RenderPage？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#43-%E8%A7%A3%E9%87%8A%E8%BF%99%E5%87%A0%E4%B8%AA%E7%B1%BB%E7%9A%84%E4%BD%9C%E7%94%A8%E5%8F%8A%E5%85%B3%E7%B3%BB%EF%BC%9AVisual-UIElement-FrameworkElement-Control%EF%BC%9F"><span class="toc-text">43. 解释这几个类的作用及关系：Visual, UIElement, FrameworkElement, Control？</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94"><span class="toc-text">核心问题解答</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Collection%E5%92%8CCollections%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">1. Collection和Collections的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-C-List-Set-Map%E6%98%AF%E5%90%A6%E7%BB%A7%E6%89%BF%E8%87%AACollection%E6%8E%A5%E5%8F%A3%EF%BC%9F"><span class="toc-text">2. C# List, Set, Map是否继承自Collection接口？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%93%BE%E8%A1%A8-ArrayList-%E5%92%8C%E6%95%B0%E7%BB%84-Array-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">3. 链表(ArrayList)和数组(Array)的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-HashMap%E5%92%8CHashtable%E5%8C%BA%E5%88%AB"><span class="toc-text">4. HashMap和Hashtable区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-IList%E6%8E%A5%E5%8F%A3%E4%B8%8EList%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">5. IList接口与List的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%B8%BB%E8%A6%81%E7%BA%A6%E6%9D%9F%E5%92%8C%E6%AC%A1%E8%A6%81%E7%BA%A6%E6%9D%9F"><span class="toc-text">6. 泛型的主要约束和次要约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-Set%E5%8C%BA%E5%88%86%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">7. Set区分重复元素的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E5%88%A4%E6%96%AD50%E4%B8%87int%E6%95%B0%E5%AD%97%E6%98%AF%E5%90%A6%E9%87%8D%E5%A4%8D%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="toc-text">8. 判断50万int数字是否重复的思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E4%B8%8D%E7%94%A8Max%E6%96%B9%E6%B3%95%E6%89%BEList%E6%9C%80%E5%A4%A7%E5%80%BC"><span class="toc-text">9. 不用Max方法找List最大值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-C-%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%8C%85%E5%90%AB%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="toc-text">10. C#异常类包含的信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="toc-text">11. 创建自定义异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-%E7%94%A8IEnumerable%E5%AE%9E%E7%8E%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="toc-text">12. 用IEnumerable实现斐波那契数列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-%E7%94%A8foreach%E5%92%8Cref%E4%B8%BA%E6%95%B0%E7%BB%84%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%E5%8A%A01"><span class="toc-text">13. 用foreach和ref为数组每个元素加1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-%E6%8D%95%E8%8E%B7%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%BC%82%E5%B8%B8"><span class="toc-text">14. 捕获不同类型的异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#15-%E9%81%BF%E5%85%8D%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%BC%82%E5%B8%B8"><span class="toc-text">15. 避免类型转换异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16-Serializable%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">16. Serializable特性的作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#17-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A7%94%E6%89%98"><span class="toc-text">17. 自定义委托</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#18-NET%E9%BB%98%E8%AE%A4%E5%A7%94%E6%89%98%E7%B1%BB%E5%9E%8B"><span class="toc-text">18. .NET默认委托类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#19-%E6%B3%9B%E5%9E%8B%E5%A7%94%E6%89%98"><span class="toc-text">19. 泛型委托</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#20-IEnumerable%E8%A7%A3%E9%87%8A"><span class="toc-text">20. IEnumerable解释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#21-IEnumerable%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">21. IEnumerable的缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22-%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">22. 泛型的优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#23-%E6%B3%9B%E5%9E%8B%E5%B8%B8%E8%A7%81%E7%BA%A6%E6%9D%9F"><span class="toc-text">23. 泛型常见约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24-%E4%BA%94%E4%B8%AA%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88%E7%B1%BB"><span class="toc-text">24. 五个常用集合类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#25-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%89%B9%E7%82%B9%E5%AF%B9%E6%AF%94"><span class="toc-text">25. 数据结构特点对比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E9%A2%98%E7%B2%BE%E8%A6%81"><span class="toc-text">选择题精要</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#26-%E5%85%B3%E4%BA%8E%E6%B3%9B%E5%9E%8B%E7%9A%84%E9%94%99%E8%AF%AF%E8%AF%B4%E6%B3%95"><span class="toc-text">26. 关于泛型的错误说法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#27-%E5%88%9B%E5%BB%BAint%E6%B3%9B%E5%9E%8B%E9%9B%86%E5%90%88"><span class="toc-text">27. 创建int泛型集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#28-%E9%9D%9E%E6%B3%9B%E5%9E%8B%E9%9B%86%E5%90%88%E7%9A%84%E4%B8%BB%E8%A6%81%E9%97%AE%E9%A2%98"><span class="toc-text">28. 非泛型集合的主要问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#29-%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD%E7%9A%84%E6%AD%A3%E7%A1%AE%E8%AF%B4%E6%B3%95"><span class="toc-text">29. 类型推断的正确说法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#30-%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95%E6%98%AF%E5%90%A6%E5%8F%AA%E8%83%BD%E5%87%BA%E7%8E%B0%E5%9C%A8%E6%B3%9B%E5%9E%8B%E7%B1%BB%E4%B8%AD%EF%BC%9F"><span class="toc-text">30. 泛型方法是否只能出现在泛型类中？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#31-%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%E9%9D%9E%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%90%97%EF%BC%9F"><span class="toc-text">31. 泛型类可以继承非泛型类吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-%E4%BA%8B%E4%BB%B6%E6%98%AF%E5%90%A6%E5%8F%AF%E7%94%A8%E6%B3%9B%E5%9E%8B%E5%A7%94%E6%89%98%EF%BC%9F%E6%B3%9B%E5%9E%8B%E5%A7%94%E6%89%98%E6%98%AF%E5%90%A6%E5%8F%AA%E8%83%BD%E6%9C%89%E4%B8%80%E4%B8%AA%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0%EF%BC%9F"><span class="toc-text">32. 事件是否可用泛型委托？泛型委托是否只能有一个类型参数？</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -3897,7 +3761,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://pic1.imgdb.cn/item/6823641758cb8da5c8f0b47b.jpg","https://pic1.imgdb.cn/item/6823641458cb8da5c8f0b470.png","https://pic1.imgdb.cn/item/6823641458cb8da5c8f0b471.jpg","https://pic1.imgdb.cn/item/6823672b58cb8da5c8f0b609.png","https://pic1.imgdb.cn/item/6823641658cb8da5c8f0b479.jpg","https://pic1.imgdb.cn/item/6823641658cb8da5c8f0b47a.png","https://pic1.imgdb.cn/item/6823671a58cb8da5c8f0b600.png"];
+  let imgs = ["https://pic1.imgdb.cn/item/6823672b58cb8da5c8f0b609.png","https://pic1.imgdb.cn/item/6823641658cb8da5c8f0b47a.png","https://pic1.imgdb.cn/item/6823671a58cb8da5c8f0b600.png","https://pic1.imgdb.cn/item/6823641658cb8da5c8f0b479.jpg","https://pic1.imgdb.cn/item/6823641758cb8da5c8f0b47b.jpg","https://pic1.imgdb.cn/item/6823641458cb8da5c8f0b470.png","https://pic1.imgdb.cn/item/6823641458cb8da5c8f0b471.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4130,7 +3994,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Fly","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Here is Fly’s Blos"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/C/","name":"C#"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/C/面试系列/","name":"面试系列"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2025/06/16/C#框架/","name":"C#框架"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","url":"http://example.com/","keywords":null,"description":"Here is Fly’s Blos","author":{"@type":"Person","name":"Fly","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Here is Fly’s Blos"},"publisher":{"@type":"Organization","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"C#框架","description":"Here is Fly’s Blos","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2025/06/16/C#%E6%A1%86%E6%9E%B6/"},"author":{"@type":"Person","name":"Fly","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2025/06/16/C#%E6%A1%86%E6%9E%B6/","wordCount":0,"datePublished":"2025-06-16T14:35:24.000Z","dateModified":"2025-06-16T15:56:35.895Z","articleSection":"C#","keywords":"C#,面试系列,框架","image":{"@type":"ImageObject","url":"https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6ce.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Fly","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Here is Fly’s Blos"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/C/","name":"C#"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/C/面试系列/","name":"面试系列"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2025/06/16/CSharp集合类/","name":"CSharp集合类[面试系列]"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","url":"http://example.com/","keywords":null,"description":"Here is Fly’s Blos","author":{"@type":"Person","name":"Fly","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Here is Fly’s Blos"},"publisher":{"@type":"Organization","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"CSharp集合类[面试系列]","description":"Here is Fly’s Blos","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2025/06/16/CSharp%E9%9B%86%E5%90%88%E7%B1%BB/"},"author":{"@type":"Person","name":"Fly","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2025/06/16/CSharp%E9%9B%86%E5%90%88%E7%B1%BB/","wordCount":0,"datePublished":"2025-06-16T14:33:24.000Z","dateModified":"2025-06-16T16:00:43.312Z","articleSection":"C#","keywords":"C#,面试系列,集合","image":{"@type":"ImageObject","url":"https://pic1.imgdb.cn/item/68502ee558cb8da5c851c6d0.jpg","width":1024,"height":768}}]</script>
 
 
 
