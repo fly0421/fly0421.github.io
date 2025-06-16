@@ -1,0 +1,4637 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,zh-TW,default">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1'>
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta name="Volantis" content="6.0.0-alpha.1">
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+  <link rel="canonical" href="http://example.com/2025/06/16/c#面向对象/"/>
+  <!-- 渲染优化 -->
+    <meta http-equiv='x-dns-prefetch-control' content='on' />
+      <link rel='dns-prefetch' href='https://unpkg.com'>
+      <link rel="preconnect" href="https://unpkg.com" crossorigin>
+      <link rel='dns-prefetch' href='https://cdn.bootcdn.net'>
+      <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <!-- import head_begin begin -->
+  <!-- import head_begin end -->
+  <!-- Custom Files headBegin begin-->
+  
+  <!-- Custom Files headBegin end-->
+    <link rel="shortcut icon" type='image/x-icon' href="https://picmdnew-1301987940.cos.ap-guangzhou.myqcloud.com/mySite/sheep.png">
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <!-- feed -->
+  <!-- 页面元数据 -->
+  <title>C#面向对象[面试系列] - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა</title>
+  <meta name="keywords" content="C#,面试系列,面向对象,null">
+  <meta desc name="description" content="Here is Fly’s Blos - Fly - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#面向对象[面试系列]">
+<meta property="og:url" content="http://example.com/2025/06/16/C#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
+<meta property="og:site_name" content="Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა">
+<meta property="og:description" content="📌 C# 基础与面向对象原理题1. 阐述 C# 装箱和拆箱？什么是重载？答案：    装箱（Boxing）：将值类型转换为引用类型（object），如： 12int i &#x3D; 10;object o &#x3D; i; &#x2F;&#x2F; 装箱 拆箱（Unboxing）：将引用类型强制转换回值类型： 1int j &#x3D; (int)o; &#x2F;&#x2F; 拆箱  重载（Overloading）：同一个类中方法名相同，但参数列表不同（数量">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2025-06-16T14:35:24.000Z">
+<meta property="article:modified_time" content="2025-06-16T15:03:56.438Z">
+<meta property="article:author" content="Fly">
+<meta property="article:tag" content="C#">
+<meta property="article:tag" content="面试系列">
+<meta property="article:tag" content="面向对象">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+  <style>
+    /* 首屏样式 */
+    #safearea {
+  display: none;
+}
+:root {
+  --color-site-body: #f4f4f4;
+  --color-site-bg: #f4f4f4;
+  --color-site-inner: #fff;
+  --color-site-footer: #666;
+  --color-card: #fff;
+  --color-text: #444;
+  --color-block: #f6f6f6;
+  --color-inlinecode: #c74f00;
+  --color-codeblock: #fff7ea;
+  --color-h1: #3a3a3a;
+  --color-h2: #3a3a3a;
+  --color-h3: #333;
+  --color-h4: #444;
+  --color-h5: #555;
+  --color-h6: #666;
+  --color-p: #444;
+  --color-list: #666;
+  --color-list-hl: #30ad91;
+  --color-meta: #888;
+  --color-read-bkg: #e0d8c8;
+  --color-read-post: #f8f1e2;
+  --color-copyright-bkg: #f5f5f5;
+  --link-color: #00323c;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+*::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: #3dd9b6;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #ff5722;
+}
+html {
+  color: var(--color-text);
+  width: 100%;
+  height: 100%;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-size: 16px;
+}
+html >::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+html >::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+html >::-webkit-scrollbar-thumb {
+  background: #3dd9b6;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+html >::-webkit-scrollbar-thumb:hover {
+  background: #ff5722;
+}
+body {
+  background-color: var(--color-site-body);
+  text-rendering: optimizelegibility;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body.modal-active {
+  overflow: hidden;
+}
+@media screen and (max-width: 680px) {
+  body.modal-active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+a {
+  color: #2092ec;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+a:hover {
+  color: #ff5722;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+ul,
+ol {
+  padding-left: 0;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+header {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+img {
+  border: 0;
+  background: none;
+  max-width: 100%;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  height: 0;
+  border: 0;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-bottom: 1px solid rgba(68,68,68,0.1);
+}
+button,
+input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+@supports (backdrop-filter: blur(20px)) {
+  .blur {
+    background: rgba(255,255,255,0.9) !important;
+    backdrop-filter: saturate(200%) blur(20px);
+  }
+}
+@supports (backdrop-filter: blur(20px)) {
+  .blur#comments {
+    backdrop-filter: unset;
+  }
+}
+#layoutHelper-comments {
+  margin-bottom: 100px;
+}
+.shadow {
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.shadow.floatable {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.shadow.floatable:hover {
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
+}
+#l_cover {
+  min-height: 64px;
+}
+.cover-wrapper {
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: 100vh;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  color: var(--color-site-inner);
+  padding: 0 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -100px;
+}
+.cover-wrapper .cover-body {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.cover-wrapper#full {
+  height: calc(100vh + 100px);
+  padding-bottom: 100px;
+}
+.cover-wrapper#half {
+  max-height: 640px;
+  min-height: 400px;
+  height: calc(36vh - 64px + 200px);
+}
+.cover-wrapper #scroll-down {
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+.cover-wrapper #scroll-down .scroll-down-effects {
+  color: #fff;
+  font-size: 24px;
+  line-height: 64px;
+  position: absolute;
+  width: 24px;
+  left: calc(50% - 12px);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  animation: scroll-down-effect 1.5s infinite;
+  -webkit-animation: scroll-down-effect 1.5s infinite;
+  -khtml-animation: scroll-down-effect 1.5s infinite;
+  -moz-animation: scroll-down-effect 1.5s infinite;
+  -o-animation: scroll-down-effect 1.5s infinite;
+  -ms-animation: scroll-down-effect 1.5s infinite;
+}
+@-moz-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.cover-wrapper .cover-body {
+  margin-top: 64px;
+  margin-bottom: 100px;
+}
+.cover-wrapper .cover-body,
+.cover-wrapper .cover-body .top,
+.cover-wrapper .cover-body .bottom {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  max-width: 100%;
+}
+.cover-wrapper .cover-body .bottom {
+  margin-top: 32px;
+}
+.cover-wrapper .cover-body .title {
+  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
+  font-size: 3.125rem;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.cover-wrapper .cover-body .subtitle {
+  font-size: 20px;
+}
+.cover-wrapper .cover-body .logo {
+  max-height: 120px;
+  max-width: calc(100% - 4 * 16px);
+}
+@media screen and (min-height: 1024px) {
+  .cover-wrapper .cover-body .title {
+    font-size: 3rem;
+  }
+  .cover-wrapper .cover-body .subtitle {
+    font-size: 1.05rem;
+  }
+  .cover-wrapper .cover-body .logo {
+    max-height: 150px;
+  }
+}
+.cover-wrapper .cover-body .m_search {
+  position: relative;
+  max-width: calc(100% - 16px);
+  width: 320px;
+  vertical-align: middle;
+}
+.cover-wrapper .cover-body .m_search .form {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  width: 100%;
+}
+.cover-wrapper .cover-body .m_search .icon,
+.cover-wrapper .cover-body .m_search .input {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.cover-wrapper .cover-body .m_search .icon {
+  position: absolute;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  line-height: 2.5rem;
+  width: 32px;
+  top: 0;
+  left: 5px;
+  color: rgba(68,68,68,0.75);
+}
+.cover-wrapper .cover-body .m_search .input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 0.875rem;
+  -webkit-appearance: none;
+  padding-left: 36px;
+  border-radius: 1.4rem;
+  -webkit-border-radius: 1.4rem;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border: none;
+  color: var(--color-text);
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper .cover-body .m_search .input {
+    padding-left: 36px;
+  }
+}
+.cover-wrapper .cover-body .m_search .input:hover {
+  background: rgba(255,255,255,0.8);
+}
+.cover-wrapper .cover-body .m_search .input:focus {
+  background: #fff;
+}
+.cover-wrapper .list-h {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -khtml-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  align-items: stretch;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.cover-wrapper .list-h a {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  font-weight: 600;
+}
+.cover-wrapper .list-h a img {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  margin: 4px;
+  min-width: 40px;
+  max-width: 44px;
+}
+@media screen and (max-width: 768px) {
+  .cover-wrapper .list-h a img {
+    min-width: 36px;
+    max-width: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper .list-h a img {
+    margin: 2px 4px;
+    min-width: 32px;
+    max-width: 36px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cover-wrapper .list-h a img {
+    min-width: 28px;
+    max-width: 32px;
+  }
+}
+.cover-wrapper {
+  max-width: 100%;
+}
+.cover-wrapper.search .bottom .menu {
+  margin-top: 16px;
+}
+.cover-wrapper.search .bottom .menu .list-h a {
+  white-space: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 2px;
+  margin: 4px;
+  color: var(--color-site-inner);
+  opacity: 0.75;
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border-bottom: 2px solid transparent;
+}
+.cover-wrapper.search .bottom .menu .list-h a i {
+  margin-right: 4px;
+}
+.cover-wrapper.search .bottom .menu .list-h a p {
+  font-size: 0.9375rem;
+}
+.cover-wrapper.search .bottom .menu .list-h a:hover,
+.cover-wrapper.search .bottom .menu .list-h a.active,
+.cover-wrapper.search .bottom .menu .list-h a:active {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  border-bottom: 2px solid var(--color-site-inner);
+}
+.cover-wrapper #parallax-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.parallax-mirror {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([color-scheme]) {
+    --color-site-body: #121212;
+    --color-read-bkg: #1f1f1f;
+    --color-read-post: #262626;
+    --color-site-bg: #1f1f1f;
+    --color-site-inner: rgba(238,238,238,0.871);
+    --color-site-footer: rgba(170,170,170,0.871);
+    --color-card: #262626;
+    --color-text: rgba(238,238,238,0.871);
+    --color-block: #434343;
+    --color-codeblock: #1f1f1f;
+    --color-inlinecode: #d56d28;
+    --color-h1: rgba(255,255,255,0.871);
+    --color-h2: rgba(255,255,255,0.871);
+    --color-h3: rgba(255,255,255,0.6);
+    --color-h4: rgba(255,255,255,0.6);
+    --color-h5: rgba(255,255,255,0.6);
+    --color-h6: rgba(255,255,255,0.6);
+    --color-p: rgba(217,217,217,0.871);
+    --color-list: rgba(217,217,217,0.871);
+    --color-list-hl: #63e0c4;
+    --color-meta: rgba(191,191,191,0.871);
+    --color-link: rgba(191,191,191,0.871);
+    --color-copyright-bkg: #21252b;
+    --link-color: #e4e4e4;
+  }
+  :root:not([color-scheme]) img {
+    filter: brightness(70%) !important;
+  }
+  :root:not([color-scheme]) .blur {
+    background: rgba(31,31,31,0.9) !important;
+  }
+  :root:not([color-scheme]) .white-box.blur {
+    background: rgba(38,38,38,0.9) !important;
+  }
+  :root:not([color-scheme]) .nav-main .u-search-input {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a:hover {
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) .article blockquote {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .article-title a {
+    color: var(--color-h1) !important;
+  }
+  :root:not([color-scheme]) details>summary {
+    color: var(--color-p) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) details {
+    border: 1px solid var(--color-site-bg) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal,
+  :root:not([color-scheme]) #u-search .modal-header,
+  :root:not([color-scheme]) #u-search .modal-body {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:focus {
+    background: var(--color-site-body) !important;
+  }
+}
+[color-scheme='dark'] {
+  --color-site-body: #121212;
+  --color-read-bkg: #1f1f1f;
+  --color-read-post: #262626;
+  --color-site-bg: #1f1f1f;
+  --color-site-inner: rgba(238,238,238,0.871);
+  --color-site-footer: rgba(170,170,170,0.871);
+  --color-card: #262626;
+  --color-text: rgba(238,238,238,0.871);
+  --color-block: #434343;
+  --color-codeblock: #1f1f1f;
+  --color-inlinecode: #d56d28;
+  --color-h1: rgba(255,255,255,0.871);
+  --color-h2: rgba(255,255,255,0.871);
+  --color-h3: rgba(255,255,255,0.6);
+  --color-h4: rgba(255,255,255,0.6);
+  --color-h5: rgba(255,255,255,0.6);
+  --color-h6: rgba(255,255,255,0.6);
+  --color-p: rgba(217,217,217,0.871);
+  --color-list: rgba(217,217,217,0.871);
+  --color-list-hl: #63e0c4;
+  --color-meta: rgba(191,191,191,0.871);
+  --color-link: rgba(191,191,191,0.871);
+  --color-copyright-bkg: #21252b;
+  --link-color: #e4e4e4;
+}
+[color-scheme='dark'] img {
+  filter: brightness(70%) !important;
+}
+[color-scheme='dark'] .blur {
+  background: rgba(31,31,31,0.9) !important;
+}
+[color-scheme='dark'] .white-box.blur {
+  background: rgba(38,38,38,0.9) !important;
+}
+[color-scheme='dark'] .nav-main .u-search-input {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a:hover {
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] .article blockquote {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .article-title a {
+  color: var(--color-h1) !important;
+}
+[color-scheme='dark'] details>summary {
+  color: var(--color-p) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] details {
+  border: 1px solid var(--color-site-bg) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] #u-search .modal,
+[color-scheme='dark'] #u-search .modal-header,
+[color-scheme='dark'] #u-search .modal-body {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #u-search .modal-body .modal-results .result:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:focus {
+  background: var(--color-site-body) !important;
+}
+@media screen and (max-width: 500px) {
+  [color-scheme='dark'] .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
+[color-scheme='dark'] .friend-card.color-bk-dark {
+  filter: brightness(0.8);
+}
+@font-face {
+  font-family: 'UbuntuMono';
+  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  font-weight: 'normal';
+  font-style: 'normal';
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Varela Round';
+  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
+  font-weight: 'normal';
+  font-style: 'normal';
+  font-display: swap;
+}
+.l_header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: var(--color-card);
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.l_header.auto {
+  transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+  -khtml-transition: opacity 0.4s ease;
+  -moz-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  -ms-transition: opacity 0.4s ease;
+  visibility: hidden;
+}
+.l_header.auto.show {
+  opacity: 1 !important;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+  visibility: visible;
+}
+.l_header .container {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.l_header #wrapper {
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.l_header #wrapper .nav-main,
+.l_header #wrapper .nav-sub {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -khtml-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  align-items: center;
+}
+.l_header #wrapper .nav-main {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.l_header #wrapper.sub .nav-main {
+  transform: translateY(-64px);
+  -webkit-transform: translateY(-64px);
+  -khtml-transform: translateY(-64px);
+  -moz-transform: translateY(-64px);
+  -o-transform: translateY(-64px);
+  -ms-transform: translateY(-64px);
+}
+.l_header #wrapper .nav-sub {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  height: 64px;
+  width: calc(100% - 2 * 16px);
+  position: absolute;
+}
+.l_header #wrapper .nav-sub ::-webkit-scrollbar {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media screen and (min-width: 2048px) {
+  .l_header #wrapper .nav-sub {
+    max-width: 55vw;
+    margin: auto;
+  }
+}
+.l_header #wrapper.sub .nav-sub {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+}
+.l_header #wrapper .title {
+  position: relative;
+  color: var(--color-text);
+  padding-left: 24px;
+  max-height: 64px;
+}
+.l_header #wrapper .nav-main .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  line-height: 64px;
+  padding: 0 24px;
+  font-size: 1.25rem;
+  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
+}
+.l_header #wrapper .nav-main .title img {
+  height: 64px;
+}
+.l_header .nav-sub {
+  max-width: 1080px;
+  margin: auto;
+}
+.l_header .nav-sub .title {
+  font-weight: bold;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  line-height: 1.2;
+  max-height: 64px;
+  white-space: normal;
+  flex-shrink: 1;
+}
+.l_header .switcher {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  line-height: 64px;
+  align-items: center;
+}
+.l_header .switcher .s-toc {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .l_header .switcher .s-toc {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+  }
+}
+.l_header .switcher >li {
+  height: 48px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  margin: 2px;
+}
+@media screen and (max-width: 500px) {
+  .l_header .switcher >li {
+    margin: 0 1px;
+    height: 48px;
+  }
+}
+.l_header .switcher >li >a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0.85em 1.1em;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  color: #3dd9b6;
+}
+.l_header .switcher >li >a:hover {
+  border: none;
+}
+.l_header .switcher >li >a.active,
+.l_header .switcher >li >a:active {
+  border: none;
+  background: var(--color-site-bg);
+}
+@media screen and (max-width: 500px) {
+  .l_header .switcher >li >a {
+    width: 36px;
+    height: 48px;
+  }
+}
+.l_header .nav-sub .switcher {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+}
+.l_header .m_search {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  height: 64px;
+  width: 240px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+@media screen and (max-width: 1024px) {
+  .l_header .m_search {
+    width: 44px;
+    min-width: 44px;
+  }
+  .l_header .m_search input::placeholder {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  .l_header .m_search:hover {
+    width: 240px;
+  }
+  .l_header .m_search:hover input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (min-width: 500px) {
+  .l_header .m_search:hover .input {
+    width: 100%;
+  }
+  .l_header .m_search:hover .input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search {
+    min-width: 0;
+  }
+  .l_header .m_search input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.l_header .m_search .form {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.l_header .m_search .icon {
+  position: absolute;
+  width: 36px;
+  left: 5px;
+  color: var(--color-meta);
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search .icon {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+.l_header .m_search .input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.3;
+  width: 100%;
+  color: var(--color-text);
+  background: #fafafa;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-left: 40px;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+@media screen and (min-width: 500px) {
+  .l_header .m_search .input:focus {
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search .input {
+    background: var(--color-block);
+    padding-left: 8px;
+    border: none;
+  }
+  .l_header .m_search .input:hover,
+  .l_header .m_search .input:focus {
+    border: none;
+  }
+}
+@media (max-width: 500px) {
+  .l_header .m_search {
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    background: #fff;
+    transition: all 0.28s ease;
+    -webkit-transition: all 0.28s ease;
+    -khtml-transition: all 0.28s ease;
+    -moz-transition: all 0.28s ease;
+    -o-transition: all 0.28s ease;
+    -ms-transition: all 0.28s ease;
+  }
+  .l_header .m_search .input {
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    margin-left: 16px;
+    padding-left: 16px;
+  }
+  .l_header.z_search-open .m_search {
+    width: 100%;
+  }
+  .l_header.z_search-open .m_search .input {
+    width: calc(100% - 120px);
+  }
+}
+ul.m-pc >li>a {
+  color: inherit;
+  border-bottom: 2px solid transparent;
+}
+ul.m-pc >li>a:active,
+ul.m-pc >li>a.active {
+  border-bottom: 2px solid #3dd9b6;
+}
+ul.m-pc li:hover >ul.list-v,
+ul.list-v li:hover >ul.list-v {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+ul.nav-list-h {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: stretch;
+}
+ul.nav-list-h>li {
+  position: relative;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  height: 100%;
+  line-height: 2.4;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+ul.nav-list-h>li >a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+}
+ul.list-v {
+  z-index: 1;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: absolute;
+  background: var(--color-card);
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  margin-top: -6px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 8px 0;
+}
+ul.list-v.show {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+ul.list-v hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+ul.list-v >li {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+ul.list-v >li.header {
+  font-size: 0.78125rem;
+  font-weight: bold;
+  line-height: 2em;
+  color: var(--color-meta);
+  margin: 8px 16px 4px;
+}
+ul.list-v >li.header i {
+  margin-right: 8px;
+}
+ul.list-v >li ul {
+  margin-left: 0;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  margin-top: -40px;
+}
+ul.list-v .aplayer-container {
+  min-height: 64px;
+  padding: 6px 16px;
+}
+ul.list-v >li>a {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  color: var(--color-list);
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 0 20px 0 16px;
+  text-overflow: ellipsis;
+  margin: 0 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+@media screen and (max-width: 1024px) {
+  ul.list-v >li>a {
+    line-height: 40px;
+  }
+}
+ul.list-v >li>a >i {
+  margin-right: 8px;
+}
+ul.list-v >li>a:active,
+ul.list-v >li>a.active {
+  color: var(--color-list-hl);
+}
+ul.list-v >li>a:hover {
+  color: var(--color-list-hl);
+  background: var(--color-site-bg);
+}
+.l_header .menu >ul>li>a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  padding: 0 8px;
+}
+.l_header .menu >ul>li>a >i {
+  margin-right: 4px;
+}
+.l_header ul.nav-list-h>li {
+  color: var(--color-list);
+  line-height: 64px;
+}
+.l_header ul.nav-list-h>li >a {
+  max-height: 64px;
+  overflow: hidden;
+  color: inherit;
+}
+.l_header ul.nav-list-h>li >a:active,
+.l_header ul.nav-list-h>li >a.active {
+  color: #3dd9b6;
+}
+.l_header ul.nav-list-h>li:hover>a {
+  color: var(--color-list-hl);
+}
+.l_header ul.nav-list-h>li i.music {
+  animation: rotate-effect 1.5s linear infinite;
+  -webkit-animation: rotate-effect 1.5s linear infinite;
+  -khtml-animation: rotate-effect 1.5s linear infinite;
+  -moz-animation: rotate-effect 1.5s linear infinite;
+  -o-animation: rotate-effect 1.5s linear infinite;
+  -ms-animation: rotate-effect 1.5s linear infinite;
+}
+@-moz-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+.menu-phone li ul.list-v {
+  right: calc(100% - 0.5 * 16px);
+}
+.menu-phone li ul.list-v ul {
+  right: calc(100% - 0.5 * 16px);
+}
+#wrapper {
+  max-width: 1080px;
+  margin: auto;
+}
+@media screen and (min-width: 2048px) {
+  #wrapper {
+    max-width: 55vw;
+  }
+}
+#wrapper .menu {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  margin: 0 16px 0 0;
+}
+#wrapper .menu .list-v ul {
+  left: calc(100% - 0.5 * 16px);
+}
+.menu-phone {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  margin-top: 16px;
+  right: 8px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.menu-phone ul {
+  right: calc(100% - 0.5 * 16px);
+}
+@media screen and (max-width: 500px) {
+  .menu-phone {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: block;
+  }
+}
+.l_header {
+  max-width: 65vw;
+  left: calc((100% - 65vw) * 0.5);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+@media screen and (max-width: 2048px) {
+  .l_header {
+    max-width: 1112px;
+    left: calc((100% - 1112px) * 0.5);
+  }
+}
+@media screen and (max-width: 1112px) {
+  .l_header {
+    left: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .l_header #wrapper .nav-main .title {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .l_header #wrapper .nav-sub {
+    width: 100%;
+  }
+  .l_header #wrapper .nav-sub .title {
+    overflow-y: scroll;
+    margin-top: 2px;
+    padding: 8px 16px;
+  }
+  .l_header #wrapper .switcher {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+    margin-right: 8px;
+  }
+  .l_header .menu {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .list-v li {
+    max-width: 270px;
+  }
+}
+#u-search {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px 20px;
+  z-index: 1001;
+}
+@media screen and (max-width: 680px) {
+  #u-search {
+    padding: 0px;
+  }
+}
+@media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
+  .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
+
+  </style>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+    <script>
+      let userColorScheme=localStorage.getItem("color-scheme")
+      if(userColorScheme){
+        document.documentElement.setAttribute("color-scheme", userColorScheme);
+      }
+    </script>
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+    '.kill-t{'+
+      'font-size: 2rem;'+
+    '}'+
+    '.kill-c{'+
+      'font-size: 1.2rem;'+
+    '}'+
+		'#l_header,#l_body{'+
+			'display: none;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
+        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+    .kill-t{
+      font-size: 2rem;
+    }
+    .kill-c{
+      font-size: 1.2rem;
+    }
+		#l_header,#l_body{
+			display: none;
+		}
+	</style>
+    <div class="kill-noscript">
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+
+  <script>
+  /************这个文件存放不需要重载的全局变量和全局函数*********/
+  window.volantis = {}; // volantis 全局变量
+  volantis.debug = "env"; // 调试模式
+  volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
+  /******************** volantis.dom.$ ********************************/
+  // 注：这里没有选择器，也没有forEach一次只处理一个dom，这里重新封装主题常用的dom方法，返回的是dom对象，对象包含了以下方法，同时保留dom的原生API
+  function volantisDom(ele) {
+    if (!ele) ele = document.createElement("div")
+    this.ele = ele;
+    // ==============================================================
+    this.ele.find = (c) => {
+      let q = this.ele.querySelector(c)
+      if (q)
+        return new volantisDom(q)
+    }
+    // ==============================================================
+    this.ele.hasClass = (c) => {
+      return this.ele.className.match(new RegExp('(\\s|^)' + c + '(\\s|$)'));
+    }
+    this.ele.addClass = (c) => {
+      this.ele.classList.add(c);
+      return this.ele
+    }
+    this.ele.removeClass = (c) => {
+      this.ele.classList.remove(c);
+      return this.ele
+    }
+    this.ele.toggleClass = (c) => {
+      if (this.ele.hasClass(c)) {
+        this.ele.removeClass(c)
+      } else {
+        this.ele.addClass(c)
+      }
+      return this.ele
+    }
+    // ==============================================================
+    this.ele.on = (c, f) => {
+      this.ele.addEventListener(c, f, false)
+      return this.ele
+    }
+    this.ele.click = (f, r) => {
+      this.ele.on("click", f, r)
+      return this.ele
+    }
+    this.ele.scroll = (f, r) => {
+      this.ele.on("scroll", f, r)
+      return this.ele
+    }
+    // ==============================================================
+    this.ele.html = (c) => {
+      // if(c=== undefined){
+      //   return this.ele.innerHTML
+      // }else{
+      this.ele.innerHTML = c
+      return this.ele
+      // }
+    }
+    // ==============================================================
+    this.ele.hide = (c) => {
+      this.ele.style.display = "none"
+      return this.ele
+    }
+    this.ele.show = (c) => {
+      this.ele.style.display = "block"
+      return this.ele
+    }
+    // ==============================================================
+    return this.ele
+  }
+  volantis.dom.$ = (ele) => {
+    return !!ele ? new volantisDom(ele) : null;
+  }
+  /******************** RunItem ********************************/
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          volantis.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+  /******************** RightMenu ********************************/
+  // volantis.rightmenu.handle(callBack[,"callBackName"]) 外部菜单项控制
+  // 可在 volantis.mouseEvent 处获取右键事件
+  volantis.rightmenu = {};
+  volantis.rightmenu.method = {
+    handle: new RunItem(),
+  }
+  volantis.rightmenu = Object.assign(volantis.rightmenu, {
+    handle: volantis.rightmenu.method.handle.push,
+  });
+  /********************  Dark Mode  ********************************/
+  // /layout/_partial/scripts/darkmode.ejs
+  // volantis.dark.mode 当前模式 dark or light
+  // volantis.dark.toggle() 暗黑模式触发器
+  // volantis.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  volantis.dark = {};
+  volantis.dark.method = {
+    toggle: new RunItem(),
+  };
+  volantis.dark = Object.assign(volantis.dark, {
+    push: volantis.dark.method.toggle.push,
+  });
+  /********************  Message  ********************************/
+  // VolantisApp.message
+  /********************  isMobile  ********************************/
+  // /source/js/app.js
+  // volantis.isMobile
+  // volantis.isMobileOld
+  /********************脚本动态加载函数********************************/
+  // volantis.js(src, cb)  cb 可以传入onload回调函数 或者 JSON对象 例如: volantis.js("src", ()=>{}) 或 volantis.js("src", {defer:true,onload:()=>{}})
+  // volantis.css(src)
+
+  // 返回Promise对象，如下方法同步加载资源，这利于处理文件资源之间的依赖关系，例如：APlayer 需要在 MetingJS 之前加载
+  // (async () => {
+  //     await volantis.js("...theme.plugins.aplayer.js.aplayer...")
+  //     await volantis.js("...theme.plugins.aplayer.js.meting...")
+  // })();
+
+  // 已经加入了setTimeout
+  volantis.js = (src, cb) => {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
+    });
+  }
+  volantis.css = (src) => {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
+      });
+    });
+  }
+  /********************按需加载的插件********************************/
+  // volantis.import.jQuery().then(()=>{})
+  volantis.import = {
+    jQuery: () => {
+      if (typeof jQuery == "undefined") {
+        return volantis.js("https://unpkg.com/jquery@3.7.1/dist/jquery.min.js")
+      } else {
+        return new Promise(resolve => {
+          resolve()
+        });
+      }
+    }
+  }
+  /********************** requestAnimationFrame ********************************/
+  // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  volantis.requestAnimationFrame = (fn) => {
+    if (!window.requestAnimationFrame) {
+      window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+    }
+    window.requestAnimationFrame(fn)
+  }
+  /************************ layoutHelper *****************************************/
+  volantis.layoutHelper = (helper, html, opt) => {
+    opt = Object.assign({ clean: false}, opt)
+    function myhelper(helper, html, clean) {
+      volantis.tempDiv = document.createElement("div");
+      volantis.tempDiv.innerHTML = html;
+      let layoutHelper = document.querySelector("#layoutHelper-" + helper)
+      if (layoutHelper) {
+        if (clean) {
+          layoutHelper.innerHTML = ""
+        }
+        layoutHelper.append(volantis.tempDiv);
+      }
+    }
+    myhelper(helper, html, opt.clean)
+  }
+  /****************************** 滚动事件处理 ****************************************/
+  volantis.scroll = {
+    engine: new RunItem(),
+    unengine: new RunItem(),
+  };
+  volantis.scroll = Object.assign(volantis.scroll, {
+    push: volantis.scroll.engine.push,
+  });
+  // 滚动条距离顶部的距离
+  volantis.scroll.getScrollTop = () => {
+    let scrollPos;
+    if (window.pageYOffset) {
+      scrollPos = window.pageYOffset;
+    } else if (document.compatMode && document.compatMode != 'BackCompat') {
+      scrollPos = document.documentElement.scrollTop;
+    } else if (document.body) {
+      scrollPos = document.body.scrollTop;
+    }
+    return scrollPos;
+  }
+  volantis.scroll.scrollHeight = function () {
+    return Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+    )
+  }
+  volantis.scroll.offsetHeight = function () {
+    return Math.max(
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
+    )
+  }
+  volantis.scroll.progress = function () {
+    return volantis.scroll.getScrollTop() / (volantis.scroll.scrollHeight() - volantis.scroll.offsetHeight())
+  }
+  // 使用 requestAnimationFrame 处理滚动事件
+  // `volantis.scroll.del` 中存储了一个数值, 该数值检测一定时间间隔内滚动条滚动的位移, 数值的检测频率是浏览器的刷新频率. 数值为正数时, 表示向下滚动. 数值为负数时, 表示向上滚动.
+  volantis.scroll.handleScrollEvents = () => {
+    volantis.scroll.lastScrollTop = volantis.scroll.getScrollTop()
+    function loop() {
+      const scrollTop = volantis.scroll.getScrollTop();
+      if (volantis.scroll.lastScrollTop !== scrollTop) {
+        volantis.scroll.del = scrollTop - volantis.scroll.lastScrollTop;
+        volantis.scroll.lastScrollTop = scrollTop;
+        // if (volantis.scroll.del > 0) {
+        //   console.log("向下滚动");
+        // } else {
+        //   console.log("向上滚动");
+        // }
+        // 注销过期的unengine未滚动事件
+        volantis.scroll.unengine.list = []
+        volantis.scroll.engine.start();
+      } else {
+        volantis.scroll.unengine.start();
+      }
+      volantis.requestAnimationFrame(loop)
+    }
+    volantis.requestAnimationFrame(loop)
+  }
+  volantis.scroll.handleScrollEvents()
+  volantis.scroll.ele = null;
+  // 触发页面滚动至目标元素位置
+  volantis.scroll.to = (ele, option = {}) => {
+    if (!ele) return;
+    volantis.scroll.ele = ele;
+    // 默认配置
+    opt = {
+      top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
+      behavior: "smooth"
+    }
+    // 定义配置
+    if ("top" in option) {
+      opt.top = option.top
+    }
+    if ("behavior" in option) {
+      opt.behavior = option.behavior
+    }
+    if ("addTop" in option) {
+      opt.top += option.addTop
+    }
+    if (!("observerDic" in option)) {
+      option.observerDic = 100
+    }
+    // 滚动
+    window.scrollTo(opt);
+    // 监视器
+    // 监视并矫正元素滚动到指定位置
+    // 用于处理 lazyload 引起的 cls 导致的定位失败问题
+    // option.observer = false
+    if (option.observer) {
+      setTimeout(() => {
+        if (volantis.scroll.ele != ele) {
+          return
+        }
+        volantis.scroll.unengine.push(() => {
+          let me = ele.getBoundingClientRect().top
+          if (!(me >= -option.observerDic && me <= option.observerDic)) {
+            volantis.scroll.to(ele, option)
+          }
+          volantis.scroll.unengine.remove("unengineObserver")
+        }, "unengineObserver")
+      }, 1000)
+    }
+  }
+  /********************** Content Visibility ********************************/
+  // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
+  // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
+  // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
+  volantis.cleanContentVisibility = () => {
+    if (document.querySelector(".post-story")) {
+      console.log("cleanContentVisibility");
+      document.querySelectorAll(".post-story").forEach(e => {
+        e.classList.remove("post-story")
+      })
+    }
+  }
+  /******************************************************************************/
+  /******************************************************************************/
+  /******************************************************************************/
+  //图像加载出错时的处理
+  function errorImgAvatar(img) {
+    img.src = "https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg";
+    img.onerror = null;
+  }
+  function errorImgCover(img) {
+    img.src = "https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg";
+    img.onerror = null;
+  }
+  /******************************************************************************/
+</script>
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  pdata.commentConfig={};
+  volantis.GLOBAL_CONFIG ={
+    root: '/',
+    debug: "env",
+    default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date(1750086695564),
+    cdn: {
+      izitoast_css: 'https://unpkg.com/izitoast@1.4.0/dist/css/iziToast.min.css',
+      izitoast_js: 'https://unpkg.com/izitoast@1.4.0/dist/js/iziToast.min.js',
+      fancybox_css: 'https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css',
+      fancybox_js: 'https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js'
+    },
+    sidebar: {
+      for_page: ["blogger","category","tagcloud","donate","webinfo","music","lastupdate"],
+      for_post: ["toc"],
+      webinfo: {
+        lastupd: {
+          enable: true,
+          friendlyShow: true
+        },
+        runtime: {
+          data: "2025/05/10",
+          unit: "天"
+        }
+      }
+    },
+    plugins: {
+      message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
+      
+      aplayer: {
+        id: 2090675384,
+        enable:true
+      },
+      
+      
+    },
+    search: {
+      
+
+      
+        dataPath: (("/" || "/").endsWith("/") ? "/" || "/" : "//" || "/") + "content.json",
+      
+
+      
+    },
+    languages: {
+      
+        search: {
+          hits_empty: "找不到您查询的内容：${query}",
+          hits_stats: "找到 ${hits} 条结果，用时 ${time} 毫秒",
+        }
+      
+    }
+  }
+</script>
+  <!-- import head_end begin -->
+  <!-- import head_end end -->
+  <!-- Custom Files headEnd begin-->
+  
+  <!-- Custom Files headEnd end-->
+</head>
+  <body itemscope itemtype="https://schema.org.cn/WebPage"> 
+	<script src="https://gcore.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_slide.js"></script>
+	<script src="https://gcore.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_click.js"></script>
+	<script>
+		//动态标题
+		var OriginTitile = document.title;
+		var titleTime;
+		document.addEventListener('visibilitychange', function () {
+		  if (document.hidden) {
+			//离开当前页面时标签显示内容
+			document.title = '跑哪里去啦 👀 👀 👀 ？';
+			clearTimeout(titleTime);
+		  } else {
+			//返回当前页面时标签显示内容
+			document.title = '抓到你啦 ～ 🐖 ⬅ ';
+			//两秒后变回正常标题
+			titleTime = setTimeout(function () {
+			  document.title = OriginTitile;
+			}, 2000);
+		  }
+		});
+	</script
+    <!-- import body_begin begin--> 
+    <!-- import body_begin end-->
+    <!-- Custom Files bodyBegin begin-->
+    
+    <!-- Custom Files bodyBegin end-->
+    <header itemscope itemtype="https://schema.org.cn/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone'>
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" title="comment"></a></li>
+        
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" title="toc"></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://picmdnew-1301987940.cos.ap-guangzhou.myqcloud.com/mySite/sheep.png'/>
+          
+          
+            <i class='https://picmdnew-1301987940.cos.ap-guangzhou.myqcloud.com/mySite/sheep.png'></i>
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="首页"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                 title="更多"
+                  
+                  
+                  >
+                  <i class='fa-solid fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/artitalk/" title="说说"
+                  
+                  
+                  
+                    active-action="action-artitalk"
+                  >
+                  <i class='fa-solid fa-comments fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/photos/" title="相册"
+                  
+                  
+                  
+                    active-action="action-photos"
+                  >
+                  <i class='fas fa-images fa-fw'></i>相册
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+       
+	  <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fa-solid fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="搜索" />
+        </form>
+      </div>
+      
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" title="search"></a></li>
+				
+				<li>
+          <a class="s-menu fa-solid fa-bars fa-fw" target="_self" title="menu"></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="首页"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                 title="更多"
+                  
+                  
+                  >
+                  <i class='fa-solid fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/artitalk/" title="说说"
+                  
+                  
+                  
+                    active-action="action-artitalk"
+                  >
+                  <i class='fa-solid fa-comments fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/photos/" title="相册"
+                  
+                  
+                  
+                    active-action="action-photos"
+                  >
+                  <i class='fas fa-images fa-fw'></i>相册
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+
+      <!-- Custom Files header begin -->
+      
+      <!-- Custom Files header end -->
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+      <div class="cover-wrapper post search" id='half'>
+        
+  <div id="parallax-window"></div>
+
+<div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Fly’s Blog</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="Welcome to Fly's Blog" />
+          <i class="icon fa-solid fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              active-action="action-home">
+              <p>主页</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <p>标签</p>
+            </a>
+          
+            <a href="/categories/"
+              
+              
+              active-action="action-categories">
+              <p>分类</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              active-action="action-archives">
+              <p>归档</p>
+            </a>
+          
+            <a href="/about/"
+              
+              
+              active-action="action-about">
+              <p>关于</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    
+  
+</div>
+
+      <div id="safearea">
+        <div class="body-wrapper">
+          
+<div id="l_main" class=''>
+  <article itemscope itemtype="https://schema.org.cn/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/06/16/C#面向对象/">
+  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
+    <meta itemprop="name" content="Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
+    <meta itemprop="name" content="Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა">
+    <meta itemprop="description" content="Here is Fly’s Blos">
+  </span>
+  
+
+
+  
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img itemprop="image" class='headimg' src='https://pic1.imgdb.cn/item/6850320d58cb8da5c851c781.jpg'/>
+      </a>
+    </div>
+  
+  <div class="article-meta" id="top">
+    
+    
+      <a title='C#面向对象[面试系列]' href='/2025/06/16/C#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/'>
+        <img itemprop="image" class='thumbnail' src='https://pic1.imgdb.cn/item/6850320d58cb8da5c851c781.jpg'>
+      </a>
+    
+    
+      <h1 class="title" itemprop="name headline">
+        C#面向对象[面试系列]
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="https://schema.org.cn/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://picmdnew-1301987940.cos.ap-guangzhou.myqcloud.com/mySite/sheep.png" class="lazyload" data-srcset="https://picmdnew-1301987940.cos.ap-guangzhou.myqcloud.com/mySite/sheep.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">fengliyang</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/C/">C#</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/C/" itemprop="url"><span itemprop="name">C#</span></a>
+      </span>
+    
+  </div>
+  
+
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-16T22:35:24+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2025年6月16日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span data-path="/2025/06/16/C#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="waline-pageview-count">
+        <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+      </span>
+        
+      <span>次浏览</span>
+    </p>
+  </a>
+</div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h3 id="📌-C-基础与面向对象原理题"><a href="#📌-C-基础与面向对象原理题" class="headerlink" title="📌 C# 基础与面向对象原理题"></a>📌 <strong>C# 基础与面向对象原理题</strong></h3><h4 id="1-阐述-C-装箱和拆箱？什么是重载？"><a href="#1-阐述-C-装箱和拆箱？什么是重载？" class="headerlink" title="1. 阐述 C# 装箱和拆箱？什么是重载？"></a><strong>1. 阐述 C# 装箱和拆箱？什么是重载？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li><p><strong>装箱（Boxing）</strong>：将值类型转换为引用类型（<code>object</code>），如：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> i = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">object</span> o = i; <span class="comment">// 装箱</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>拆箱（Unboxing）</strong>：将引用类型强制转换回值类型：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> j = (<span class="built_in">int</span>)o; <span class="comment">// 拆箱</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>重载（Overloading）</strong>：同一个类中方法名相同，但参数列表不同（数量、类型或顺序不同）。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Show</span>(<span class="params"><span class="built_in">int</span> a</span>)</span> &#123; &#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Show</span>(<span class="params"><span class="built_in">string</span> s</span>)</span> &#123; &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：中级</strong></p>
+<hr>
+<h4 id="2-详述-NET-里-class-和-struct-的异同？"><a href="#2-详述-NET-里-class-和-struct-的异同？" class="headerlink" title="2. 详述 .NET 里 class 和 struct 的异同？"></a><strong>2. 详述 .NET 里 class 和 struct 的异同？</strong></h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>class</th>
+<th>struct</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类型</td>
+<td>引用类型</td>
+<td>值类型</td>
+</tr>
+<tr>
+<td>继承</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>构造函数</td>
+<td>可以有无参构造</td>
+<td>必须带参数</td>
+</tr>
+<tr>
+<td>默认初始化</td>
+<td>null</td>
+<td>自动初始化</td>
+</tr>
+<tr>
+<td>存储位置</td>
+<td>堆</td>
+<td>栈</td>
+</tr>
+</tbody></table>
+<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="3-C-中的接口和类有什么异同？"><a href="#3-C-中的接口和类有什么异同？" class="headerlink" title="3. C# 中的接口和类有什么异同？"></a><strong>3. C# 中的接口和类有什么异同？</strong></h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>接口</th>
+<th>类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>方法实现</td>
+<td>不提供具体实现（.NET 8+可有默认实现）</td>
+<td>提供具体实现</td>
+</tr>
+<tr>
+<td>多继承</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>成员访问级别</td>
+<td>默认 public</td>
+<td>可设置各种访问修饰符</td>
+</tr>
+<tr>
+<td>实例化</td>
+<td>不能直接实例化</td>
+<td>可以实例化</td>
+</tr>
+</tbody></table>
+<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="4-abstract-的-method-是否可同时是-static-native-synchronized"><a href="#4-abstract-的-method-是否可同时是-static-native-synchronized" class="headerlink" title="4. abstract 的 method 是否可同时是 static, native, synchronized?"></a><strong>4. abstract 的 method 是否可同时是 static, native, synchronized?</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li><strong>static</strong> ❌ 不可以，抽象方法必须被子类实现，而静态方法属于类本身。</li>
+<li><strong>native</strong> ❌ 不可以，抽象方法没有实现，native 表示平台相关实现。</li>
+<li><strong>synchronized</strong> ❌ 不可以，同步控制是运行时行为，抽象方法无实现。</li>
+</ul>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="5-Anonymous-Inner-Class-匿名内部类-是否可以-extends-其它类，是否可以-implements-interface"><a href="#5-Anonymous-Inner-Class-匿名内部类-是否可以-extends-其它类，是否可以-implements-interface" class="headerlink" title="5. Anonymous Inner Class (匿名内部类) 是否可以 extends 其它类，是否可以 implements interface?"></a><strong>5. Anonymous Inner Class (匿名内部类) 是否可以 extends 其它类，是否可以 implements interface?</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li>✅ 可以继承一个类（只能继承一个）</li>
+<li>✅ 可以实现接口（只能实现一个）</li>
+</ul>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> BaseClass() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Method</span>()</span> &#123; &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：高难</strong></p>
+<hr>
+<h4 id="6-C-abstract-class-和-interface-有什么区别？"><a href="#6-C-abstract-class-和-interface-有什么区别？" class="headerlink" title="6. C# abstract class 和 interface 有什么区别？"></a><strong>6. C# abstract class 和 interface 有什么区别？</strong></h4><table>
+<thead>
+<tr>
+<th>特征</th>
+<th>抽象类</th>
+<th>接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>实现</td>
+<td>可以部分实现</td>
+<td>所有方法默认无实现</td>
+</tr>
+<tr>
+<td>构造函数</td>
+<td>有</td>
+<td>无</td>
+</tr>
+<tr>
+<td>多继承</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>成员变量</td>
+<td>可定义</td>
+<td>不可定义（.NET 8+ 可定义）</td>
+</tr>
+<tr>
+<td>访问权限</td>
+<td>可设访问修饰符</td>
+<td>默认 public</td>
+</tr>
+</tbody></table>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="7-C-面向对象的思想主要包括什么？"><a href="#7-C-面向对象的思想主要包括什么？" class="headerlink" title="7. C# 面向对象的思想主要包括什么？"></a><strong>7. C# 面向对象的思想主要包括什么？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li><strong>封装（Encapsulation）</strong>：隐藏对象细节，通过属性和方法暴露行为</li>
+<li><strong>继承（Inheritance）</strong>：子类复用父类的属性和方法</li>
+<li><strong>多态（Polymorphism）</strong>：同一接口不同实现（虚方法、抽象方法）</li>
+</ul>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="8-请解释-C-接口的显式实现有什么意义？"><a href="#8-请解释-C-接口的显式实现有什么意义？" class="headerlink" title="8. 请解释 C# 接口的显式实现有什么意义？"></a><strong>8. 请解释 C# 接口的显式实现有什么意义？</strong></h4><p><strong>答案：</strong><br>当一个类实现多个具有相同方法签名的接口时，使用显式实现可以避免命名冲突。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">MyClass</span> : <span class="title">IInterface1</span>, <span class="title">IInterface2</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">void</span> IInterface1.Method() &#123; &#125;</span><br><span class="line">    <span class="keyword">void</span> IInterface2.Method() &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用方式：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IInterface1 obj = <span class="keyword">new</span> MyClass();</span><br><span class="line">obj.Method(); <span class="comment">// 调用 IInterface1 的实现</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="9-C-接口是否可以继承接口？抽象类是否可以实现接口？抽象类是否可以继承实体类？"><a href="#9-C-接口是否可以继承接口？抽象类是否可以实现接口？抽象类是否可以继承实体类？" class="headerlink" title="9. C# 接口是否可以继承接口？抽象类是否可以实现接口？抽象类是否可以继承实体类？"></a><strong>9. C# 接口是否可以继承接口？抽象类是否可以实现接口？抽象类是否可以继承实体类？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li>✅ 接口可以继承接口</li>
+<li>✅ 抽象类可以实现接口</li>
+<li>✅ 抽象类可以继承实体类（但实体类不能是 sealed）</li>
+</ul>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="10-C-构造器-Constructor-是否可以被继承？是否可以被-Override？"><a href="#10-C-构造器-Constructor-是否可以被继承？是否可以被-Override？" class="headerlink" title="10. C# 构造器 Constructor 是否可以被继承？是否可以被 Override？"></a><strong>10. C# 构造器 Constructor 是否可以被继承？是否可以被 Override？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li>❌ <strong>不能被继承</strong>：构造函数不参与继承机制</li>
+<li>❌ <strong>不能被 Override</strong>：构造函数不是虚方法</li>
+</ul>
+<p>但可以通过 <code>base()</code> 显式调用基类构造函数。</p>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：中级</strong></p>
+<hr>
+<h4 id="11-C-虚方法（virtual）和抽象方法（abstract）的区别？"><a href="#11-C-虚方法（virtual）和抽象方法（abstract）的区别？" class="headerlink" title="11. C# 虚方法（virtual）和抽象方法（abstract）的区别？"></a><strong>11. C# 虚方法（virtual）和抽象方法（abstract）的区别？</strong></h4><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>virtual 方法</th>
+<th>abstract 方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>是否必须重写</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>是否有实现</td>
+<td>有</td>
+<td>无</td>
+</tr>
+<tr>
+<td>所在类</td>
+<td>可以在普通类</td>
+<td>必须在抽象类中</td>
+</tr>
+<tr>
+<td>可否直接调用</td>
+<td>可以</td>
+<td>不可以</td>
+</tr>
+</tbody></table>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="12-简述-private、protected、public、internal-修饰符的访问权限？"><a href="#12-简述-private、protected、public、internal-修饰符的访问权限？" class="headerlink" title="12. 简述 private、protected、public、internal 修饰符的访问权限？"></a><strong>12. 简述 private、protected、public、internal 修饰符的访问权限？</strong></h4><table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>访问范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>private</td>
+<td>仅当前类</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>当前类 + 派生类</td>
+</tr>
+<tr>
+<td>internal</td>
+<td>同一程序集内</td>
+</tr>
+<tr>
+<td>public</td>
+<td>任何地方</td>
+</tr>
+<tr>
+<td>protected internal</td>
+<td>同一程序集 + 派生类</td>
+</tr>
+</tbody></table>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="13-C-支持多重继承么？"><a href="#13-C-支持多重继承么？" class="headerlink" title="13. C# 支持多重继承么？"></a><strong>13. C# 支持多重继承么？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li>❌ 类之间不支持多重继承</li>
+<li>✅ 类可以实现多个接口</li>
+<li>✅ 接口之间可以多重继承</li>
+</ul>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：中级</strong></p>
+<hr>
+<h4 id="14-解释什么是构造函数？"><a href="#14-解释什么是构造函数？" class="headerlink" title="14. 解释什么是构造函数？"></a><strong>14. 解释什么是构造函数？</strong></h4><p><strong>答案：</strong><br>构造函数是类的一个特殊方法，用于在创建对象时进行初始化操作，名称与类名相同，没有返回类型。</p>
+<p><strong>特点：</strong></p>
+<ul>
+<li>可重载</li>
+<li>可调用 base 构造函数</li>
+<li>静态类可有静态构造函数</li>
+</ul>
+<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="15-简述一下面向对象的三大特性？"><a href="#15-简述一下面向对象的三大特性？" class="headerlink" title="15. 简述一下面向对象的三大特性？"></a><strong>15. 简述一下面向对象的三大特性？</strong></h4><p><strong>答案：</strong>  </p>
+<ol>
+<li><strong>封装（Encapsulation）</strong>：隐藏实现细节，只暴露必要的接口</li>
+<li><strong>继承（Inheritance）</strong>：子类复用父类的成员</li>
+<li><strong>多态（Polymorphism）</strong>：相同接口不同实现（方法重写）</li>
+</ol>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="16-构造函数是否能被重写？"><a href="#16-构造函数是否能被重写？" class="headerlink" title="16. 构造函数是否能被重写？"></a><strong>16. 构造函数是否能被重写？</strong></h4><p><strong>答案：</strong><br>❌ <strong>不可以重写构造函数</strong>，因为构造函数不是虚方法。但可以在派生类中通过 <code>base()</code> 调用基类构造函数。</p>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：中级</strong></p>
+<hr>
+<h4 id="17-C-类的执行顺序？"><a href="#17-C-类的执行顺序？" class="headerlink" title="17. C# 类的执行顺序？"></a><strong>17. C# 类的执行顺序？</strong></h4><p><strong>答案：</strong>  </p>
+<ol>
+<li>静态字段初始化</li>
+<li>静态构造函数</li>
+<li>实例字段初始化</li>
+<li>基类构造函数</li>
+<li>当前类构造函数</li>
+</ol>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Base</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Base</span>()</span> =&gt; Console.WriteLine(<span class="string">&quot;Base ctor&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title">Derived</span> : <span class="title">Base</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Derived</span>()</span> =&gt; Console.WriteLine(<span class="string">&quot;Derived ctor&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Base ctor</span><br><span class="line">Derived ctor</span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="18-C-接口是否可继承接口？抽象类是否可实现接口？抽象类是否可继承实现类？"><a href="#18-C-接口是否可继承接口？抽象类是否可实现接口？抽象类是否可继承实现类？" class="headerlink" title="18. C# 接口是否可继承接口？抽象类是否可实现接口？抽象类是否可继承实现类？"></a><strong>18. C# 接口是否可继承接口？抽象类是否可实现接口？抽象类是否可继承实现类？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li>✅ 接口可以继承接口</li>
+<li>✅ 抽象类可以实现接口</li>
+<li>✅ 抽象类可以继承实现类（只要该类不是 sealed）</li>
+</ul>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：高难</strong></p>
+<hr>
+<h4 id="19-请说说-C-引用和对象？"><a href="#19-请说说-C-引用和对象？" class="headerlink" title="19. 请说说 C# 引用和对象？"></a><strong>19. 请说说 C# 引用和对象？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li><strong>引用（Reference）</strong>：指向堆内存中的对象地址</li>
+<li><strong>对象（Object）</strong>：实际存储在堆上的数据实例</li>
+</ul>
+<p><strong>举例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person p = <span class="keyword">new</span> Person();</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>p</code> 是引用，指向堆上 <code>Person</code> 实例</li>
+</ul>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="20-阐述什么是-C-匿名类，有什么好处？"><a href="#20-阐述什么是-C-匿名类，有什么好处？" class="headerlink" title="20. 阐述什么是 C# 匿名类，有什么好处？"></a><strong>20. 阐述什么是 C# 匿名类，有什么好处？</strong></h4><p><strong>答案：</strong><br>匿名类是在代码中动态生成的类，没有名字，用于临时存储数据。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> &#123; Name = <span class="string">&quot;Tom&quot;</span>, Age = <span class="number">25</span> &#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>优点：</strong></p>
+<ul>
+<li>简洁高效</li>
+<li>适用于 LINQ 查询等场景</li>
+<li>不需要提前定义类</li>
+</ul>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="21-C-中有没有静态构造函数，如果有是做什么用的？"><a href="#21-C-中有没有静态构造函数，如果有是做什么用的？" class="headerlink" title="21. C# 中有没有静态构造函数，如果有是做什么用的？"></a><strong>21. C# 中有没有静态构造函数，如果有是做什么用的？</strong></h4><p><strong>答案：</strong><br>✅ 有静态构造函数，用于初始化静态成员，仅执行一次，在首次访问类之前自动调用。</p>
+<p><strong>特点：</strong></p>
+<ul>
+<li>无访问修饰符</li>
+<li>无参数</li>
+<li>不能被显式调用</li>
+</ul>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">MyClass</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="title">MyClass</span>()</span> &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;Static constructor&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：中级</strong></p>
+<hr>
+<h4 id="22-C-属性能在接口中声明吗？"><a href="#22-C-属性能在接口中声明吗？" class="headerlink" title="22. C# 属性能在接口中声明吗？"></a><strong>22. C# 属性能在接口中声明吗？</strong></h4><p><strong>答案：</strong><br>✅ 可以声明属性，接口中属性只有 get&#x2F;set，没有实现。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title">IPerson</span> &#123;</span><br><span class="line">    <span class="built_in">string</span> Name &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="23-在-C-项目中为什么使用接口？接口的好处是什么？什么是面向接口开发？"><a href="#23-在-C-项目中为什么使用接口？接口的好处是什么？什么是面向接口开发？" class="headerlink" title="23. 在 C# 项目中为什么使用接口？接口的好处是什么？什么是面向接口开发？"></a><strong>23. 在 C# 项目中为什么使用接口？接口的好处是什么？什么是面向接口开发？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li><strong>解耦</strong>：减少类之间的依赖</li>
+<li><strong>可扩展性</strong>：便于替换实现</li>
+<li><strong>多态支持</strong>：统一调用接口</li>
+<li><strong>测试友好</strong>：方便 Mock 测试</li>
+</ul>
+<p><strong>面向接口开发</strong>：设计系统时优先定义接口，再由具体类实现，提高灵活性和维护性。</p>
+<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="24-C-静态方法可以访问非静态变量吗？如果不可以为什么？"><a href="#24-C-静态方法可以访问非静态变量吗？如果不可以为什么？" class="headerlink" title="24. C# 静态方法可以访问非静态变量吗？如果不可以为什么？"></a><strong>24. C# 静态方法可以访问非静态变量吗？如果不可以为什么？</strong></h4><p><strong>答案：</strong><br>❌ <strong>不可以</strong>，静态方法属于类，而非静态变量属于实例，两者生命周期不同。</p>
+<p><strong>原因：</strong></p>
+<ul>
+<li>静态方法在类加载时就存在</li>
+<li>非静态变量必须通过实例访问</li>
+</ul>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：中级</strong></p>
+<hr>
+<h4 id="25-C-能用-foreach-遍历访问的对象需要实现接口或声明方法的类型？"><a href="#25-C-能用-foreach-遍历访问的对象需要实现接口或声明方法的类型？" class="headerlink" title="25. C# 能用 foreach 遍历访问的对象需要实现接口或声明方法的类型？"></a><strong>25. C# 能用 foreach 遍历访问的对象需要实现接口或声明方法的类型？</strong></h4><p><strong>答案：</strong><br>✅ 必须实现 <code>IEnumerable</code> 或 <code>IEnumerable&lt;T&gt;</code> 接口。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">foreach</span> (<span class="keyword">var</span> item <span class="keyword">in</span> list) &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>list</code> 必须实现了 <code>IEnumerable&lt;T&gt;</code></p>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="26-能够将非静态的方法覆写成静态方法吗？"><a href="#26-能够将非静态的方法覆写成静态方法吗？" class="headerlink" title="26. 能够将非静态的方法覆写成静态方法吗？"></a><strong>26. 能够将非静态的方法覆写成静态方法吗？</strong></h4><p><strong>答案：</strong><br>❌ <strong>不可以</strong>，虚方法必须是非静态的，静态方法无法参与多态。</p>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="27-C-中的析构函数是什么？"><a href="#27-C-中的析构函数是什么？" class="headerlink" title="27. C# 中的析构函数是什么？"></a><strong>27. C# 中的析构函数是什么？</strong></h4><p><strong>答案：</strong><br>析构函数用于释放非托管资源，在对象被垃圾回收前自动调用。</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~MyClass() &#123;</span><br><span class="line">    <span class="comment">// 清理资源</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong></p>
+<ul>
+<li>不可控调用时机</li>
+<li>应优先使用 <code>IDisposable</code> 接口</li>
+</ul>
+<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="28-解释-C-中什么是命名空间，它是强制性的吗？"><a href="#28-解释-C-中什么是命名空间，它是强制性的吗？" class="headerlink" title="28. 解释 C# 中什么是命名空间，它是强制性的吗？"></a><strong>28. 解释 C# 中什么是命名空间，它是强制性的吗？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li><strong>命名空间（namespace）</strong>：组织代码结构，防止命名冲突</li>
+<li><strong>非强制性</strong>：可以不写 namespace，但不推荐</li>
+</ul>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">MyCompany.Project</span> &#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span> &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：中级</strong></p>
+<hr>
+<h4 id="29-请举例解释封装？"><a href="#29-请举例解释封装？" class="headerlink" title="29. 请举例解释封装？"></a><strong>29. 请举例解释封装？</strong></h4><p><strong>答案：</strong><br>封装是指将对象的内部状态和行为隐藏起来，只暴露必要的接口。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">BankAccount</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">decimal</span> balance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Deposit</span>(<span class="params"><span class="built_in">decimal</span> amount</span>)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (amount &gt; <span class="number">0</span>) balance += amount;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">decimal</span> <span class="title">GetBalance</span>()</span> =&gt; balance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>外部不能直接修改 <code>balance</code>，只能通过 <code>Deposit</code> 方法操作。</p>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：高难</strong></p>
+<hr>
+<h4 id="30-阐述什么是抽象？"><a href="#30-阐述什么是抽象？" class="headerlink" title="30. 阐述什么是抽象？"></a><strong>30. 阐述什么是抽象？</strong></h4><p><strong>答案：</strong><br>抽象是从具体事物中提取共同特征的过程，忽略次要信息，专注于本质特征。</p>
+<p><strong>在 OOP 中体现为：</strong></p>
+<ul>
+<li>抽象类（abstract class）</li>
+<li>接口（interface）</li>
+</ul>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="31-C-详细举例阐述什么是多态性？"><a href="#31-C-详细举例阐述什么是多态性？" class="headerlink" title="31. C# 详细举例阐述什么是多态性？"></a><strong>31. C# 详细举例阐述什么是多态性？</strong></h4><p><strong>答案：</strong><br>多态是指“一个接口，多种实现”。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Animal</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Speak</span>()</span> =&gt; Console.WriteLine(<span class="string">&quot;Animal sound&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Dog</span> : <span class="title">Animal</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Speak</span>()</span> =&gt; Console.WriteLine(<span class="string">&quot;Woof!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Cat</span> : <span class="title">Animal</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Speak</span>()</span> =&gt; Console.WriteLine(<span class="string">&quot;Meow!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">Animal a = <span class="keyword">new</span> Dog();</span><br><span class="line">a.Speak(); <span class="comment">// 输出 Woof!</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="32-C-举例子阐述什么是继承？"><a href="#32-C-举例子阐述什么是继承？" class="headerlink" title="32. C# 举例子阐述什么是继承？"></a><strong>32. C# 举例子阐述什么是继承？</strong></h4><p><strong>答案：</strong><br>继承是子类从父类获取属性和方法的能力。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Vehicle</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Start</span>()</span> =&gt; Console.WriteLine(<span class="string">&quot;Engine started&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Car</span> : <span class="title">Vehicle</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Drive</span>()</span> =&gt; Console.WriteLine(<span class="string">&quot;Car is driving&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">Car myCar = <span class="keyword">new</span> Car();</span><br><span class="line">myCar.Start(); <span class="comment">// 来自 Vehicle</span></span><br><span class="line">myCar.Drive(); <span class="comment">// 来自 Car</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="33-C-如何在同一个类中实现多个具有相同方法名的接口？"><a href="#33-C-如何在同一个类中实现多个具有相同方法名的接口？" class="headerlink" title="33. C# 如何在同一个类中实现多个具有相同方法名的接口？"></a><strong>33. C# 如何在同一个类中实现多个具有相同方法名的接口？</strong></h4><p><strong>答案：</strong><br>使用 <strong>显式接口实现</strong>。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title">IA</span> &#123; <span class="function"><span class="keyword">void</span> <span class="title">Show</span>()</span>; &#125;</span><br><span class="line"><span class="keyword">interface</span> <span class="title">IB</span> &#123; <span class="function"><span class="keyword">void</span> <span class="title">Show</span>()</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">MyClass</span> : <span class="title">IA</span>, <span class="title">IB</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> IA.Show() =&gt; Console.WriteLine(<span class="string">&quot;IA Show&quot;</span>);</span><br><span class="line">    <span class="keyword">void</span> IB.Show() =&gt; Console.WriteLine(<span class="string">&quot;IB Show&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">IA a = <span class="keyword">new</span> MyClass();</span><br><span class="line">a.Show(); <span class="comment">// IA.Show</span></span><br><span class="line">IB b = <span class="keyword">new</span> MyClass();</span><br><span class="line">b.Show(); <span class="comment">// IB.Show</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="34-阐述什么是-C-static-关键字？"><a href="#34-阐述什么是-C-static-关键字？" class="headerlink" title="34. 阐述什么是 C# static 关键字？"></a><strong>34. 阐述什么是 C# static 关键字？</strong></h4><p><strong>答案：</strong><br><code>static</code> 用于定义属于类而不是实例的成员（字段、方法、类等）。</p>
+<p><strong>用途：</strong></p>
+<ul>
+<li>静态字段：共享数据</li>
+<li>静态方法：无需实例即可调用</li>
+<li>静态类：不可实例化，所有成员必须为静态</li>
+<li>静态构造函数：初始化静态成员</li>
+</ul>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：中级</strong></p>
+<hr>
+<h4 id="35-我们可以在-C-静态类中使用“this”吗？"><a href="#35-我们可以在-C-静态类中使用“this”吗？" class="headerlink" title="35. 我们可以在 C# 静态类中使用“this”吗？"></a><strong>35. 我们可以在 C# 静态类中使用“this”吗？</strong></h4><p><strong>答案：</strong><br>❌ <strong>不可以</strong>，静态类没有实例，因此不存在 <code>this</code>。</p>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="36-解释什么是访问修饰符？解释每种类型"><a href="#36-解释什么是访问修饰符？解释每种类型" class="headerlink" title="36. 解释什么是访问修饰符？解释每种类型"></a><strong>36. 解释什么是访问修饰符？解释每种类型</strong></h4><p><strong>答案：</strong><br>访问修饰符控制类、成员的可访问范围：</p>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public</td>
+<td>任何地方可访问</td>
+</tr>
+<tr>
+<td>private</td>
+<td>仅本类可访问</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>本类及派生类可访问</td>
+</tr>
+<tr>
+<td>internal</td>
+<td>同一程序集内可访问</td>
+</tr>
+<tr>
+<td>protected internal</td>
+<td>同一程序集内或派生类可访问</td>
+</tr>
+</tbody></table>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="37-C-如何从基类创建派生类对象？"><a href="#37-C-如何从基类创建派生类对象？" class="headerlink" title="37. C# 如何从基类创建派生类对象？"></a><strong>37. C# 如何从基类创建派生类对象？</strong></h4><p><strong>答案：</strong><br>使用 <code>base()</code> 调用基类构造函数。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Base</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Base</span>(<span class="params"><span class="built_in">string</span> msg</span>)</span> =&gt; Console.WriteLine(msg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Derived</span> : <span class="title">Base</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Derived</span>() : <span class="title">base</span>(<span class="params"><span class="string">&quot;Hello from Base&quot;</span></span>)</span> &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：高难</strong></p>
+<hr>
+<h4 id="38-简述在-C-程序中，如果类-B-要继承类-A，类-B-正确的定义为"><a href="#38-简述在-C-程序中，如果类-B-要继承类-A，类-B-正确的定义为" class="headerlink" title="38. 简述在 C# 程序中，如果类 B 要继承类 A，类 B 正确的定义为( ) ?"></a><strong>38. 简述在 C# 程序中，如果类 B 要继承类 A，类 B 正确的定义为( ) ?</strong></h4><p><strong>答案：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">B</span> : <span class="title">A</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<p>以下是 <strong>C# 面向对象编程原理题（共19题）</strong> 的完整解答，基于您提供的题目列表整理。每道题都包含 <strong>答案、解析和推荐星级说明</strong>。</p>
+<hr>
+<h3 id="📌-C-面向对象原理题"><a href="#📌-C-面向对象原理题" class="headerlink" title="📌 C# 面向对象原理题"></a>📌 <strong>C# 面向对象原理题</strong></h3><h4 id="1-简述面向对象？主要特征是什么？"><a href="#1-简述面向对象？主要特征是什么？" class="headerlink" title="1. 简述面向对象？主要特征是什么？"></a><strong>1. 简述面向对象？主要特征是什么？</strong></h4><p><strong>答案：</strong><br>面向对象是一种以“对象”为核心组织代码的编程思想，将数据（属性）与操作（方法）封装在一起。</p>
+<p><strong>主要特征：</strong></p>
+<ul>
+<li>封装</li>
+<li>继承</li>
+<li>多态</li>
+</ul>
+<p><strong>推荐星级：★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="2-面向对象编程（OOP）相关解释？"><a href="#2-面向对象编程（OOP）相关解释？" class="headerlink" title="2. 面向对象编程（OOP）相关解释？"></a><strong>2. 面向对象编程（OOP）相关解释？</strong></h4><p><strong>答案：</strong><br>OOP 是一种软件开发范式，强调将现实世界中的实体抽象为类和对象，通过封装、继承、多态等机制提高代码的可维护性、复用性和扩展性。</p>
+<p><strong>核心概念：</strong></p>
+<ul>
+<li>类（Class）</li>
+<li>对象（Object）</li>
+<li>属性（Property）</li>
+<li>方法（Method）</li>
+</ul>
+<p><strong>推荐星级：★★★</strong><br><strong>难度：中级</strong></p>
+<hr>
+<h4 id="3-简述继承的原则？"><a href="#3-简述继承的原则？" class="headerlink" title="3. 简述继承的原则？"></a><strong>3. 简述继承的原则？</strong></h4><p><strong>答案：</strong><br>继承是指一个类（派生类）可以继承另一个类（基类）的成员（字段、属性、方法等），从而实现代码复用。</p>
+<p><strong>原则：</strong></p>
+<ul>
+<li>派生类自动拥有基类的非私有成员</li>
+<li>构造函数不能被继承，但可通过 <code>base()</code> 调用</li>
+<li>C# 中类只支持单继承（一个类只能有一个直接父类）</li>
+<li>接口支持多重继承</li>
+</ul>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="4-列举面向对象-OOD-访问修饰符？"><a href="#4-列举面向对象-OOD-访问修饰符？" class="headerlink" title="4. 列举面向对象 OOD 访问修饰符？"></a><strong>4. 列举面向对象 OOD 访问修饰符？</strong></h4><p><strong>答案：</strong><br>C# 中常用的访问修饰符：</p>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>可见范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>private</td>
+<td>同一类内</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>同一类 + 派生类</td>
+</tr>
+<tr>
+<td>internal</td>
+<td>同一程序集内</td>
+</tr>
+<tr>
+<td>public</td>
+<td>所有位置</td>
+</tr>
+<tr>
+<td>protected internal</td>
+<td>同一程序集 + 派生类</td>
+</tr>
+</tbody></table>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="5-简述抽象类和接口的理解？"><a href="#5-简述抽象类和接口的理解？" class="headerlink" title="5. 简述抽象类和接口的理解？"></a><strong>5. 简述抽象类和接口的理解？</strong></h4><p><strong>答案：</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>抽象类</th>
+<th>接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>方法实现</td>
+<td>可提供部分实现</td>
+<td>默认无实现（C# 8+ 支持默认实现）</td>
+</tr>
+<tr>
+<td>成员变量</td>
+<td>可定义</td>
+<td>不可定义（仅常量或静态属性）</td>
+</tr>
+<tr>
+<td>构造函数</td>
+<td>有</td>
+<td>无</td>
+</tr>
+<tr>
+<td>多继承</td>
+<td>不支持</td>
+<td>支持多个接口</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>共享逻辑 + 强制子类实现某些方法</td>
+<td>定义行为契约，不关心实现细节</td>
+</tr>
+</tbody></table>
+<p><strong>推荐星级：★★★</strong><br><strong>难度：中级</strong></p>
+<hr>
+<h4 id="6-死锁的必要条件？怎么解决？"><a href="#6-死锁的必要条件？怎么解决？" class="headerlink" title="6. 死锁的必要条件？怎么解决？"></a><strong>6. 死锁的必要条件？怎么解决？</strong></h4><p><strong>答案：</strong><br>死锁发生的四个必要条件：</p>
+<ol>
+<li><strong>互斥</strong>：资源不能共享</li>
+<li><strong>请求与保持</strong>：线程在等待其他资源时仍持有已占资源</li>
+<li><strong>不可抢占</strong>：资源只能由持有它的线程主动释放</li>
+<li><strong>循环等待</strong>：存在一个线程链，每个线程都在等待下一个线程所持有的资源</li>
+</ol>
+<p><strong>解决方案：</strong></p>
+<ul>
+<li>破坏其中一个必要条件</li>
+<li>使用超时机制（如 <code>Monitor.TryEnter</code>）</li>
+<li>按固定顺序加锁</li>
+<li>使用高级并发结构如 <code>ConcurrentQueue</code>, <code>SemaphoreSlim</code></li>
+</ul>
+<p><strong>推荐星级：★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="7-接口是否可以继承接口？抽象类是否可以实现接口？抽象类是否可以继承实体类？"><a href="#7-接口是否可以继承接口？抽象类是否可以实现接口？抽象类是否可以继承实体类？" class="headerlink" title="7. 接口是否可以继承接口？抽象类是否可以实现接口？抽象类是否可以继承实体类？"></a><strong>7. 接口是否可以继承接口？抽象类是否可以实现接口？抽象类是否可以继承实体类？</strong></h4><p><strong>答案：</strong><br>✅ <strong>是的：</strong></p>
+<ul>
+<li>接口可以继承接口</li>
+<li>抽象类可以实现接口</li>
+<li>抽象类可以继承实体类（只要该类不是 sealed）</li>
+</ul>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title">IBase</span> &#123; <span class="function"><span class="keyword">void</span> <span class="title">Method</span>()</span>; &#125;</span><br><span class="line"><span class="keyword">interface</span> <span class="title">IDerived</span> : <span class="title">IBase</span> &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">MyBase</span> &#123; &#125;</span><br><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">MyAbstract</span> : <span class="title">MyBase</span>, <span class="title">IDerived</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="8-简述封装具有的特性？"><a href="#8-简述封装具有的特性？" class="headerlink" title="8. 简述封装具有的特性？"></a><strong>8. 简述封装具有的特性？</strong></h4><p><strong>答案：</strong><br>封装是面向对象的核心特性之一，其目的是隐藏对象内部实现细节，对外提供统一的访问接口。</p>
+<p><strong>特性：</strong></p>
+<ul>
+<li>数据隐藏（使用 <code>private</code>、<code>protected</code>）</li>
+<li>提供公开的方法（getter&#x2F;setter）</li>
+<li>控制对对象状态的访问</li>
+<li>增强安全性和灵活性</li>
+</ul>
+<p><strong>推荐星级：★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="9-简述什么时候应用带参构造函数？"><a href="#9-简述什么时候应用带参构造函数？" class="headerlink" title="9. 简述什么时候应用带参构造函数？"></a><strong>9. 简述什么时候应用带参构造函数？</strong></h4><p><strong>答案：</strong><br>当对象创建时需要初始化特定值时使用带参数的构造函数。</p>
+<p><strong>常见用途：</strong></p>
+<ul>
+<li>初始化必须字段</li>
+<li>设置初始状态</li>
+<li>依赖注入</li>
+</ul>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Person</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> Name &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span>(<span class="params"><span class="built_in">string</span> name</span>)</span> =&gt; Name = name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="10-简述内部类的好处？"><a href="#10-简述内部类的好处？" class="headerlink" title="10. 简述内部类的好处？"></a><strong>10. 简述内部类的好处？</strong></h4><p><strong>答案：</strong><br>内部类（Nested Class）是一个类中定义的类。</p>
+<p><strong>好处：</strong></p>
+<ul>
+<li>更好的封装性</li>
+<li>限制作用域</li>
+<li>可访问外部类的私有成员</li>
+<li>实现更紧密的类关系</li>
+</ul>
+<p><strong>推荐星级：★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="11-简述内部类的作用？"><a href="#11-简述内部类的作用？" class="headerlink" title="11. 简述内部类的作用？"></a><strong>11. 简述内部类的作用？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li>用于辅助外部类的功能实现</li>
+<li>逻辑上相关的类放在一起</li>
+<li>提高代码组织性和可读性</li>
+<li>控制访问权限</li>
+</ul>
+<p><strong>推荐星级：★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="12-Java-中，子类可以从父类中继承哪些？"><a href="#12-Java-中，子类可以从父类中继承哪些？" class="headerlink" title="12. Java 中，子类可以从父类中继承哪些？"></a><strong>12. Java 中，子类可以从父类中继承哪些？</strong></h4><p><strong>注意：本题是 Java 相关内容，C# 不完全适用。以下为 Java 行为解释：</strong></p>
+<p><strong>Java 中继承的内容包括：</strong></p>
+<ul>
+<li>非私有字段和方法</li>
+<li>构造函数（需显式调用 super()）</li>
+<li>成员变量（除 private）</li>
+<li>方法重写能力</li>
+</ul>
+<p><strong>C# 中类似规则：</strong></p>
+<ul>
+<li>子类继承所有非私有成员</li>
+<li>构造函数不继承，但可通过 base() 调用</li>
+</ul>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="13-解释方法重载与重写的区别？"><a href="#13-解释方法重载与重写的区别？" class="headerlink" title="13. 解释方法重载与重写的区别？"></a><strong>13. 解释方法重载与重写的区别？</strong></h4><table>
+<thead>
+<tr>
+<th>特征</th>
+<th>重载（Overload）</th>
+<th>重写（Override）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>发生位置</td>
+<td>同一个类中</td>
+<td>派生类中</td>
+</tr>
+<tr>
+<td>方法名</td>
+<td>相同</td>
+<td>相同</td>
+</tr>
+<tr>
+<td>参数列表</td>
+<td>必须不同</td>
+<td>必须相同</td>
+</tr>
+<tr>
+<td>返回类型</td>
+<td>可变</td>
+<td>通常相同</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>提供多个功能相似的方法</td>
+<td>替换父类方法实现</td>
+</tr>
+<tr>
+<td>关键字</td>
+<td>无</td>
+<td>override</td>
+</tr>
+</tbody></table>
+<p><strong>推荐星级：★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="14-Java-中的抽象类和接口的区别？"><a href="#14-Java-中的抽象类和接口的区别？" class="headerlink" title="14. Java 中的抽象类和接口的区别？"></a><strong>14. Java 中的抽象类和接口的区别？</strong></h4><p><strong>注意：此题为 Java 内容，C# 中略有不同，以下是 Java 视角的对比：</strong></p>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>抽象类</th>
+<th>接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>方法实现</td>
+<td>可部分实现</td>
+<td>默认无实现（Java 8+ 支持 default）</td>
+</tr>
+<tr>
+<td>构造函数</td>
+<td>有</td>
+<td>无</td>
+</tr>
+<tr>
+<td>成员变量</td>
+<td>可定义</td>
+<td>默认 public static final</td>
+</tr>
+<tr>
+<td>多继承</td>
+<td>不支持</td>
+<td>支持多个接口</td>
+</tr>
+</tbody></table>
+<p><strong>C# 中差异：</strong></p>
+<ul>
+<li>接口支持默认实现（C# 8+）</li>
+<li>抽象类可继承具体类</li>
+</ul>
+<p><strong>推荐星级：★★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="15-简述接口隔离原则和单一职责原则如何理解？"><a href="#15-简述接口隔离原则和单一职责原则如何理解？" class="headerlink" title="15. 简述接口隔离原则和单一职责原则如何理解？"></a><strong>15. 简述接口隔离原则和单一职责原则如何理解？</strong></h4><p><strong>答案：</strong>  </p>
+<ul>
+<li><strong>接口隔离原则（ISP）</strong>：客户端不应该依赖它不需要的接口，应拆分为更细粒度的接口。</li>
+<li><strong>单一职责原则（SRP）</strong>：一个类&#x2F;方法应该只有一个引起它变化的原因。</li>
+</ul>
+<p><strong>目的：</strong></p>
+<ul>
+<li>减少耦合</li>
+<li>提高可维护性</li>
+<li>易于测试和扩展</li>
+</ul>
+<p><strong>推荐星级：★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="16-解释-finally-在什么时候使用？"><a href="#16-解释-finally-在什么时候使用？" class="headerlink" title="16. 解释 finally 在什么时候使用？"></a><strong>16. 解释 finally 在什么时候使用？</strong></h4><p><strong>答案：</strong><br><code>finally</code> 块用于确保无论是否发生异常，都能执行清理代码（如关闭文件、数据库连接等）。</p>
+<p><strong>典型使用场景：</strong></p>
+<ul>
+<li>关闭流（FileStream）</li>
+<li>断开数据库连接</li>
+<li>释放资源</li>
+</ul>
+<p><strong>示例：</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 执行可能出错的操作</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception ex) &#123;</span><br><span class="line">    <span class="comment">// 处理异常</span></span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    <span class="comment">// 总是执行，如关闭连接</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="17-throw-和-throws-关键字的区别？"><a href="#17-throw-和-throws-关键字的区别？" class="headerlink" title="17. throw 和 throws 关键字的区别？"></a><strong>17. throw 和 throws 关键字的区别？</strong></h4><p><strong>注意：此题为 Java 内容，C# 中没有 <code>throws</code>，以下是 Java 解释：</strong></p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>throw</td>
+<td>抛出一个具体的异常对象</td>
+</tr>
+<tr>
+<td>throws</td>
+<td>声明方法可能抛出的异常类型（在方法签名中）</td>
+</tr>
+</tbody></table>
+<p><strong>C# 中处理方式：</strong></p>
+<ul>
+<li>使用 <code>throw new Exception()</code> 抛出异常</li>
+<li>不需要声明异常，编译器不强制检查</li>
+</ul>
+<p><strong>推荐星级：★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="18-简述-final-finally-finalize-的区别？"><a href="#18-简述-final-finally-finalize-的区别？" class="headerlink" title="18. 简述 final, finally, finalize 的区别？"></a><strong>18. 简述 final, finally, finalize 的区别？</strong></h4><p><strong>注意：此题为 Java 内容，C# 中无 <code>final</code> 和 <code>finalize</code>（有 <code>sealed</code> 和 <code>~ClassName()</code> 析构函数）。以下是 Java 解释：</strong></p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>final</td>
+<td>修饰类、方法、变量，表示不可更改或继承</td>
+</tr>
+<tr>
+<td>finally</td>
+<td>用于异常处理，总会执行的代码块</td>
+</tr>
+<tr>
+<td>finalize</td>
+<td>对象回收前调用的方法（不推荐使用）</td>
+</tr>
+</tbody></table>
+<p><strong>C# 中替代方案：</strong></p>
+<ul>
+<li><code>sealed</code> → 替代 <code>final</code></li>
+<li><code>~MyClass()</code> → 析构函数</li>
+<li><code>IDisposable.Dispose()</code> → 资源释放</li>
+</ul>
+<p><strong>推荐星级：★★★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+<h4 id="19-简述面向对象的特征有哪些方面？"><a href="#19-简述面向对象的特征有哪些方面？" class="headerlink" title="19. 简述面向对象的特征有哪些方面？"></a><strong>19. 简述面向对象的特征有哪些方面？</strong></h4><p><strong>答案：</strong><br>面向对象的主要特征包括：</p>
+<ul>
+<li><strong>封装（Encapsulation）</strong>：隐藏对象实现细节</li>
+<li><strong>继承（Inheritance）</strong>：代码复用机制</li>
+<li><strong>多态（Polymorphism）</strong>：同一接口多种实现</li>
+<li><strong>抽象（Abstraction）</strong>：提取关键特征忽略复杂细节</li>
+</ul>
+<p><strong>推荐星级：★★</strong><br><strong>难度：初级</strong></p>
+<hr>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-16T23:03:56+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2025年6月16日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C#</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E8%AF%95%E7%B3%BB%E5%88%97/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>面试系列</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>面向对象</p></a></div>
+  <span hidden itemprop="keywords">C# 面试系列 面向对象</span>
+  
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2025/06/16/C#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/&title=C#面向对象[面试系列] - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა&pics=https://pic1.imgdb.cn/item/6850320d58cb8da5c851c781.jpg&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2025/06/16/C#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/&title=C#面向对象[面试系列] - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა&pics=https://pic1.imgdb.cn/item/6850320d58cb8da5c851c781.jpg&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2025/06/16/C#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/&title=C#面向对象[面试系列] - Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა&pics=https://pic1.imgdb.cn/item/6850320d58cb8da5c851c781.jpg&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2025/06/16/C#%E6%A1%86%E6%9E%B6/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>C#框架[面试系列]</p>
+          <p class='content'>📌 ASP.NET Core 原理题1. ASP.NET Core 比 ASP.NET 更具优势的地方是什么？答案：  
+
+跨平台支持（Windows、Linux、macOS）
+高性能
+内建依...</p>
+        </a>
+      
+      
+        <a class='next' href='/2025/06/16/WPF%E9%A2%98%E5%BA%93/'>
+          <p class='title'>C#Wpf题库[面试系列]<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>目录
+什么是WPF？
+WPF的组成部分
+Silverlight与WPF异同
+WPF体系结构
+Binding作用与语法
+依赖属性详解
+样式定义
+模板概念
+绑定基础用法
+视觉树与逻辑树
+Resour...</p>
+        </a>
+      
+    </div>
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2025/06/16/C#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside id='l_side' itemscope itemtype="https://schema.org.cn/WPSideBar">
+  
+
+  
+    
+    
+      
+    
+  
+
+
+<div class="widget-sticky">
+
+  
+  
+
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8C-C-%E5%9F%BA%E7%A1%80%E4%B8%8E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%8E%9F%E7%90%86%E9%A2%98"><span class="toc-text">📌 C# 基础与面向对象原理题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E9%98%90%E8%BF%B0-C-%E8%A3%85%E7%AE%B1%E5%92%8C%E6%8B%86%E7%AE%B1%EF%BC%9F%E4%BB%80%E4%B9%88%E6%98%AF%E9%87%8D%E8%BD%BD%EF%BC%9F"><span class="toc-text">1. 阐述 C# 装箱和拆箱？什么是重载？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%AF%A6%E8%BF%B0-NET-%E9%87%8C-class-%E5%92%8C-struct-%E7%9A%84%E5%BC%82%E5%90%8C%EF%BC%9F"><span class="toc-text">2. 详述 .NET 里 class 和 struct 的异同？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-C-%E4%B8%AD%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%B1%BB%E6%9C%89%E4%BB%80%E4%B9%88%E5%BC%82%E5%90%8C%EF%BC%9F"><span class="toc-text">3. C# 中的接口和类有什么异同？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-abstract-%E7%9A%84-method-%E6%98%AF%E5%90%A6%E5%8F%AF%E5%90%8C%E6%97%B6%E6%98%AF-static-native-synchronized"><span class="toc-text">4. abstract 的 method 是否可同时是 static, native, synchronized?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-Anonymous-Inner-Class-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5-extends-%E5%85%B6%E5%AE%83%E7%B1%BB%EF%BC%8C%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5-implements-interface"><span class="toc-text">5. Anonymous Inner Class (匿名内部类) 是否可以 extends 其它类，是否可以 implements interface?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-C-abstract-class-%E5%92%8C-interface-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">6. C# abstract class 和 interface 有什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%9D%E6%83%B3%E4%B8%BB%E8%A6%81%E5%8C%85%E6%8B%AC%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">7. C# 面向对象的思想主要包括什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E8%AF%B7%E8%A7%A3%E9%87%8A-C-%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%98%BE%E5%BC%8F%E5%AE%9E%E7%8E%B0%E6%9C%89%E4%BB%80%E4%B9%88%E6%84%8F%E4%B9%89%EF%BC%9F"><span class="toc-text">8. 请解释 C# 接口的显式实现有什么意义？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-C-%E6%8E%A5%E5%8F%A3%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%E6%8E%A5%E5%8F%A3%EF%BC%9F%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3%EF%BC%9F%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%E5%AE%9E%E4%BD%93%E7%B1%BB%EF%BC%9F"><span class="toc-text">9. C# 接口是否可以继承接口？抽象类是否可以实现接口？抽象类是否可以继承实体类？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-C-%E6%9E%84%E9%80%A0%E5%99%A8-Constructor-%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E8%A2%AB%E7%BB%A7%E6%89%BF%EF%BC%9F%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E8%A2%AB-Override%EF%BC%9F"><span class="toc-text">10. C# 构造器 Constructor 是否可以被继承？是否可以被 Override？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-C-%E8%99%9A%E6%96%B9%E6%B3%95%EF%BC%88virtual%EF%BC%89%E5%92%8C%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%EF%BC%88abstract%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">11. C# 虚方法（virtual）和抽象方法（abstract）的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-%E7%AE%80%E8%BF%B0-private%E3%80%81protected%E3%80%81public%E3%80%81internal-%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%9A%84%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%9F"><span class="toc-text">12. 简述 private、protected、public、internal 修饰符的访问权限？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-C-%E6%94%AF%E6%8C%81%E5%A4%9A%E9%87%8D%E7%BB%A7%E6%89%BF%E4%B9%88%EF%BC%9F"><span class="toc-text">13. C# 支持多重继承么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-%E8%A7%A3%E9%87%8A%E4%BB%80%E4%B9%88%E6%98%AF%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%EF%BC%9F"><span class="toc-text">14. 解释什么是构造函数？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#15-%E7%AE%80%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%9F"><span class="toc-text">15. 简述一下面向对象的三大特性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%98%AF%E5%90%A6%E8%83%BD%E8%A2%AB%E9%87%8D%E5%86%99%EF%BC%9F"><span class="toc-text">16. 构造函数是否能被重写？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#17-C-%E7%B1%BB%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%EF%BC%9F"><span class="toc-text">17. C# 类的执行顺序？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#18-C-%E6%8E%A5%E5%8F%A3%E6%98%AF%E5%90%A6%E5%8F%AF%E7%BB%A7%E6%89%BF%E6%8E%A5%E5%8F%A3%EF%BC%9F%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3%EF%BC%9F%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E7%BB%A7%E6%89%BF%E5%AE%9E%E7%8E%B0%E7%B1%BB%EF%BC%9F"><span class="toc-text">18. C# 接口是否可继承接口？抽象类是否可实现接口？抽象类是否可继承实现类？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#19-%E8%AF%B7%E8%AF%B4%E8%AF%B4-C-%E5%BC%95%E7%94%A8%E5%92%8C%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="toc-text">19. 请说说 C# 引用和对象？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#20-%E9%98%90%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AF-C-%E5%8C%BF%E5%90%8D%E7%B1%BB%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%EF%BC%9F"><span class="toc-text">20. 阐述什么是 C# 匿名类，有什么好处？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#21-C-%E4%B8%AD%E6%9C%89%E6%B2%A1%E6%9C%89%E9%9D%99%E6%80%81%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%9C%89%E6%98%AF%E5%81%9A%E4%BB%80%E4%B9%88%E7%94%A8%E7%9A%84%EF%BC%9F"><span class="toc-text">21. C# 中有没有静态构造函数，如果有是做什么用的？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22-C-%E5%B1%9E%E6%80%A7%E8%83%BD%E5%9C%A8%E6%8E%A5%E5%8F%A3%E4%B8%AD%E5%A3%B0%E6%98%8E%E5%90%97%EF%BC%9F"><span class="toc-text">22. C# 属性能在接口中声明吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#23-%E5%9C%A8-C-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E6%8E%A5%E5%8F%A3%EF%BC%9F%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%A5%BD%E5%A4%84%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91%EF%BC%9F"><span class="toc-text">23. 在 C# 项目中为什么使用接口？接口的好处是什么？什么是面向接口开发？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24-C-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E9%9D%9E%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E5%90%97%EF%BC%9F%E5%A6%82%E6%9E%9C%E4%B8%8D%E5%8F%AF%E4%BB%A5%E4%B8%BA%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">24. C# 静态方法可以访问非静态变量吗？如果不可以为什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#25-C-%E8%83%BD%E7%94%A8-foreach-%E9%81%8D%E5%8E%86%E8%AE%BF%E9%97%AE%E7%9A%84%E5%AF%B9%E8%B1%A1%E9%9C%80%E8%A6%81%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3%E6%88%96%E5%A3%B0%E6%98%8E%E6%96%B9%E6%B3%95%E7%9A%84%E7%B1%BB%E5%9E%8B%EF%BC%9F"><span class="toc-text">25. C# 能用 foreach 遍历访问的对象需要实现接口或声明方法的类型？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#26-%E8%83%BD%E5%A4%9F%E5%B0%86%E9%9D%9E%E9%9D%99%E6%80%81%E7%9A%84%E6%96%B9%E6%B3%95%E8%A6%86%E5%86%99%E6%88%90%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%90%97%EF%BC%9F"><span class="toc-text">26. 能够将非静态的方法覆写成静态方法吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#27-C-%E4%B8%AD%E7%9A%84%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">27. C# 中的析构函数是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#28-%E8%A7%A3%E9%87%8A-C-%E4%B8%AD%E4%BB%80%E4%B9%88%E6%98%AF%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%8C%E5%AE%83%E6%98%AF%E5%BC%BA%E5%88%B6%E6%80%A7%E7%9A%84%E5%90%97%EF%BC%9F"><span class="toc-text">28. 解释 C# 中什么是命名空间，它是强制性的吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#29-%E8%AF%B7%E4%B8%BE%E4%BE%8B%E8%A7%A3%E9%87%8A%E5%B0%81%E8%A3%85%EF%BC%9F"><span class="toc-text">29. 请举例解释封装？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#30-%E9%98%90%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AF%E6%8A%BD%E8%B1%A1%EF%BC%9F"><span class="toc-text">30. 阐述什么是抽象？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#31-C-%E8%AF%A6%E7%BB%86%E4%B8%BE%E4%BE%8B%E9%98%90%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%9A%E6%80%81%E6%80%A7%EF%BC%9F"><span class="toc-text">31. C# 详细举例阐述什么是多态性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-C-%E4%B8%BE%E4%BE%8B%E5%AD%90%E9%98%90%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%A7%E6%89%BF%EF%BC%9F"><span class="toc-text">32. C# 举例子阐述什么是继承？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#33-C-%E5%A6%82%E4%BD%95%E5%9C%A8%E5%90%8C%E4%B8%80%E4%B8%AA%E7%B1%BB%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%A4%9A%E4%B8%AA%E5%85%B7%E6%9C%89%E7%9B%B8%E5%90%8C%E6%96%B9%E6%B3%95%E5%90%8D%E7%9A%84%E6%8E%A5%E5%8F%A3%EF%BC%9F"><span class="toc-text">33. C# 如何在同一个类中实现多个具有相同方法名的接口？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#34-%E9%98%90%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AF-C-static-%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%9F"><span class="toc-text">34. 阐述什么是 C# static 关键字？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#35-%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E5%9C%A8-C-%E9%9D%99%E6%80%81%E7%B1%BB%E4%B8%AD%E4%BD%BF%E7%94%A8%E2%80%9Cthis%E2%80%9D%E5%90%97%EF%BC%9F"><span class="toc-text">35. 我们可以在 C# 静态类中使用“this”吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#36-%E8%A7%A3%E9%87%8A%E4%BB%80%E4%B9%88%E6%98%AF%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6%EF%BC%9F%E8%A7%A3%E9%87%8A%E6%AF%8F%E7%A7%8D%E7%B1%BB%E5%9E%8B"><span class="toc-text">36. 解释什么是访问修饰符？解释每种类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#37-C-%E5%A6%82%E4%BD%95%E4%BB%8E%E5%9F%BA%E7%B1%BB%E5%88%9B%E5%BB%BA%E6%B4%BE%E7%94%9F%E7%B1%BB%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="toc-text">37. C# 如何从基类创建派生类对象？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#38-%E7%AE%80%E8%BF%B0%E5%9C%A8-C-%E7%A8%8B%E5%BA%8F%E4%B8%AD%EF%BC%8C%E5%A6%82%E6%9E%9C%E7%B1%BB-B-%E8%A6%81%E7%BB%A7%E6%89%BF%E7%B1%BB-A%EF%BC%8C%E7%B1%BB-B-%E6%AD%A3%E7%A1%AE%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%BA"><span class="toc-text">38. 简述在 C# 程序中，如果类 B 要继承类 A，类 B 正确的定义为( ) ?</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8C-C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%8E%9F%E7%90%86%E9%A2%98"><span class="toc-text">📌 C# 面向对象原理题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%AE%80%E8%BF%B0%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9F%E4%B8%BB%E8%A6%81%E7%89%B9%E5%BE%81%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">1. 简述面向对象？主要特征是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88OOP%EF%BC%89%E7%9B%B8%E5%85%B3%E8%A7%A3%E9%87%8A%EF%BC%9F"><span class="toc-text">2. 面向对象编程（OOP）相关解释？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%AE%80%E8%BF%B0%E7%BB%A7%E6%89%BF%E7%9A%84%E5%8E%9F%E5%88%99%EF%BC%9F"><span class="toc-text">3. 简述继承的原则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%88%97%E4%B8%BE%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-OOD-%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6%EF%BC%9F"><span class="toc-text">4. 列举面向对象 OOD 访问修饰符？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E7%AE%80%E8%BF%B0%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-text">5. 简述抽象类和接口的理解？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E6%AD%BB%E9%94%81%E7%9A%84%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6%EF%BC%9F%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%EF%BC%9F"><span class="toc-text">6. 死锁的必要条件？怎么解决？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E6%8E%A5%E5%8F%A3%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%E6%8E%A5%E5%8F%A3%EF%BC%9F%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3%EF%BC%9F%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%E5%AE%9E%E4%BD%93%E7%B1%BB%EF%BC%9F"><span class="toc-text">7. 接口是否可以继承接口？抽象类是否可以实现接口？抽象类是否可以继承实体类？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E7%AE%80%E8%BF%B0%E5%B0%81%E8%A3%85%E5%85%B7%E6%9C%89%E7%9A%84%E7%89%B9%E6%80%A7%EF%BC%9F"><span class="toc-text">8. 简述封装具有的特性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E7%AE%80%E8%BF%B0%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%BA%94%E7%94%A8%E5%B8%A6%E5%8F%82%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%EF%BC%9F"><span class="toc-text">9. 简述什么时候应用带参构造函数？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-%E7%AE%80%E8%BF%B0%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E5%A5%BD%E5%A4%84%EF%BC%9F"><span class="toc-text">10. 简述内部类的好处？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-%E7%AE%80%E8%BF%B0%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-text">11. 简述内部类的作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-Java-%E4%B8%AD%EF%BC%8C%E5%AD%90%E7%B1%BB%E5%8F%AF%E4%BB%A5%E4%BB%8E%E7%88%B6%E7%B1%BB%E4%B8%AD%E7%BB%A7%E6%89%BF%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">12. Java 中，子类可以从父类中继承哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-%E8%A7%A3%E9%87%8A%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E4%B8%8E%E9%87%8D%E5%86%99%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">13. 解释方法重载与重写的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-Java-%E4%B8%AD%E7%9A%84%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">14. Java 中的抽象类和接口的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#15-%E7%AE%80%E8%BF%B0%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99%E5%92%8C%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-text">15. 简述接口隔离原则和单一职责原则如何理解？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16-%E8%A7%A3%E9%87%8A-finally-%E5%9C%A8%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BD%BF%E7%94%A8%EF%BC%9F"><span class="toc-text">16. 解释 finally 在什么时候使用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#17-throw-%E5%92%8C-throws-%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">17. throw 和 throws 关键字的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#18-%E7%AE%80%E8%BF%B0-final-finally-finalize-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">18. 简述 final, finally, finalize 的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#19-%E7%AE%80%E8%BF%B0%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B9%E9%9D%A2%EF%BC%9F"><span class="toc-text">19. 简述面向对象的特征有哪些方面？</span></a></li></ol></li></ol>
+  </div>
+</section>
+
+  
+
+</div>
+
+  <!-- Custom Files side begin -->
+  
+  <!-- Custom Files side end -->
+</aside>
+
+
+
+        </div>
+        
+  
+  <footer class="footer clearfix"  itemscope itemtype="https://schema.org.cn/WPFooter">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    
+      <meting-js
+        theme='#1BCDFC'
+        autoplay='false'
+        volume='0.7'
+        loop='all'
+        order='list'
+        fixed='false'
+        list-max-height='320px'
+        server='netease'
+        type='playlist'
+        id='2090675384'
+        list-folded='true'>
+      </meting-js>
+    
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper" itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+          
+            
+          
+            
+              <a href="mailto:1174768469@qq.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="https://github.com/fly0421"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1" target="_blank" class="codename">Volantis</a>
+        作为主题
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2021-2025 Fly</a></p>
+
+        </div>
+      
+    
+    <!-- Custom Files footer begin-->
+    
+    <!-- Custom Files footer end-->
+  </footer>
+
+
+        <a id="s-top" class="fa-solid fa-arrow-up fa-fw" title="top"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+  /******************** volantis.dom ********************************/
+  // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
+  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
+  volantis.dom.topBtn = volantis.dom.$(document.getElementById('s-top')); // 向上
+  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整个导航栏
+  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1个
+  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按钮   移动端 1个
+  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
+  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
+  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
+</script>
+
+<script>
+  
+  volantis.css("https://unpkg.com/@fortawesome/fontawesome-free@6.6.0/css/all.min.css");
+  
+  
+  
+</script>
+
+<!-- required -->
+
+
+<!-- internal -->
+
+<script src="/js/app.js"></script>
+
+
+
+
+<!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "color-scheme";
+const rootElementDarkModeAttributeName = "color-scheme";
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+  getCustomDarkMode();
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+/**
+ * get target mode
+ */
+ const getCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  if(currentSetting=="dark"){
+    volantis.dark.mode="light";
+  }else{
+    volantis.dark.mode="dark";
+  }
+  // console.log(volantis.dark.mode)
+};
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+/**
+ * 暗黑模式触发器
+ */
+volantis.dark.toggle=()=>{
+  const mode = toggleCustomDarkMode();
+  applyCustomDarkModeSettings(mode);
+  // 使用 volantis.dark.push 方法传入volantis.dark.toggle回调函数 参见layout/_partial/scripts/global.ejs
+  volantis.dark.method.toggle.start();
+}
+/**
+ * bind event for toggle button
+ */
+
+function bindToggleButton() {
+  var btn= document.querySelectorAll("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn")
+  btn.forEach(function (e) {
+    volantis.dom.$(e).on('click',volantis.dark.toggle);
+  })
+}
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", ()=>{
+  volantis.requestAnimationFrame(bindToggleButton)
+});
+
+const darkModelListeners={
+  dark:(mediaQueryList )=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "dark";
+    }
+    volantis.dark.method.toggle.start();
+  },
+  light:(mediaQueryList)=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "light";
+    }
+    volantis.dark.method.toggle.start();
+  }
+}
+window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
+window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
+</script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    
+      const sites_api = document.getElementById('sites-api');
+      if (sites_api != undefined && typeof SitesJS === 'undefined') {
+        volantis.js("/js/plugins/tags/sites.js")
+      }
+    
+    
+      const friends_api = document.getElementById('friends-api');
+      if (friends_api != undefined && typeof FriendsJS === 'undefined') {
+        volantis.js("/js/plugins/tags/friends.js")
+      }
+    
+    
+      const contributors_api = document.getElementById('contributors-api');
+      if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
+        volantis.js("/js/plugins/tags/contributors.js")
+      }
+    
+  };
+  loadIssuesJS()
+</script>
+
+
+
+
+  <script defer src="https://unpkg.com/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: ["#"],
+	maxRPS: 6,
+	hoverDelay: 0
+  };
+</script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1660614606622/libs/flying-pages/flying-pages.min.js"></script>
+
+
+
+
+
+   <script type="text/javascript">
+  function p_scrollrebeal() {
+    ScrollReveal().reveal("#l_main .reveal", {
+      distance: "32px",
+      duration: "800",
+      interval: "20",
+      scale: "1",
+      easing: "ease-out",
+    });
+  }
+  function init_scrollrebeal() {
+    if (typeof ScrollReveal == "undefined") {
+      volantis.requestAnimationFrame(init_scrollrebeal);
+    } else {
+      p_scrollrebeal();
+    }
+  }
+  volantis.js("https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js");
+  document.addEventListener("DOMContentLoaded", init_scrollrebeal)
+</script>
+
+
+
+
+  <script>
+  volantis.css("https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css");
+
+  
+    (async () => {
+      // APlayer 需要在  MetingJS 之前加载
+      await volantis.js("https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js")
+      await volantis.js("https://unpkg.com/meting@2.0.1/dist/Meting.min.js")
+    
+    })();
+
+    function SetAPlayerPlugin(){
+      let Metings = document.querySelectorAll('meting-js');
+      if (Metings.length === 0) {return;};
+      if (Metings[0].aplayer && Metings[0].aplayer.on) {
+        // improve the accessibility https://web.dev/button-name/
+        document.querySelectorAll(".aplayer-icon-menu").forEach(e=>{
+          e.setAttribute("aria-label","Aplayer Menu")
+        })
+        // message see: /layout/_plugins/message/script.ejs
+        
+          try {
+            setTimeout(() => {
+              Metings.forEach((item, index) => {
+                const aplayerItem = item.aplayer; if(!aplayerItem) return;
+                const rightAplayerCheck = 'true' === 'true'
+                  && item.meta.id === '2090675384';
+                if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
+                if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
+                  aplayerItem.on('play', function messagePlay() {
+                    let index = aplayerItem.list.index;
+                    let title = aplayerItem.list.audios[index].title;
+                    let artist = aplayerItem.list.audios[index].artist;
+                    setTimeout(() => {
+                      VolantisApp.message('音乐通知', title + ' - ' + artist, {
+                        icon: 'fa-solid fa-play',
+                        transitionIn: 'flipInX',
+                        transitionOut: 'flipOutX'
+                      });
+                    }, 100)
+                  });
+                }
+                if(aplayerItem.events.events.pause.every(item => {return item.name !== 'messagePause'})) {
+                  aplayerItem.on('pause', function messagePause() {
+                    let index = aplayerItem.list.index;
+                    let title = aplayerItem.list.audios[index].title;
+                    let artist = aplayerItem.list.audios[index].artist;
+                    setTimeout(() => {
+                      // 歌曲播放结束也会触发 pause 事件，为了避免错误提示，等待一会儿
+                      if(aplayerItem.paused) {
+                        VolantisApp.message('音乐通知', title + ' - ' + artist, {
+                          icon: 'fa-solid fa-pause',
+                          transitionIn: 'flipInX',
+                          transitionOut: 'flipOutX'
+                        });
+                      }
+                    }, 100)
+                  });
+                }
+              });
+            }, 500)
+          } catch (error) { console.error(error); }
+        
+      }else{
+        volantis.requestAnimationFrame(SetAPlayerPlugin)
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", ()=>{
+      SetAPlayerPlugin();
+    });
+  
+</script>
+
+
+
+
+      <script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@3.3.2/dist/waline.js';
+
+  volantis.layoutHelper("comments", `<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+
+  function p_waline() {
+    if (!document.querySelector("#waline")) return;
+    
+    let locale = {};
+    let path = pdata.commentPath;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    if (pagePlaceholder.length != 0) {
+      locale.placeholder = pagePlaceholder;
+    }
+
+    try {
+      init(Object.assign(Object.assign({"path":null,"placeholder":"快来评论吧~","serverURL":"https://hexo-wline-three.vercel.app/","imageUploader":{"fileName":null,"tokenName":null,"api":null,"token":null,"resp":null},"pageview":true,"comment":true,"imageHosting":"https://7bu.top/api/upload"}, {
+        el: '#waline',
+        path: path,
+        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
+        
+        locale,
+      }), pdata.commentConfig));
+    } catch (error) {
+      alert(`Waline ${error}`);
+    }
+    fancybox_waline();
+  }
+
+  function fancybox_waline() {
+    const fancyBoxInstance = new VolantisFancyBox();
+    fancyBoxInstance.bind('#waline .wl-content img:not(.wl-emoji)');
+  }
+
+  volantis.css('https://unpkg.com/@waline/client@3.3.2/dist/waline.css');
+  volantis.js('https://unpkg.com/@waline/client@3.3.2/dist/waline.js').then(p_waline);
+</script>
+
+    
+
+
+
+
+
+<!-- optional -->
+
+  <script>
+  async function loadSearchScript() {
+    
+        
+    
+    return volantis.js("/js/search/hexo.js");
+  }
+
+  function loadSearchService() {
+    loadSearchScript();
+    document.querySelectorAll(".input.u-search-input").forEach((e) => {
+      e.removeEventListener("focus", loadSearchService, false);
+    });
+
+    document.querySelectorAll(".u-search-form").forEach((e) => {
+      e.addEventListener("submit", (event) => {
+        event.preventDefault();
+      }, false);
+    });
+  }
+
+  // 打开并搜索 字符串 s
+  function OpenSearch(s) {
+    if (typeof SearchService === 'undefined')
+      loadSearchScript().then(() => {
+        SearchService.setQueryText(s);
+        SearchService.search();
+      });
+    else {
+      SearchService.setQueryText(s);
+      SearchService.search();
+    }
+  }
+
+  // 访问含有 ?s=xxx  的链接时打开搜索 // 与搜索引擎 structured data 相关: /scripts/helpers/structured-data/lib/config.js
+  if (window.location.search && /^\?s=/g.test(window.location.search)) {
+    let queryText = decodeURI(window.location.search)
+      .replace(/\ /g, "-")
+      .replace(/^\?s=/g, "");
+    OpenSearch(queryText);
+  }
+
+  // 搜索输入框获取焦点时加载搜索
+  document.querySelectorAll(".input.u-search-input").forEach((e) => {
+    e.addEventListener("focus", loadSearchService, false);
+  });
+</script>
+
+
+
+
+
+
+
+  <script>
+
+
+
+  function p_highlightjs_copyCode(){
+    if (!(document.querySelector(".highlight .code pre") ||
+      document.querySelector(".article pre code"))) {
+      return;
+    }
+    VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
+  }
+  volantis.requestAnimationFrame(p_highlightjs_copyCode)
+
+</script>
+
+
+
+
+
+
+
+
+  <script>
+  let imgs = ["https://pic1.imgdb.cn/item/6823641758cb8da5c8f0b47b.jpg","https://pic1.imgdb.cn/item/6823641458cb8da5c8f0b471.jpg","https://pic1.imgdb.cn/item/6823641658cb8da5c8f0b479.jpg","https://pic1.imgdb.cn/item/6823641458cb8da5c8f0b470.png","https://pic1.imgdb.cn/item/6823671a58cb8da5c8f0b600.png","https://pic1.imgdb.cn/item/6823641658cb8da5c8f0b47a.png","https://pic1.imgdb.cn/item/6823672b58cb8da5c8f0b609.png"];
+  let index = 0;
+  let IntervalParallax = null;
+
+  function parallax(){
+    let ParallaxWindow = document.querySelector("#parallax-window");
+    
+      ParallaxWindow = document.querySelector("html");
+    
+    Parallax.window = ParallaxWindow;
+    Parallax.options.fade = 500;
+    Parallax.cache = 1;
+    next_parallax();
+    Parallax.init();
+    if (imgs.length>1) {
+      IntervalParallax = setInterval(function () {
+        next_parallax();
+      }, '25000');
+    }
+  }
+
+  function next_parallax() {
+    if (typeof Parallax == "undefined") {
+      return
+    }
+    
+    if (imgs.length>=1) {
+      Parallax.options.src = imgs[index % imgs.length];
+      Parallax.start();
+      index++;
+      if (Parallax.cache) {
+        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
+        if (index == imgs.length) {
+          Parallax.cache = 0;
+        }
+      }
+    }
+  }
+  var runningOnBrowser = typeof window !== "undefined";
+  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+  if (!isBot) {
+    volantis.js('/js/plugins/parallax.js').then(()=>{
+      parallax()
+    })
+  }
+</script>
+
+
+
+
+  <script>
+  function load_swiper() {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    volantis.css("https://unpkg.com/swiper@11.1.14/swiper-bundle.min.css");
+    volantis.js("https://unpkg.com/swiper@11.1.14/swiper-bundle.min.js").then(() => {
+      p_swiper();
+    });
+  }
+
+  load_swiper();
+
+  function p_swiper() {
+    volantis.swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+
+</script>
+
+
+
+  <script>
+  volantis.css("https://unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-minimal.css");
+  volantis.js("https://unpkg.com/pace-js@1.2.4/pace.min.js").then(() => {
+    Pace.options.restartOnPushState = false;
+    // 阅读进度
+    volantis.scroll.push(() => {
+      Pace.stop();
+      Pace.trigger('start');
+      Pace.bar.update(volantis.scroll.progress() * 100);
+      document.body.className = document.body.className.replaceAll("pace-running ","");
+    },"阅读进度")
+    // todo：配置项开关, 哪些页面添加阅读进度
+  })
+</script>
+
+
+
+
+<script>
+  function listenSidebarTOC() {
+    const navItems = document.querySelectorAll(".toc li");
+    if (!navItems.length) return;
+    const targets = []
+    const sections = Array.from(navItems).forEach((element) => {
+      const link = element.querySelector(".toc-link");
+      const target = document.getElementById(
+        link.getAttribute("href") ? decodeURI(link.getAttribute("href")).replace("#", "") : link.getAttribute("toc-action").split("toc-")[1] // 兼容 hexo-blog-encrypt
+      );
+      targets.push(target)
+      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
+      if (link.getAttribute("href")) {
+        link.setAttribute("toc-action", "toc-" + decodeURI(link.getAttribute("href")).replace("#", ""))
+        link.removeAttribute("href")
+      }
+      // 配置 点击 触发新的锚点定位
+      if (target && target.id) {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          // 这里的 addTop 是通过错位使得 toc 自动展开.
+          volantis.scroll.to(target, { addTop: 5, observer: true })
+          // Anchor id
+          history.pushState(null, document.title, "#" + target.id);
+        });
+      }
+      return target;
+    });
+
+    function activateNavByIndex(target) {
+      if (target.classList.contains("active-current")) return;
+
+      document.querySelectorAll(".toc .active").forEach((element) => {
+        element.classList.remove("active", "active-current");
+      });
+      target.classList.add("active", "active-current");
+      let parent = target.parentNode;
+      while (!parent.matches(".toc")) {
+        if (parent.matches("li")) parent.classList.add("active");
+        parent = parent.parentNode;
+      }
+    }
+
+    // 方案一：
+    volantis.activateNavIndex = 0
+    activateNavByIndex(navItems[volantis.activateNavIndex])
+    if (targets[0]) {
+      volantis.scroll.push(() => {
+        if (targets[0].getBoundingClientRect().top >= 0) {
+          volantis.activateNavIndex = 0
+        } else if (targets[targets.length - 1].getBoundingClientRect().top < 0) {
+          volantis.activateNavIndex = targets.length - 1
+        } else {
+          for (let index = 0; index < targets.length; index++) {
+            const target0 = targets[index];
+            const target1 = targets[(index + 1) % targets.length];
+            if (target0.getBoundingClientRect().top < 0 && target1.getBoundingClientRect().top >= 0) {
+              volantis.activateNavIndex = index
+              break;
+            }
+          }
+        }
+        activateNavByIndex(navItems[volantis.activateNavIndex])
+      })
+    }
+
+    // 方案二：
+    // IntersectionObserver 不是完美精确到像素级别 也不是低延时性的
+    // function findIndex(entries) {
+    //   let index = 0;
+    //   let entry = entries[index];
+    //   if (entry.boundingClientRect.top > 0) {
+    //     index = sections.indexOf(entry.target);
+    //     return index === 0 ? 0 : index - 1;
+    //   }
+    //   for (; index < entries.length; index++) {
+    //     if (entries[index].boundingClientRect.top <= 0) {
+    //       entry = entries[index];
+    //     } else {
+    //       return sections.indexOf(entry.target);
+    //     }
+    //   }
+    //   return sections.indexOf(entry.target);
+    // }
+    // function createIntersectionObserver(marginTop) {
+    //   marginTop = Math.floor(marginTop + 10000);
+    //   let intersectionObserver = new IntersectionObserver(
+    //     (entries, observe) => {
+    //       let scrollHeight = document.documentElement.scrollHeight;
+    //       if (scrollHeight > marginTop) {
+    //         observe.disconnect();
+    //         createIntersectionObserver(scrollHeight);
+    //         return;
+    //       }
+    //       let index = findIndex(entries);
+    //       activateNavByIndex(navItems[index]);
+    //     }, {
+    //       rootMargin: marginTop + "px 0px -100% 0px",
+    //       threshold: 0,
+    //     }
+    //   );
+    //   sections.forEach((element) => {
+    //     element && intersectionObserver.observe(element);
+    //   });
+    // }
+    // createIntersectionObserver(document.documentElement.scrollHeight);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    volantis.requestAnimationFrame(listenSidebarTOC)
+  });
+</script>
+
+
+
+
+
+<script>
+  document.onreadystatechange = function () {
+    if (document.readyState == 'complete') {
+      // 页面加载完毕 样式加载失败，或是当前网速慢，或是开启了省流模式
+      const { saveData, effectiveType } = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {}
+      if (getComputedStyle(document.querySelector("#safearea"), null)["display"] == "none" || saveData || /2g/.test(effectiveType)) {
+        document.querySelectorAll(".reveal").forEach(function (e) {
+          e.style["opacity"] = "1";
+        });
+        document.querySelector("#safearea").style["display"] = "block";
+      }
+    }
+  }
+</script>
+
+
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Fly","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Here is Fly’s Blos"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/C/","name":"C#"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2025/06/16/C#面向对象/","name":"C#面向对象[面试系列]"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","url":"http://example.com/","keywords":null,"description":"Here is Fly’s Blos","author":{"@type":"Person","name":"Fly","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Here is Fly’s Blos"},"publisher":{"@type":"Organization","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"C#面向对象[面试系列]","description":"Here is Fly’s Blos","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2025/06/16/C#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"},"author":{"@type":"Person","name":"Fly","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Fly Blog - ૮꒰ ˶• ༝ •˶꒱ა","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2025/06/16/C#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/","wordCount":0,"datePublished":"2025-06-16T14:35:24.000Z","dateModified":"2025-06-16T15:03:56.438Z","articleSection":"C#","keywords":"C#,面试系列,面向对象","image":{"@type":"ImageObject","url":"https://pic1.imgdb.cn/item/6850320d58cb8da5c851c781.jpg","width":1024,"height":768}}]</script>
+
+
+
+
+    </div>
+    <!-- import body_end begin-->
+	 
+	
+	 <div id="tp-weather-widget"></div>
+<style>
+  #tp-weather-widget {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  #tp-weather-widget.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #tp-weather-widget .sw-container {
+    left: unset;
+    right: 100px;
+    top: unset;
+    bottom: 33px;
+    opacity: 0.9;
+  }
+</style>
+
+<script>
+  if (screen.width >= 768){
+	// 天气插件初始化代码
+	  (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+	  window.SeniverseWeatherWidget('show', {
+		flavor: "bubble",
+		location: "WX4FBXXFKE4F",
+		geolocation: true,
+		position: "bottom-right",
+		language: "zh-Hans",
+		unit: "c",
+		theme: "auto",
+		token: "15395d19-df74-475b-9663-63cecebd74dc",
+		hover: "enabled",
+		container: "tp-weather-widget", 
+	  });
+  }
+
+  // 滚动控制逻辑
+  document.addEventListener('DOMContentLoaded', function() {
+    const widget = document.getElementById('tp-weather-widget');
+    const scrollThreshold = 200; // 触发显示/隐藏的滚动距离阈值
+    let lastScroll = window.scrollY;
+
+    function updateVisibility() {
+      const currentScroll = window.scrollY || document.documentElement.scrollTop;
+      const isOverThreshold = currentScroll > scrollThreshold;
+      
+      // 根据滚动方向和应用阈值更新状态
+      if (currentScroll > lastScroll && isOverThreshold) {
+        widget.classList.add('show');
+      } else if (currentScroll < lastScroll && !isOverThreshold) {
+        widget.classList.remove('show');
+      }
+      
+      lastScroll = currentScroll;
+    }
+
+    // 优化滚动事件处理
+    function handleScroll() {
+      window.requestAnimationFrame(updateVisibility);
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // 初始化检测
+    updateVisibility();
+  });
+</script>
+
+	
+	
+    <!-- import body_end end-->
+    <!-- Custom Files bodyEnd begin-->
+    
+    <!-- Custom Files bodyEnd end-->
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
